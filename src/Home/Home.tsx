@@ -1,24 +1,21 @@
 import React from 'react';
-import './Home.css';
 import MenuItem from '../MenuItem/MenuItem';
 
-function Home() {
+export const Home = () => {
   return (
-    <div className="flex">
-      <div className="w-1/2">
-        <MenuItem imageUrl="images/image1.jpg" linkTo="" />
+    <div>
+      <div className="w-1/4">
+        <MenuItem imageUrl='image1.jpg' linkTo="/Starters" />
       </div>
-      <div className="w-1/2">
-        <MenuItem imageUrl="images/image2.jpg" linkTo="" />
+      <div className="w-1/4">
+        <MenuItem imageUrl='image2.jpg' linkTo="/Sushis" />
       </div>
-      <div className="w-1/2">
-        <MenuItem imageUrl="images/image3.jpg" linkTo="" />
+      <div className="w-1/4">
+        <MenuItem imageUrl='image3.jpg' linkTo="Thai" />
       </div>
-      <div className="w-1/2">
-        <MenuItem imageUrl="images/image4.jpg" linkTo="" />
+      <div className="w-1/4">
+        <MenuItem imageUrl='image4.jpg' linkTo="Desserts" />
       </div>
     </div>
   );
-}
-
-export default Home;
+};
