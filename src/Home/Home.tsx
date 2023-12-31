@@ -3,19 +3,11 @@ import MenuItem from '../MenuItem/MenuItem';
 
 export const Home = () => {
   return (
-    <div>
-      <div className="w-1/4">
-        <MenuItem imageUrl='image1.jpg' linkTo="/Starters" />
-      </div>
-      <div className="w-1/4">
-        <MenuItem imageUrl='image2.jpg' linkTo="/Sushis" />
-      </div>
-      <div className="w-1/4">
-        <MenuItem imageUrl='image3.jpg' linkTo="Thai" />
-      </div>
-      <div className="w-1/4">
-        <MenuItem imageUrl='image4.jpg' linkTo="Desserts" />
-      </div>
+    <div className='MenuContainer'>
+        <MenuItem imageUrl='starters.jpg' linkTo="/Starters" title='STARTERS' description='Entrées' />
+        <MenuItem imageUrl='sushis.jpg' linkTo="/Sushis" title='SUSHIS' description='Sushis'/>
+        <MenuItem imageUrl='thai.jpg' linkTo="Thai" title='THAI' description='Plat thailandais'/>
+        <MenuItem imageUrl='dessert.jpg' linkTo="Desserts" title='DESSERTS' description='FRUITS'/>
     </div>
   );
 };
