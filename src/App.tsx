@@ -5,11 +5,13 @@ import { Dessert } from './Dessert/Dessert';
 import { Thai } from './Thai/Thai';
 import { Starter } from './Starter/Starter';
 import { Home } from './Home/Home';
+import { Topbar } from './Topbar/Topbar';
 
 export const App = () =>
 {
     return (
         <div className="app">
+            <Topbar />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/Sushis" element={<Sushi />} />

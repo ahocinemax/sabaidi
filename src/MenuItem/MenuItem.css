@@ -1,66 +1,89 @@
-/* MenuItem.css */
 .MenuItem {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 8px;
-  cursor: pointer;
-  color: white;
+    position: relative;
+    overflow: clip;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    width: 25%;
+    height: 33%;
 }
 
-.MenuItem img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
+.MenuLink {
+    position: relative;
+    text-decoration: none;
 }
 
-.MenuItem::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  left: -5%;
-  margin: auto;
-  width: 110%;
-  height: 110%;
-  border-radius: 10px;
-  background: linear-gradient(-45deg, #afafb1 70%, #c534a8 100%);
-  z-index: -10;
-  pointer-events: none;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.MenuItemImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: filter 0.3s ease-in-out;
 }
 
-.MenuItem:hover::before {
-  transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+.MenuItem:hover .MenuItemImage {
+    filter: blur(2px);
 }
 
-.MenuText {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 12px;
-  gap: 12px;
+.TextOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 12px;
+    gap: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.MenuLink:hover .TextOverlay {
+    opacity: 1;
 }
 
 .heading {
-  font-size: 20px;
-  text-transform: capitalize;
-  font-weight: 700;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 700;
+    color: rgb(72, 82, 220);
+    text-shadow: #c4a219 2px 2px;
 }
 
-.MenuText p:not(.heading) {
-  font-size: 14px;
+.TextOverlay p:not(.heading) {
+    font-size: 1.6em;
 }
 
-.MenuText p:last-child {
-  color: #e81cff;
-  font-weight: 600;
+.TextOverlay p:last-child {
+    color: #6145e0;
+    font-weight: 600;
+}
+
+.MenuItem::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -5%;
+    margin: auto;
+    width: 110%;
+    height: 110%;
+    border-radius: 10px;
+    background: goldenrod;
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.MenuItem:hover::before {
+    transform: rotate(90deg) scaleX(1.34) scaleY(0.77);
 }
 
 .MenuContainer {
-  display: flex;
-  gap: 16px;
+    position: relative;
+    top: 130px;
+    display: flex;
+    gap: 16px;
+    align-items: stretch
 }

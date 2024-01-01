@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Roman-Morrissey-DEMO';
+    src:url('/public/Roman-Morrissey-DEMO.ttf.woff') format('woff'),
+        url('/public/Roman-Morrissey-DEMO.ttf.svg#Roman-Morrissey-DEMO') format('svg'),
+        url('/public/Roman-Morrissey-DEMO.ttf.eot'),
+        url('/public/Roman-Morrissey-DEMO.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}

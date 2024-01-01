@@ -1,0 +1,50 @@
+/* Thai.css */
+.Thai {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.ThaiItem {
+    position: relative;
+    top: 130px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 20%;
+}
+
+.ThaiItem:hover {
+    transform: scale(1.05);
+}
+
+.ItemImage, .HoverImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.ItemDetails {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.HoverImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.ThaiItem:hover .HoverImage {
+    opacity: 1;
+}

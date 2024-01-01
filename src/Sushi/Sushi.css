@@ -1,0 +1,59 @@
+/* Sushi.css */
+
+.menu-section {
+    /* display: flex;
+    flex-direction: column; */
+    position: relative;
+    top: 71px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    margin: auto;
+    width: 60%;
+    box-shadow: -6px 8px 13px 1px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.menu-item img {
+    width: 33%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.menu-item h3 {
+    /* font-family: 'Roman-Morrissey-DEMO'; */
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.menu-item p {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.menu-item p:last-child {
+    font-weight: bold;
+    font-family: 'Roman-Morrissey-DEMO';
+}
+
+.menu-item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+};
