@@ -1,31 +1,46 @@
 /* Topbar.tsx */
 import React, { useEffect, useState } from 'react';
 import './Topbar.css';
-import { TopbarProps } from '../interfaces';
 import { Link } from 'react-router-dom';
 
 
 export const Topbar: React.FC = () => {
-    const [isActive, setIsActive] = React.useState(window.location.pathname === '/' ? false : true);
-
+    const [isActive, setIsActive] = useState(window.location.pathname !== '/');
     // je n'arrive pas à actualiser la variable <path> à chaque changement de page
+    // const path = window.location.pathname;
+    // console.log(path);
+    // console.log(isActive);
+    // useEffect(() => {
+    //     if (path === '/' && isActive === true) {
+    //         setIsActive(false);
+    //         console.log("should hide");
+    //     } else if (path !== '/' && isActive === false) {
+    //         setIsActive(true);
+    //         console.log("should show");
+    //     }
+    // }, [path]);
     setInterval(() => {
-        setIsActive(window.location.pathname === '/' ? false : true);
+        if (window.location.pathname === '/' && isActive === true) {
+            setIsActive(false);
+            // console.log("should hide");
+        } else if (window.location.pathname !== '/' && isActive === false) {
+            setIsActive(true);
+            // console.log("should show");
+        }
     }, 100);
 
-return (
-    <div className={`topbar ${isActive ? 'active' : ''}`}>
-        <Link to={'/'} className='logo'>
-            <img src="sabaidi.jpg" alt="Logo Sabaidi" />
-        </Link>
-        {window.location.pathname !== '/' && (
-        <div className="navigation-links">
-            <Link to="/Starters">Starters</Link>
-            <Link to="/Sushis">Sushis</Link>
-            <Link to="/Thai">Thai</Link>
-            <Link to="/Desserts">Desserts</Link>
+    return (
+        <div className={`topbar${isActive ? ' active' : ''}`}>
+            <Link to={'/'} className='logo'>
+                <img src="sabaidi.jpg" alt="Logo Sabaidi" />
+            </Link>
+            {window.location.pathname !== '/' && (
+            <div className="navigation-links">
+                <Link to="/Starters">Starters</Link>
+                <Link to="/Sushis">Sushis</Link>
+                <Link to="/Thai">Thai</Link>
+                <Link to="/Desserts">Desserts</Link>
+            </div> )}
         </div>
-        )}
-    </div>
-);
+    );
 };

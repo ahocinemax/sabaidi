@@ -1,14 +1,15 @@
 /* Thai.css */
 .Thai {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
+    top: 71px;
 }
 
 .ThaiItem {
     position: relative;
-    top: 130px;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -25,6 +26,14 @@
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
+}
+
+.HoverText {
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 6px;
 }
 
 .ItemDetails {

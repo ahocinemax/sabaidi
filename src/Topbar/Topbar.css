@@ -1,43 +1,35 @@
 /* Topbar.css */
 .topbar {
-    position:static;
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    transition: padding 0.9s ease-in-out;
+    top: 15px;
+    transition: transform 3s ease-in-out;
 }
 
 .topbar img {
-    width: 100px;
-    height: 100px;
+    width: 160px;
     border-radius: 50%;
     cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
-
 .navigation-links {
-    margin-top: 40px;
     display: flex;
-    gap: 5%;
+    gap: 15%;
+    padding-top: 25px;
+    justify-content: space-around;
 }
 
 .navigation-links a {
-    margin-right: 20px;
     text-decoration: none;
     color: #333333;
     font-weight: bold;
     font-size: 2em;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.9s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .navigation-links a:hover {
-    color: #007bff; /* ou la couleur de votre choix au survol */
-}
-
-.topbar.active .navigation-links a {
-    opacity: 1;
-    transform: translateY(0);
+    color: #007bff;
 }

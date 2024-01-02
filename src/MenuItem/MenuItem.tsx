@@ -10,8 +10,8 @@ const MenuItem: React.FC<MenuItemProps> = ({ imageUrl, linkTo, title, descriptio
       <Link to={linkTo} className="MenuLink">
         <img className="MenuItemImage" src={imageUrl} alt="Submenu item" />
         <div className="TextOverlay">
-          <p className="heading">{title}</p>
-          <p>{description}</p>
+          {/* <p className="heading">{title}</p>
+          <p>{description}</p> */}
         </div>
       </Link>
     </div>

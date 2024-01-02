@@ -9,8 +9,19 @@ import { Topbar } from './Topbar/Topbar';
 
 export const App = () =>
 {
+    const [darkMode, setDarkMode] = React.useState(false);
+
+    const toggleDarkMode = () => { 
+        console.log("is", darkMode ? "dark" : "light");
+        setDarkMode(!darkMode); }
     return (
         <div className="app">
+            <div className='toggle-switch'>
+            <label>
+                <input type='checkbox' />
+                <span className = 'slider'></span>
+            </label>
+        </div>
             <Topbar />
             <Routes>
                 <Route path="/" element={<Home />} />

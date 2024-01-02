@@ -13,8 +13,8 @@ export interface SushiItemProps {
 }
 
 export interface TopbarProps {
-    isActive: boolean;
-    toggleActive: () => void;
+    darkMode: boolean;
+    toggleDarkMode: () => void;
 }
 
 export interface ThaiItemProps {
