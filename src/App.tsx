@@ -18,7 +18,7 @@ export const App = () =>
         <div className="app">
             <div className='toggle-switch'>
             <label>
-                <input type='checkbox' />
+                <input type='checkbox' checked={darkMode} onChange={toggleDarkMode} />
                 <span className = 'slider'></span>
             </label>
         </div>
