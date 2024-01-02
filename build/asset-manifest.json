@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9e437289.css",
+    "main.js": "/static/js/main.8f8bd099.js",
+    "static/media/Roman-Morrissey-DEMO.ttf.svg": "/static/media/Roman-Morrissey-DEMO.ttf.85d6f53b51bc7f9708a2.svg",
+    "static/media/Roman-Morrissey-DEMO.ttf.eot": "/static/media/Roman-Morrissey-DEMO.ttf.3b45040320efe87c5c97.eot",
+    "static/media/Roman-Morrissey-DEMO.ttf.woff": "/static/media/Roman-Morrissey-DEMO.ttf.29b17ed1e9a517c3a8bc.woff",
+    "index.html": "/index.html",
+    "main.9e437289.css.map": "/static/css/main.9e437289.css.map",
+    "main.8f8bd099.js.map": "/static/js/main.8f8bd099.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9e437289.css",
+    "static/js/main.8f8bd099.js"
+  ]
+}
