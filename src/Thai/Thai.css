@@ -38,12 +38,16 @@
 
 .ItemDetails {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50px;
+    left: 35%;
+    font-family: sans-serif;
+    transform: translate(-20%, -50%);
     text-align: center;
-    color: white;
+    color: rgb(198, 195, 195);
+    font-size: 2vw;
+    font-weight: 200;
     z-index: 1;
+    text-shadow: black 2px 2px;
 }
 
 .HoverImage {
