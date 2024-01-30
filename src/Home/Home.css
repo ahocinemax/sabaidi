@@ -1,5 +1,32 @@
 /* Home.css */
 
-.MenuContainer {
-    gap: 16px;
+body {
+    /* background-color: var(--light); */
+    /* background-image: url("/public/emeraude.webp"); */
+    background-color: rgb(224, 224, 224);
+    background-position: center;
+    transition: background-color 0.3s ease;
+}
+
+.MenuTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    font-size: 3em;
+    gap: 11%;
+    margin: 10 2.6% 0 2.6%;
+}
+
+.home {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(76, 86, 86);
+    font-size: 1vw;
+    width: 98.4%;
+    margin: auto;
+}
+
+.main-container {
+    width: 98.4%;
+    margin: auto;
 }

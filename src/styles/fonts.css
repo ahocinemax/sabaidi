@@ -1,9 +1,25 @@
 @font-face {
     font-family: 'Roman-Morrissey-DEMO';
-    src:url('/public/Roman-Morrissey-DEMO.ttf.woff') format('woff'),
-        url('/public/Roman-Morrissey-DEMO.ttf.svg#Roman-Morrissey-DEMO') format('svg'),
-        url('/public/Roman-Morrissey-DEMO.ttf.eot'),
-        url('/public/Roman-Morrissey-DEMO.ttf.eot?#iefix') format('embedded-opentype'); 
+    src:url('/public/static/Roman-Morrissey-DEMO.ttf.woff') format('woff'),
+        url('/public/static/Roman-Morrissey-DEMO.ttf.svg#Roman-Morrissey-DEMO') format('svg'),
+        url('/public/static/Roman-Morrissey-DEMO.ttf.eot'),
+        url('/public/static/Roman-Morrissey-DEMO.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    src:url('/public/static/DancingScript-Bold.ttf') format('truetype'),
+        url('/public/static/DancingScript-Medium.ttf') format('truetype'),
+        url('/public/static/DancingScript-Regular.ttf') format('truetype');
+    font-family: 'Dancing Script';
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    src:url('/public/static/osaka-re.ttf') format('truetype');
+    font-family: 'osaka re';
     font-weight: normal;
     font-style: normal;
 }

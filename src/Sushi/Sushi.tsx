@@ -6,12 +6,6 @@ import { SushiItemProps } from "../interfaces";
 export const Sushi = () => {
   const sushiItems: SushiItemProps[] = [
     {
-      imageUrl: "sushi1.jpg",
-      title: "Sushi Saumon",
-      description: "Délicieux sushi au saumon frais.",
-      price: 12.99,
-    },
-    {
       imageUrl: "sushi2.jpg",
       title: "Sushi Avocat Crevette",
       description: "Sushi avec avocat et crevette.",
