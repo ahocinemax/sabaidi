@@ -17,10 +17,23 @@
 
 .navigation-links {
     display: flex;
-    gap: 25%;
     padding-top: 25px;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+}
+
+.right {
+    gap: 25%;
+    display: flex;
+    position: relative;
+    left: 20%;
+}
+
+.left {
+    gap: 30%;
+    display: flex;
+    position: relative;
+    right: 33%;
 }
 
 .navigation-links a {

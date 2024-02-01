@@ -23,3 +23,16 @@ export interface ThaiItemProps {
     image1: string;
     image2: string;
 }
+
+export interface BestSellerItem {
+    title: string;
+    description: string;
+    imageURL: string;
+    altText?: string;
+    price: string
+    likes?: number;
+}
+
+export interface BestSellersProps {
+    items: BestSellerItem[];
+}

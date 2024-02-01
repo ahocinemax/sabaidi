@@ -14,7 +14,7 @@
 
 .container-thai {
     width: 100%;
-    background-color: 0;
+    background-color: rgb(197, 197, 197);
     border-radius: 8px;
     position: relative;
     top: 40px;
@@ -54,6 +54,15 @@
     padding: 2px;
     color: white;
     text-shadow: rgb(232, 101, 195) 2px 3px;
+}
+
+.PopUpDetails {
+    /* display: flex; */
+    text-align: center;
+    margin: 2px;
+    padding: 2px;
+    color: rgb(215, 215, 215);
+
 }
 
 .HoverImage {

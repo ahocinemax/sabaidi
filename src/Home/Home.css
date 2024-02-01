@@ -3,7 +3,7 @@
 body {
     /* background-color: var(--light); */
     /* background-image: url("/public/emeraude.webp"); */
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(241, 241, 241);
     background-position: center;
     transition: background-color 0.3s ease;
 }
@@ -29,4 +29,5 @@ body {
 .main-container {
     width: 98.4%;
     margin: auto;
+    border-radius: 8px;
 }

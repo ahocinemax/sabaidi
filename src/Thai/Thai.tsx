@@ -11,7 +11,7 @@ const ThaiPopup: React.FC<ThaiItemProps & { onClose: () => void }> = ({ name, de
         <div className="ImageContainer">
           <img className="PopupImage" src={image1} alt={name} />
         </div>
-        <div className="ItemDetails">
+        <div className="PopupDetails">
           <h3>{name}</h3>
           <p>{description}</p>
         </div>

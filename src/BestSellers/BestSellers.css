@@ -1,0 +1,84 @@
+.best-sellers-item {
+    background: linear-gradient(to top, rgba(86, 86, 86, 0.09), rgba(241, 241, 241, 0.023));    border-radius: 10px; 
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    height: 35dvh;
+    justify-content: space-between;
+}
+
+.image-container {
+    position: relative;
+    height: max-content;
+    scale: 1.08;
+    top: -11;
+}
+
+.best-seller-img {
+    width: 100%;
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+.text-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 10px;
+    align-items: flex-end;
+}
+
+.text-box h1 {
+    width: 50%;
+    margin: 0;
+}
+
+.price {
+    margin-top: 10px;
+}
+
+.like-button .heart-icon {
+    height: 100px;
+    width: 100px;
+    background: url("../../public/heart.png");
+    background-position: left;
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  .like-button .heart-icon.liked {
+    animation: like-anim 0.7s steps(28) forwards;
+  }
+  
+  @keyframes like-anim {
+    to {
+      background-position: right;
+    }
+  }
+  
+  .like-button .heart-bg {
+    background: rgba(255, 192, 200, 0);
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 100ms ease;
+  }
+  
+  .like-button .heart-bg:hover {
+    background: rgba(255, 192, 200, 0.7);
+  }
+  
+  .like-button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .like-button .likes-amount {
+    font-size: 0.72em;
+    font-family: "Roboto", sans-serif;
+    color: #888;
+    font-weight: 900;
+    margin-left: 6px;
+  }
