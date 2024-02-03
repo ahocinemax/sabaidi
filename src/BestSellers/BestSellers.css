@@ -43,19 +43,19 @@
     background-position: left;
     cursor: pointer;
     position: absolute;
-  }
-  
-  .like-button .heart-icon.liked {
+}
+
+.like-button .heart-icon.liked {
     animation: like-anim 0.7s steps(28) forwards;
-  }
-  
-  @keyframes like-anim {
+}
+
+@keyframes like-anim {
     to {
-      background-position: right;
+        background-position: right;
     }
-  }
-  
-  .like-button .heart-bg {
+}
+
+.like-button .heart-bg {
     background: rgba(255, 192, 200, 0);
     border-radius: 50%;
     height: 60px;
@@ -64,21 +64,21 @@
     align-items: center;
     justify-content: center;
     transition: all 100ms ease;
-  }
-  
-  .like-button .heart-bg:hover {
+}
+
+.like-button .heart-bg:hover {
     background: rgba(255, 192, 200, 0.7);
-  }
-  
-  .like-button {
+}
+
+.like-button {
     display: flex;
     align-items: center;
-  }
-  
-  .like-button .likes-amount {
+}
+
+.like-button .likes-amount {
     font-size: 0.72em;
     font-family: "Roboto", sans-serif;
     color: #888;
     font-weight: 900;
     margin-left: 6px;
-  }
+}

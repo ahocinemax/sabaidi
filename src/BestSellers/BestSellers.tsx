@@ -16,7 +16,7 @@ const BestSellers: React.FC<BestSellersProps> = ({ items }) => {
 	};
 
   return (
-    <div className="best-sellers">
+    <div className="section best-sellers">
       <h2>Best Sellers</h2>
       <div className="best-sellers-items">
         {items.map((item, index) => (
@@ -32,7 +32,7 @@ const BestSellers: React.FC<BestSellersProps> = ({ items }) => {
                 <div className="heart-bg" onClick={() => handleClick(index)}>
                   <div className={`heart-icon ${hearts[index] ? 'liked' : ''}`} />
                 </div>
-                {/* <div className="likes-amount">Likes: 0</div> */}
+                <div className="likes-amount">Likes: 0</div>
               </div>
             </div>
           </div>

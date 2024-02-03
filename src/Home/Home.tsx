@@ -89,7 +89,7 @@ const BestSellersItems: BestSellerItem[] = [
 export const Home: React.FC = () => {
   return (
     <div className="main-container">
-      <div className="Home">
+      <div className="section Home">
         <div className='MenuContainer'>
           {submenu.map((item, index) => (
             <MenuItem
@@ -102,7 +102,8 @@ export const Home: React.FC = () => {
           ))}
         </div>
       </div>
-      <div className="about-section">
+      <BestSellers items={BestSellersItems} />
+      <div className="section about-section">
         <p className="about-info">
           Retrouvez-nous sur vos plateformes préférées :
         </p>
@@ -118,7 +119,6 @@ export const Home: React.FC = () => {
           </a>
         </div>
       </div>
-      <BestSellers items={BestSellersItems} />
     </div>
   );
 };

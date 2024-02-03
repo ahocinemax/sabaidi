@@ -14,6 +14,9 @@
     display: flex;
     justify-content: center;
     padding-bottom: 12px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.4rem;
+    margin-top: 12px;
 }
 
 .MenuLink {
@@ -73,9 +76,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #bababa17;
+    background-color: #ddddddc8;
     border-radius: 8px;
-    box-shadow: 0 0 19px #da75d4;
 }
 
 .best-sellers {
@@ -84,7 +86,10 @@
     flex-direction: column;
     align-items: center;
     margin-top: 20;
-    height: 50vh;
+    /* height: 50vh; */
+    background-color: rgb(230, 233, 130);
+    border-radius: 15px;
+    width: 98.4%;
 }
 
 .best-sellers h2 {

@@ -3,9 +3,9 @@
 body {
     /* background-color: var(--light); */
     /* background-image: url("/public/emeraude.webp"); */
-    background-color: rgb(241, 241, 241);
     background-position: center;
     transition: background-color 0.3s ease;
+ 
 }
 
 .MenuTitle {
@@ -24,10 +24,29 @@ body {
     font-size: 1vw;
     width: 98.4%;
     margin: auto;
+    background-color: rgb(130, 233, 202);
+    border-radius: 15px;
 }
 
 .main-container {
-    width: 98.4%;
+    /* width: 98.4%; */
+    height: 100vh;
     margin: auto;
     border-radius: 8px;
+    /* display: flex; */
+    /* align-items: center; */
+    /* flex-direction: column; */
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-stop: always;
+}
+
+.section {
+    height: 100vh;
+    scroll-snap-align: start;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    padding: 11px
 }
