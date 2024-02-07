@@ -22,6 +22,7 @@ export interface ThaiItemProps {
     description: string;
     image1: string;
     image2: string;
+    price: string;
 }
 
 export interface BestSellerItem {
@@ -35,4 +36,9 @@ export interface BestSellerItem {
 
 export interface BestSellersProps {
     items: BestSellerItem[];
+}
+
+export interface SidebarProps {
+    titles: string[];
+    activeTitle: string;
 }

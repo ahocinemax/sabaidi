@@ -6,6 +6,49 @@
     height: 35dvh;
     justify-content: space-between;
 }
+.best-sellers {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20;
+    background-color: #8B9D83;
+    border-radius: 15px;
+    width: 98.4%;
+    justify-content: space-evenly;
+}
+
+.best-sellers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.best-sellers h2 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #3A4E48;
+    margin: 0;
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+
+.best-sellers h3 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 11px;
+}
+
+.best-sellers-items {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 30px;
+    height: 20vh;
+    row-gap: 35px;
+}
 
 .image-container {
     position: relative;
@@ -16,7 +59,7 @@
 
 .best-seller-img {
     width: 100%;
-    border-radius: 8px; /* Rounded corners for the image */
+    border-radius: 8px;
 }
 
 .text-box {
@@ -56,10 +99,10 @@
 }
 
 .like-button .heart-bg {
-    background: rgba(255, 192, 200, 0);
+    background: rgba(255, 243, 245, 0);
     border-radius: 50%;
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,7 +110,7 @@
 }
 
 .like-button .heart-bg:hover {
-    background: rgba(255, 192, 200, 0.7);
+    background: rgba(249, 219, 223, 0.347);
 }
 
 .like-button {
@@ -78,7 +121,7 @@
 .like-button .likes-amount {
     font-size: 0.72em;
     font-family: "Roboto", sans-serif;
-    color: #888;
+    color: #fff;
     font-weight: 900;
     margin-left: 6px;
 }

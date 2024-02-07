@@ -1,7 +1,8 @@
 import React from "react";
 import "./Sushi.css";
 import "../styles/fonts.css";
-import { SushiItemProps } from "../interfaces";
+import { SushiItemProps, SidebarProps } from "../interfaces";
+import Sidebar from "../Sidebar/Sidebar";
 
 export const Sushi = () => {
   const sushiItems: SushiItemProps[] = [
@@ -66,10 +67,16 @@ export const Sushi = () => {
       price: 13.99,
     },
   ];
+
+  const submenus: SidebarProps = {
+    titles: ["Sushi", "Maki", "Sashimi", "Nigiri"],
+    activeTitle: "Sushi",
+  };
   
   return (
     <div className="menu-section">
       <h2>Menu Sushi</h2>
+      <Sidebar titles={submenus.titles} activeTitle={submenus.activeTitle}/>
       <div className="menu-items">
         {sushiItems.map((item, index) => (
           <div className="menu-item" key={index}>

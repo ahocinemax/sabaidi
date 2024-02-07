@@ -34,7 +34,6 @@ export const App = () =>
             </label>
         </div> */}
             <Topbar />
-            {shouldRenderSidebar && <Sidebar />}
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/Sushis" element={<Sushi />} />
