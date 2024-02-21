@@ -1,35 +1,35 @@
 import React, { useRef, useEffect } from 'react';
 import './Sidebar.css';
-import { Link } from 'react-router-dom';
 import { SidebarProps } from '../interfaces';
+import { useSidebar } from '../Context/SidebarContext';
 
-const Sidebar: React.FC<SidebarProps> = (items) => {
+const Sidebar: React.FC<SidebarProps> = ({ titles, activeTitle, onTitleClick }) => {
   const sidebarRef = useRef<HTMLDivElement | null>(null);
+  const { setActiveTitle } = useSidebar();
 
-  useEffect(() => {
-    const handleScroll = () => {};
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const switchSection = (title: string) => {
+    if (activeTitle !== title) {
+      setActiveTitle(title);
+      onTitleClick(title);
+    }
+  };
 
   return (
     <div className='sidebar-container' ref={sidebarRef}>
       <div className="sidebar">
-        {items.titles.map((title) => (
-          <Link to="/" className="nav-link"><p>{title}</p></Link>
+        {titles.map((title, index) => (
+          <span onClick={() => switchSection(title)} className={activeTitle !== title ? "nav-link" : "nav-link active"} key={index}>
+            {title}
+          </span>
         ))}
       </div>
-      <div className="cart-button">
+      {/* <div className="cart-button">
         <span className="cart">
           <img src="cart.svg" alt="cart" />
         </span>
-      </div>
+      </div> */}
     </div>
   );
-}
+};
 
 export default Sidebar;

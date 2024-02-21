@@ -9,7 +9,7 @@ export interface SushiItemProps {
     imageUrl: string;
     title: string;
     description: string;
-    price: number;
+    price: string;
 }
 
 export interface TopbarProps {
@@ -41,4 +41,10 @@ export interface BestSellersProps {
 export interface SidebarProps {
     titles: string[];
     activeTitle: string;
+    onTitleClick: (title: string) => void;
+}
+
+export interface SidebarContextProps {
+    activeTitle: string;
+    setActiveTitle: (title: string) => void;
 }

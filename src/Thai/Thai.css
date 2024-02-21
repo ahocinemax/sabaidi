@@ -18,27 +18,36 @@
     padding: 20px;
     text-align: center;
     font-family: Mathilde, cursive;
-    color: #d78cca;
+    color: #d4307a;
     font-weight: 700;
-    background-color: rgb(35, 55, 72);
+    background-color: #687a86;
 }
-
-
 
 .container-thai {
     width: 65%;
     background-color: #f5f5f5;
     border-radius: 8px;
     position: relative;
-    /* top: 40px; */
     padding-bottom: 14px;
     margin: auto;
+    /* overflow-y: scroll;
+    height: 78%; */
 }
+
+.thai-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding-top: 9px;
+    overflow-y: scroll;
+    height: 50%;
+}
+
 
 .ItemImage {
     width: 50%;
     border-radius: 8px;
-    /* Rounded corners for the image */
 }
 
 .ThaiItem {
