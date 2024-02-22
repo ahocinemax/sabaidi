@@ -8,45 +8,6 @@ import { useSidebar } from "../Context/SidebarContext";
 export const Sushi = () => {
   const { activeTitle, setActiveTitle } = useSidebar();
 
-  const entreesItems: SushiItemProps[] = [
-    {
-      imageUrl: "Starters/nems-poulet.JPG",
-      title: "Nems poulet",
-      description: "Bouchées vapeur au poulet ou aux légumes.",
-      price: "4.90",
-    },
-    {
-      imageUrl: "Starters/nems-crevette.JPG",
-      title: "Nems crevette",
-      description: "Crevettes décortiquées panées.",
-      price: "5.90",
-    },
-    {
-      imageUrl: "Starters/gyozas.JPG",
-      title: "Gyoza",
-      description: "Bouchées vapeur au poulet ou aux légumes.",
-      price: "5.20",
-    },
-    {
-      imageUrl: "Starters/tempuras.JPG",
-      title: "Tempura",
-      description: "Crevettes décortiquées panées.",
-      price: "6.20",
-    },
-    {
-      imageUrl: "Starters/poulet-dynamite.JPG",
-      title: "Poulet dynamite",
-      description: "Tendres morceaux de poulet, accompagnés de leur sauce dynamite.",
-      price: "7.50",
-    },
-    {
-      imageUrl: "Starters/crevette-dynamite.JPG",
-      title: "Crevette dynamite",
-      description: "Crevettes décortiquées, accompagnées de leur sauce dynamite.",
-      price: "8.90",
-    },
-  ];
-
   const yakitoriItems: SushiItemProps[] = [
     {
       imageUrl: "ComingSoon.webp",
@@ -70,7 +31,7 @@ export const Sushi = () => {
 
   const pokeItems: SushiItemProps[] = [
     {
-      imageUrl: "Jap/poke-chicken.JPG",
+      imageUrl: "Jap/poke-chicken-2.JPG",
       title: "Poulet",
       description: "Sushi au thon épicé et à l'avocat.",
       price: "12.90",
@@ -82,7 +43,7 @@ export const Sushi = () => {
       price: "13.90",
     },
     {
-      imageUrl: "Jap/poke-saumon.JPG",
+      imageUrl: "Jap/poke-saumon-2.JPG",
       title: "Saumon",
       description: "Sushi avec avocat et crevette.",
       price: "13.90",
@@ -382,7 +343,6 @@ export const Sushi = () => {
   ];
 
   const itemsList: Record<string, SushiItemProps[]> = {
-    // "Entrées": entreesItems,
     "Yakitori": yakitoriItems,
     "Poké": pokeItems,
     "Chirachi": chirachiItems,
@@ -391,6 +351,11 @@ export const Sushi = () => {
     "Sushis": sushiItems,
     "Plateaux": plateauxItems,
     "Signatures": signaturesItems,
+    "Tartar": tartareItems,
+    "Sashim": sashimiItems,
+    "Sushi": sushiItems,
+    "Plateau": plateauxItems,
+    "Signature": signaturesItems,
   };
 
   const keys = Object.keys(itemsList);
@@ -407,11 +372,7 @@ export const Sushi = () => {
   const handleTitleClick = (title: string) => {
     setActiveTitle(title);
   };
-
-  // window.onload = () => {
-  //   setActiveTitle(submenus.activeTitle);
-  // }
-
+          
   return (
     <div className="menu-section">
       <h2>Menu Japonais</h2>

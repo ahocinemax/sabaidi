@@ -17,13 +17,17 @@
 	display: flex;
 	text-decoration: none;
 	letter-spacing: 0.0892857143em;
-	font-size: .875rem;
+	font-size: 1.2rem;
 	cursor: pointer;
 }
 
 .nav-link.active {
 	color: #d965c6;
 	cursor: default;
+}
+
+.nav-link:last-child {
+	padding-right: 3%;
 }
 
 .cart-button {
@@ -42,4 +46,26 @@
 .sidebar-container {
 	display: flex;
 	flex-direction: row;
+	overflow-x: hidden;
+	position: relative;
+	margin: auto;
+	width: 97%;
 }
+
+.left-arrow, .right-arrow {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+  }
+  
+  .left-arrow {
+	left: 0;
+  }
+  
+  .right-arrow {
+	right: 0;
+  }

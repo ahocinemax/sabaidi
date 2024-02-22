@@ -32,31 +32,31 @@ const submenu: MenuItemProps[] = [
 
 const BestSellersItems: BestSellerItem[] = [
   {
-    title: "Poulet dynamite",
+    title: "Poké poulet",
     description: "Tendres morceaux de poulet, accompagnés de leur sauce dynamite.",
-    imageURL: "Starters/poulet-dynamite.JPG",
-    price: "7.50€",
+    imageURL: "best-seller.png",
+    price: "7.50",
   },
   {
     title: "Crevette dynamite",
     description: "Nouilles sautées au wok avec des crevettes, du tofu, des arachides et de la lime.",
-    imageURL: "Thai/crevette-dynamite-1.JPG",
-    price: "13.90€",
+    imageURL: "best-seller.png",
+    price: "13.90",
   },
   {
     title: "Mi prat",
     description: "Soupe épicée aux crevettes avec des champignons, de la citronnelle et des épices.",
-    imageURL: "Thai/mi-prat-1.JPG",
-    price: "12.90€",
+    imageURL: "best-seller.png",
+    price: "12.90",
   },
   {
-    imageURL: "Jap/P2-2.JPG",
+    imageURL: "best-seller.png",
     title: "Plateau Sabaidi love",
     description: "Sushi au saumon et à l'avocat.",
     price: "10.90",
   },
   {
-    imageURL: "Jap/tartare-ceviche.JPG",
+    imageURL: "best-seller.png",
     title: "Saumon mango ciboulette spicy",
     description: "Sushi au saumon et à l'avocat.",
     price: "10.90",
@@ -101,6 +101,6 @@ export const Home: React.FC = () => {
           </a>
         </div>
       </div>
-      </div>
+    </div>
   );
 };
