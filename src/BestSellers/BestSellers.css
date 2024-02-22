@@ -6,13 +6,14 @@
     height: 35dvh;
     justify-content: space-between;
 }
+
 .best-sellers {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20;
-    background-color: #868F74;
+    background-color: #FFEFCD;
     border-radius: 15px;
     width: 98.4%;
     justify-content: space-evenly;
