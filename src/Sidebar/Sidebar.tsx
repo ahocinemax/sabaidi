@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './Sidebar.css';
 import { SidebarProps } from '../interfaces';
 import { useSidebar } from '../Context/SidebarContext';
@@ -6,6 +6,7 @@ import { useSidebar } from '../Context/SidebarContext';
 const Sidebar: React.FC<SidebarProps> = ({ titles, activeTitle, onTitleClick }) => {
   const sidebarRef = useRef<HTMLDivElement | null>(null);
   const { setActiveTitle } = useSidebar();
+  const [showArrows, setShowArrows] = useState(false);
 
   const switchSection = (title: string) => {
     if (activeTitle !== title) {
@@ -14,32 +15,50 @@ const Sidebar: React.FC<SidebarProps> = ({ titles, activeTitle, onTitleClick }) 
     }
   };
 
+  // Gère le défilement de la barre latérale pour afficher les flèches de défilement si nécessaire
+  const handleScroll = () => {
+    if (sidebarRef.current) {
+      // Détermine si les flèches de défilement doivent être affichées en fonction de la largeur du contenu et de la largeur visible du conteneur
+      const shouldDisplayArrows = sidebarRef.current.scrollWidth > sidebarRef.current.clientWidth;
+      console.log(shouldDisplayArrows, sidebarRef.current.scrollWidth, sidebarRef.current.clientWidth);
+      setShowArrows(shouldDisplayArrows); // Met à jour l'état pour afficher ou masquer les flèches de défilement
+    }
+  };
+
+  useEffect(() => {
+    // Ajoute un écouteur d'événements pour le redimensionnement de la fenêtre et initialise l'affichage des flèches de défilement
+    window.addEventListener('resize', handleScroll);
+    handleScroll(); // Appelle handleScroll pour initialiser l'affichage des flèches de défilement lors du premier rendu
+    return () => window.removeEventListener('resize', handleScroll); // Nettoie l'écouteur d'événements lors du démontage du composant
+  }, [titles]); // Réexécute handleScroll lorsque le contenu change
+
+  // Gère le défilement de la barre latérale lors du clic sur les flèches de défilement
   const scrollHandler = (dir: number) => {
     if (sidebarRef.current) {
-      // const scrollWidth = sidebarRef.current.scrollWidth;
-      console.log("old position:", sidebarRef.current.scrollLeft);
-      const scrollDistance = sidebarRef.current.offsetWidth * 0.25; // 25% de la largeur visible
+      // Calcule la distance de défilement en fonction de la largeur visible du conteneur
+      const scrollDistance = sidebarRef.current.offsetWidth * 0.25;
+      // Déplace la barre latérale en fonction de la direction (gauche ou droite)
       sidebarRef.current.scrollLeft += scrollDistance * dir;
-      console.log("new position:", sidebarRef.current.scrollLeft);
+      // Met à jour l'affichage des flèches de défilement après le défilement
+      handleScroll();
     }
   };
 
   return (
-    <div className='sidebar-container' ref={sidebarRef}>
-      <button className='left-arrow' onClick={() => scrollHandler(-1)}>&lt;</button>
-      <div className="sidebar">
+    <div className='sidebar-container'>
+      {showArrows && (
+        <button className='left-arrow' onClick={() => scrollHandler(-1)}>&lt;</button>
+      )}
+      <div className="sidebar" ref={sidebarRef}>
         {titles.map((title, index) => (
           <span onClick={() => switchSection(title)} className={activeTitle !== title ? "nav-link" : "nav-link active"} key={index}>
             {title}
           </span>
         ))}
       </div>
-      <button className='right-arrow' onClick={() => scrollHandler(1)}>&gt;</button>
-      {/* <div className="cart-button">
-        <span className="cart">
-          <img src="cart.svg" alt="cart" />
-        </span>
-      </div> */}
+      {showArrows && (
+        <button className='right-arrow' onClick={() => scrollHandler(1)}>&gt;</button>
+      )}
     </div>
   );
 };

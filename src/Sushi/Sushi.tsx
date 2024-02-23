@@ -351,11 +351,6 @@ export const Sushi = () => {
     "Sushis": sushiItems,
     "Plateaux": plateauxItems,
     "Signatures": signaturesItems,
-    "Tartar": tartareItems,
-    "Sashim": sashimiItems,
-    "Sushi": sushiItems,
-    "Plateau": plateauxItems,
-    "Signature": signaturesItems,
   };
 
   const keys = Object.keys(itemsList);
