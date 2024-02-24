@@ -8,6 +8,7 @@ import { Home } from './Home/Home';
 import { Topbar } from './Topbar/Topbar';
 import { SidebarProvider, useSidebar } from './Context/SidebarContext';
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 export const App = () =>
 {    
@@ -25,6 +26,7 @@ export const App = () =>
     return (
         <div className="app">
             <Analytics/>
+            <SpeedInsights/>
             <SidebarProvider>
                 <Topbar />
                 <Routes>
