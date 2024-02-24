@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4cc8d222.css",
-    "main.js": "/static/js/main.6cdb4d45.js",
+    "main.css": "/static/css/main.87782374.css",
+    "main.js": "/static/js/main.1dd81144.js",
     "static/media/Roman-Morrissey-DEMO.ttf.svg": "/static/media/Roman-Morrissey-DEMO.ttf.85d6f53b51bc7f9708a2.svg",
     "static/media/Roman-Morrissey-DEMO.ttf.eot": "/static/media/Roman-Morrissey-DEMO.ttf.3b45040320efe87c5c97.eot",
     "static/media/Roman-Morrissey-DEMO.ttf.woff": "/static/media/Roman-Morrissey-DEMO.ttf.29b17ed1e9a517c3a8bc.woff",
@@ -10,13 +10,12 @@
     "static/media/DancingScript-Regular.ttf": "/static/media/DancingScript-Regular.5e15416c2d596d51a588.ttf",
     "static/media/mathilde.otf": "/static/media/mathilde.98ef91a7c2f684912699.otf",
     "static/media/osaka-re.ttf": "/static/media/osaka-re.23e25886d1d44ce0348d.ttf",
-    "static/media/heart.png": "/static/media/heart.fa922e043a9717eb2a4b.png",
     "index.html": "/index.html",
-    "main.4cc8d222.css.map": "/static/css/main.4cc8d222.css.map",
-    "main.6cdb4d45.js.map": "/static/js/main.6cdb4d45.js.map"
+    "main.87782374.css.map": "/static/css/main.87782374.css.map",
+    "main.1dd81144.js.map": "/static/js/main.1dd81144.js.map"
   },
   "entrypoints": [
-    "static/css/main.4cc8d222.css",
-    "static/js/main.6cdb4d45.js"
+    "static/css/main.87782374.css",
+    "static/js/main.1dd81144.js"
   ]
 }

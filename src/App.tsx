@@ -6,7 +6,7 @@ import { Thai } from './Thai/Thai';
 import { Starter } from './Starter/Starter';
 import { Home } from './Home/Home';
 import { Topbar } from './Topbar/Topbar';
-import { SidebarProvider, useSidebar } from './Context/SidebarContext';
+import { SidebarProvider } from './Context/SidebarContext';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
@@ -22,7 +22,7 @@ export const App = () =>
 //             setShouldRenderSidebar(true);
 //         }
 //     }, [location]);
-    
+
     return (
         <div className="app">
             <Analytics/>

@@ -10,7 +10,7 @@ export const Sushi = () => {
 
   const yakitoriItems: SushiItemProps[] = [
     {
-      imageUrl: "ComingSoon.webp",
+      imageUrl: "coming-soon.jpg",
       title: "Yakitori X",
       description: "Sushi au saumon et à l'avocat.",
       price: "13.99",

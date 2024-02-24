@@ -33,7 +33,7 @@ const About = () => {
           src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10494.532785761863!2d2.3312477713351356!3d48.88426869136762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fbcab3be17d%3A0x233ab7aa5f8e2743!2sSabaidi%20sushi%20%26%20thai%20paris!5e0!3m2!1sen!2sfr!4v1708798206376!5m2!1sen!2sfr&data-streetview=true&data-style=border:0&data-zoom=${zoomLevel}&data-allowfullscreen="" data-loading="lazy" data-referrerpolicy="no-referrer-when-downgrade`}
         />
       </div>
-      <div className="zoom-control">
+      {/* <div className="zoom-control">
         <label htmlFor="zoom">Zoom:</label>
         <input
           type="range"
@@ -43,7 +43,7 @@ const About = () => {
           id="zoom"
           onChange={handleZoomChange}
         />
-      </div>
+      </div> */}
     </div>
   );
 };
