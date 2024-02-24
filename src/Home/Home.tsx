@@ -2,6 +2,7 @@ import React from 'react';
 import MenuItem from '../MenuItem/MenuItem';
 import { BestSellerItem, MenuItemProps } from '../interfaces';
 import BestSellers from '../BestSellers/BestSellers';
+import About from '../About/About';
 
 const submenu: MenuItemProps[] = [
   {
@@ -85,22 +86,7 @@ export const Home: React.FC = () => {
         </div>
       </div>
       <BestSellers items={BestSellersItems} />
-      <div className="section about-section">
-        <p className="about-info">
-          Retrouvez-nous sur vos plateformes préférées :
-        </p>
-        <div className="about-links">
-          <a target="_blank" rel="noopener noreferrer" href="https://www.just-eat.fr/menu/sabaidi">
-            <img src="justeat.png" alt="Just Eat" />
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://deliveroo.fr/fr/menu/Paris/9eme-opera/sabaidi-paris-9/">
-            <img src="deliveroo.png" alt="Deliveroo" />
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.ubereats.com/fr/store/sabaidi-paris-9/xwxmB55cWqaAKPh7RlwnTg?diningMode=DELIVERY&sc=SEARCH_SUGGESTION">
-            <img src="uber.png" alt="Uber Eats" />
-          </a>
-        </div>
-      </div>
+      <About />
     </div>
   );
 };

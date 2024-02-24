@@ -16,20 +16,19 @@ const Sidebar: React.FC<SidebarProps> = ({ titles, activeTitle, onTitleClick }) 
   };
 
   // Gère le défilement de la barre latérale pour afficher les flèches de défilement si nécessaire
-  const handleScroll = () => {
+  const displayArrows = () => {
     if (sidebarRef.current) {
       // Détermine si les flèches de défilement doivent être affichées en fonction de la largeur du contenu et de la largeur visible du conteneur
       const shouldDisplayArrows = sidebarRef.current.scrollWidth > sidebarRef.current.clientWidth;
-      console.log(shouldDisplayArrows, sidebarRef.current.scrollWidth, sidebarRef.current.clientWidth);
       setShowArrows(shouldDisplayArrows); // Met à jour l'état pour afficher ou masquer les flèches de défilement
     }
   };
 
   useEffect(() => {
     // Ajoute un écouteur d'événements pour le redimensionnement de la fenêtre et initialise l'affichage des flèches de défilement
-    window.addEventListener('resize', handleScroll);
-    handleScroll(); // Appelle handleScroll pour initialiser l'affichage des flèches de défilement lors du premier rendu
-    return () => window.removeEventListener('resize', handleScroll); // Nettoie l'écouteur d'événements lors du démontage du composant
+    window.addEventListener('resize', displayArrows);
+    displayArrows(); // Appelle handleScroll pour initialiser l'affichage des flèches de défilement lors du premier rendu
+    return () => window.removeEventListener('resize', displayArrows); // Nettoie l'écouteur d'événements lors du démontage du composant
   }, [titles]); // Réexécute handleScroll lorsque le contenu change
 
   // Gère le défilement de la barre latérale lors du clic sur les flèches de défilement
@@ -38,9 +37,14 @@ const Sidebar: React.FC<SidebarProps> = ({ titles, activeTitle, onTitleClick }) 
       // Calcule la distance de défilement en fonction de la largeur visible du conteneur
       const scrollDistance = sidebarRef.current.offsetWidth * 0.25;
       // Déplace la barre latérale en fonction de la direction (gauche ou droite)
+      sidebarRef.current.scrollBy({
+        left: scrollDistance * dir,
+        behavior: 'smooth',
+      });
       sidebarRef.current.scrollLeft += scrollDistance * dir;
+      console.log(sidebarRef.current.clientLeft);
       // Met à jour l'affichage des flèches de défilement après le défilement
-      handleScroll();
+      displayArrows();
     }
   };
 

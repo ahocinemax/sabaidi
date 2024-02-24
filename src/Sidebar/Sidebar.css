@@ -6,12 +6,33 @@
 	justify-content: flex-start;
 	box-sizing: content-box;
 	gap: 7%;
-	padding-left: 3%;
 	height: 50px;
-	width: 100%;
+	min-width: 100%;
 	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+	-webkit-overflow-scrolling: touch;
+	overflow-x: auto;
+	scroll-behavior: smooth;
 }
-
+.sidebar::-webkit-scrollbar {
+	width: 10px;
+	height: 4px;
+	top: 3px;
+	background-color: #f5f5f5;
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb {
+	background-color: #ccc;
+	border-radius: 19px;
+  }
+  
+  .sidebar::-webkit-scrollbar-track {
+	background-color: #f5f5f5;
+  }
+  
+  .sidebar::-webkit-scrollbar-button {
+	width: 0;
+	height: 0;
+  }
 .nav-link {
 	position: relative;
 	display: flex;
@@ -27,12 +48,16 @@
 }
 
 .nav-link:last-child {
-	padding-right: 3%;
+	padding-right: 7%;
+}
+
+.nav-link:first-child {
+	padding-left: 60px;
 }
 
 .cart-button {
 	width: 12%;
-	background-color: rgb(35, 55, 72);
+	background-color: #233748;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -46,10 +71,10 @@
 .sidebar-container {
 	display: flex;
 	flex-direction: row;
-	overflow-x: hidden;
+	/* overflow-x: auto; */
 	position: relative;
 	margin: auto;
-	width: 97%;
+	width: 100%;
 }
 
 .left-arrow, .right-arrow {
@@ -60,6 +85,7 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+	z-index: 100;
   }
   
   .left-arrow {
