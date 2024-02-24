@@ -7,6 +7,7 @@ import { Starter } from './Starter/Starter';
 import { Home } from './Home/Home';
 import { Topbar } from './Topbar/Topbar';
 import { SidebarProvider, useSidebar } from './Context/SidebarContext';
+import { Analytics } from "@vercel/analytics/react"
 
 export const App = () =>
 {    
@@ -23,6 +24,7 @@ export const App = () =>
     
     return (
         <div className="app">
+            <Analytics/>
             <SidebarProvider>
                 <Topbar />
                 <Routes>
