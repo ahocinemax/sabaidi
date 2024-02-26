@@ -343,10 +343,10 @@ export const Sushi = () => {
   ];
 
   const itemsList: Record<string, SushiItemProps[]> = {
+    "Tartare": tartareItems,
     "Yakitori": yakitoriItems,
     "Poké": pokeItems,
     "Chirachi": chirachiItems,
-    "Tartare": tartareItems,
     "Sashimi": sashimiItems,
     "Sushis": sushiItems,
     "Plateaux": plateauxItems,

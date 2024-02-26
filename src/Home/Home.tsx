@@ -14,7 +14,7 @@ const submenu: MenuItemProps[] = [
   {
     imageUrl: 'sushis2.png',
     linkTo: '/Sushis',
-    title: 'Sushis',
+    title: 'Jap\'',
     description: 'Découvrez nos sushis, makis, sashimis et autres spécialités. Signatures et compositions originales vous attendent',
   },
   {
@@ -24,7 +24,7 @@ const submenu: MenuItemProps[] = [
     description: 'Vos plat thailandais préférés: Pad Thai, Loc lac, Tigre qui pleure et bien d\'autres',
   },
   {
-    imageUrl: 'sodas.png',
+    imageUrl: 'dessert.png',
     linkTo: '/Desserts',
     title: 'Desserts',
     description: 'Boissons, cocktails et desserts pour agrémenter vos repas',
@@ -85,8 +85,8 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </div>
-      {/* <BestSellers items={BestSellersItems} /> */}
-      {/* <About /> */}
+      <BestSellers items={BestSellersItems} />
+      <About />
     </div>
   );
 };

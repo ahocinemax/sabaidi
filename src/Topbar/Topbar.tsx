@@ -36,7 +36,7 @@ export const Topbar: React.FC = () => {
                 {isActive && (
                     <div className="left">
                     <Link to="/Starters">Starters</Link>
-                    <Link to="/Sushis">Sushis</Link>
+                    <Link to="/Sushis">Jap'</Link>
                     </div>
                 )}
                 <Link to={'/'} className='logo'>
