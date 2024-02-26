@@ -6,16 +6,12 @@ import { MenuItemProps } from '../interfaces';
 
 const MenuItem: React.FC<MenuItemProps> = ({ imageUrl, linkTo, title, description }) => {
   return (
-    <div className="MenuItem">
-      <h1 className="title">{title}</h1>
-      <Link to={linkTo} className="MenuLink">
+    <Link to={linkTo} className="MenuLink">
+      <div className="MenuItem">
+        <h1 className="title">{title}</h1>
         <img className="MenuItemImage" src={imageUrl} alt="Submenu item" />
-        <div className="TextOverlay">
-          {/* <p>{title}</p>
-          <p>{description}</p> */}
-        </div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };
 

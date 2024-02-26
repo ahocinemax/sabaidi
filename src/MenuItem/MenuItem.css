@@ -2,22 +2,19 @@
     overflow: clip;
     border-radius: 8px;
     cursor: pointer;
-    width: 20%;
-    height: min-content;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #ffefcdb3;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .title {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 12px;
-    font-family: 'Mathilde', cursive;
-    font-size: 3rem;
-    font-weight: bolder;
+    font-family: cursive;
+    font-size: 2.3rem;
     margin-top: 12px;
+    padding-bottom: 12px;
+    color: #fff;
 }
 
 .MenuLink {
