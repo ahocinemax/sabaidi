@@ -11,21 +11,66 @@ export const Sushi = () => {
   const yakitoriItems: SushiItemProps[] = [
     {
       imageUrl: "coming-soon.jpg",
-      title: "Yakitori X",
-      description: "Sushi au saumon et à l'avocat.",
-      price: "13.99",
+      title: "Boeuf fromage",
+      description: "2 brochettes de boeuf et fromage.",
+      price: "5.50",
     },
     {
       imageUrl: "coming-soon.jpg",
-      title: "Yakitori X",
-      description: "Sushi au saumon et à l'avocat.",
-      price: "13.99",
+      title: "Boeuf fromage pané",
+      description: "2 brochettes panées de boeuf et fromage.",
+      price: "6.20",
     },
     {
       imageUrl: "coming-soon.jpg",
-      title: "Yakitori X",
-      description: "Sushi au saumon et à l'avocat.",
-      price: "13.99",
+      title: "Poulet caramélisé",
+      description: "2 brochettes de poulet haché caramélisées.",
+      price: "4.50",
+    },
+    {
+      imageUrl: "coming-soon.jpg",
+      title: "Poulet mariné",
+      description: "2 brochettes de poulet mariné.",
+      price: "5.20",
+    },
+    {
+      imageUrl: "coming-soon.jpg",
+      title: "Saumon",
+      description: "2 brochettes de saumon grillé.",
+      price: "5.20",
+    },
+  ];
+
+  const tartareItems: SushiItemProps[] = [
+    {
+      imageUrl: "Jap/tartare-ceviche-2.JPG",
+      title: "Poulet mayo avocat cheese",
+      description: "Tartare de poulet à la mayonnaise, avocat et fromage.",
+      price: "9.90",
+    },
+    {
+      imageUrl: "Jap/tartare-ceviche.JPG",
+      title: "Saumon mango ciboulette spicy",
+      description: "Tartare de saumon à la mangue, ciboulette et épices.",
+      price: "10.90",
+    },
+    {
+      imageUrl: "Jap/tartare-ceviche-2.JPG",
+      title: "Saumon snacké avocat cheese",
+      description: "Tartare de saumon snacké à l'avocat et fromage.",
+      price: "10.90",
+    },
+    {
+      imageUrl: "Jap/tartare-ceviche.JPG",
+      title: "Thon cuit mayo avocat",
+      description: "Tartare de thon cuit à la mayonnaise et avocat.",
+      price: "12.90",
+    },
+    {
+      imageUrl: "Jap/tartare-ceviche.JPG",
+      title: "Saumon avocat ceviche",
+      description: "Tartare de saumon et d'avocat façon ceviche, avec mangue, oignon rouge, menthe, coriandre, ciboulette, citron et 7 épices.",
+      price: "12.90",
     },
   ];
 
@@ -33,37 +78,37 @@ export const Sushi = () => {
     {
       imageUrl: "Jap/poke-chicken-2.JPG",
       title: "Poulet",
-      description: "Sushi au thon épicé et à l'avocat.",
+      description: "Poulet croustillant, avocat, carotte, concombre, cheese, oignon frit, oignon rouge, ciboulette, tomate cerise, sauce maison mayo spicy.",
       price: "12.90",
     },
     {
       imageUrl: "coming-soon.jpg",
       title: "Thaï",
-      description: "Sushi au saumon et à l'avocat.",
+      description: "Poulet thaï saté, avocat, carotte, poivrons, cacahuètes, oignon frit, oignon rouge, pousse de soja, tomate cerise, sauce maison mayo spicy.",
       price: "13.90",
     },
     {
       imageUrl: "Jap/poke-saumon-2.JPG",
       title: "Saumon",
-      description: "Sushi avec avocat et crevette.",
+      description: "Saumon frais, avocat, mangue, concombre, edamame, oignon rouge, oignon frit, ciboulette, tomate cerise, sauce teriyaki.",
       price: "13.90",
     },
     {
       imageUrl: "coming-soon.jpg",
       title: "Saumon tataki",
-      description: "Sushi au saumon et à l'avocat.",
+      description: "Saumon tataki, avocat, mangue, concombre, edamame, oignon rouge, oignon frit, ciboulette, tomate cerise, sauce sésame, sauce teriyaki.",
       price: "13.90",
     },
     {
       imageUrl: "coming-soon.jpg",
       title: "Pavé de saumon",
-      description: "Sushi au saumon et à l'avocat.",
+      description: "Pavé de saumon, avocat, mangue, concombre, edamame, oignon frit, oignon rouge, ciboulette, tomate cerise, sauce teriyaki.",
       price: "14.90",
     },
     {
       imageUrl: "Jap/poke-crevette.JPG",
       title: "Crevette",
-      description: "Sushi au saumon et à l'avocat.",
+      description: "Crevettes fraîches & tempura, avocat, iceberg, concombre, cheese, oignon frit, ciboulette, tomate cerise, sauce maison mayo spicy.",
       price: "14.90",
     },
   ];
@@ -72,65 +117,32 @@ export const Sushi = () => {
     {
       imageUrl: "coming-soon.jpg",
       title: "Poulet mayo ou thon cuit avocat",
-      description: "Sushi au saumon et à l'avocat.",
+      description: "Chirashi composé de poulet mariné à la mayonnaise ou de thon cuit, accompagné d'avocat et de riz vinaigré.",
       price: "12.90",
     },
     {
       imageUrl: "coming-soon.jpg",
       title: "Poulet croustillant avocat",
-      description: "Sushi au saumon et à l'avocat.",
+      description: "Chirashi de poulet croustillant et d'avocat, accompagné de riz vinaigré.",
       price: "13.90",
     },
     {
       imageUrl: "coming-soon.jpg",
       title: "Saumon",
-      description: "Sushi au saumon et à l'avocat.",
+      description: "Chirashi de saumon cru, accompagné de riz vinaigré.",
       price: "14.90",
     },
     {
       imageUrl: "coming-soon.jpg",
       title: "Saumon avocat",
-      description: "Sushi au saumon et à l'avocat.",
+      description: "Chirashi classique de saumon et d'avocat, accompagné de riz vinaigré.",
       price: "15.90",
     },
     {
       imageUrl: "coming-soon.jpg",
       title: "Saumon snacké avocat",
-      description: "Sushi au saumon et à l'avocat.",
+      description: "Chirashi de saumon snacké et d'avocat, accompagné de riz vinaigré.",
       price: "16.20",
-    },
-  ];
-
-  const tartareItems: SushiItemProps[] = [
-    {
-      imageUrl: "Jap/tartare-ceviche-2.JPG",
-      title: "Poulet mayo avocat cheese",
-      description: "Sushi au saumon et à l'avocat.",
-      price: "9.90",
-    },
-    {
-      imageUrl: "Jap/tartare-ceviche.JPG",
-      title: "Saumon mango ciboulette spicy",
-      description: "Sushi au saumon et à l'avocat.",
-      price: "10.90",
-    },
-    {
-      imageUrl: "Jap/tartare-ceviche-2.JPG",
-      title: "Saumon snacké avocat cheese",
-      description: "Sushi au saumon et à l'avocat.",
-      price: "10.90",
-    },
-    {
-      imageUrl: "Jap/tartare-ceviche.JPG",
-      title: "Thon cuit mayo avocat",
-      description: "mangue, oignon rouge, menthe, coriandre, ciboulette, citron, 7 épices.",
-      price: "12.90",
-    },
-    {
-      imageUrl: "Jap/tartare-ceviche.JPG",
-      title: "Thon cuit mayo avocat",
-      description: "mangue, oignon rouge, menthe, coriandre, ciboulette, citron, 7 épices.",
-      price: "12.90",
     },
   ];
 
@@ -138,71 +150,71 @@ export const Sushi = () => {
     {
       imageUrl: "coming-soon.jpg",
       title: "Saumon mango ciboulette spicy",
-      description: "Sushi au saumon et à l'avocat.",
+      description: "Sashimi de saumon cru, accompagné de mangue, de ciboulette et d'une sauce épicée.",
       price: "10.90",
     },
     {
       imageUrl: "coming-soon.jpg",
       title: "Saumon snacké avocat cheese",
-      description: "Sushi au saumon et à l'avocat.",
+      description: "Sashimi de saumon snacké, servi avec du fromage et de l'avocat.",
       price: "10.90",
     },
     {
       imageUrl: "coming-soon.jpg",
       title: "Poulet mayo avocat cheese",
-      description: "Sushi au saumon et à l'avocat.",
+      description: "Tartare de poulet à la mayonnaise, à l'avocat et au fromage.",
       price: "9.90",
     },
     {
       imageUrl: "coming-soon.jpg",
       title: "Thon cuit mayo avocat",
-      description: "mangue, oignon rouge, menthe, coriandre, ciboulette, citron, 7 épices.",
+      description: "Sashimi de thon cuit à la mayonnaise, accompagné d'avocat.",
       price: "12.90",
     },
   ]
 
   const sushiItems: SushiItemProps[] = [
     {
-      imageUrl: "coming-soon.jpg",
-      title: "Sushi X",
-      description: "Sushi avec avocat et crevette.",
-      price: "14.99",
+      imageUrl: "Jap/sushi-tacos.JPG",
+      title: "Sushi tacos saumon spicy avocat",
+      description: "Coupe de riz pané garnie au saumon épicé et à l'avocat.",
+      price: "8.90",
+    },
+    {
+      imageUrl: "Jap/sushi-tacos.JPG",
+      title: "Sushi tacos poulet croustillant cheese avocat",
+      description: "Coupe de riz pané garnie de poulet croustillant, de fromage et d'avocat.",
+      price: "8.90",
+    },
+    {
+      imageUrl: "Jap/sushi-tacos.JPG",
+      title: "Sushi tacos crabe spicy avocat cheese",
+      description: "Coupe de riz pané garnie de chair de crabe épicée, d'avocat et de fromage.",
+      price: "8.90",
     },
     {
       imageUrl: "coming-soon.jpg",
-      title: "Sushi X",
-      description: "Sushi au thon épicé, une explosion de saveurs.",
-      price: "15.99",
+      title: "Sushi saumon",
+      description: "Nigiri de saumon cru.",
+      price: "3.90",
     },
     {
       imageUrl: "coming-soon.jpg",
-      title: "Sushi X",
-      description: "Sushi au saumon et à l'avocat.",
-      price: "13.99",
+      title: "Sushi saumon crispy",
+      description: "Maki ou uramaki de saumon croustillant.",
+      price: "3.90",
     },
     {
       imageUrl: "coming-soon.jpg",
-      title: "Sushi X",
-      description: "Sushi au saumon et à l'avocat.",
-      price: "13.99",
+      title: "Sushi saumon cheese",
+      description: "Nigiri de saumon cru garni de fromage.",
+      price: "3.90",
     },
     {
       imageUrl: "coming-soon.jpg",
-      title: "Sushi X",
-      description: "Sushi au saumon et à l'avocat.",
-      price: "13.99",
-    },
-    {
-      imageUrl: "coming-soon.jpg",
-      title: "Sushi X",
-      description: "Sushi au saumon et à l'avocat.",
-      price: "13.99",
-    },
-    {
-      imageUrl: "coming-soon.jpg",
-      title: "Sushi X",
-      description: "Sushi au saumon et à l'avocat.",
-      price: "13.99",
+      title: "Sushi saumon braisé",
+      description: "Nigiri de saumon braisé.",
+      price: "3.90",
     },
   ];
 
