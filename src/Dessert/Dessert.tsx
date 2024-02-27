@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SushiItemProps } from '../interfaces';
+import { Helmet } from 'react-helmet';
 
 export const Dessert = () => {
     const dessertsItems: SushiItemProps[] = [
@@ -63,24 +64,27 @@ export const Dessert = () => {
           description: "Des nems revisités, à la mangue et au chocolat, pour un dessert exotique.",
           price: "5.50",
         },
-      ];
-      
-      
-        return (
-            <div className='container-thai'>
-                <h2>Desserts</h2>
-                <div className='thai-items'>
-                    {dessertsItems.map((item, index) => (
-                        <div key={index} className="menu-item">
-                            <img className="ItemImage" src={item.imageUrl} alt={item.title} />
-                            <div className="ItemDetails">
-                                <h3>{item.title}</h3>
-                                <p>{item.description}</p>
-                                <p>{item.price}€</p>
-                            </div>
+    ];
+
+    useEffect(() => {
+        document.title = "Desserts - Sabaidi";
+    }, []);
+
+    return (
+        <div className='container-thai'>
+            <h2>Desserts</h2>
+            <div className='thai-items'>
+                {dessertsItems.map((item, index) => (
+                    <div key={index} className="menu-item">
+                        <img className="ItemImage" src={item.imageUrl} alt={item.title} />
+                        <div className="ItemDetails">
+                            <h3>{item.title}</h3>
+                            <p>{item.description}</p>
+                            <p>{item.price}€</p>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
-        );
+        </div>
+    );
 }

@@ -1,5 +1,5 @@
 // Thai.tsx
-import React, { useContext, useState } from "react";
+import React, { useEffect } from "react";
 import "./Thai.css";
 import { SushiItemProps, SidebarProps } from "../interfaces";
 import "../styles/fonts.css";
@@ -144,6 +144,10 @@ export const Thai: React.FC = () => {
     "Riz": rizItems,
     "Nouilles": nouillesItems,
   };
+
+  useEffect(() => {
+    document.title = "Menu Thaï - Sabaidi";
+  }, []);
 
   const keys = Object.keys(itemsList);
   const firstKey = keys.length > 0 ? keys[0] : "";

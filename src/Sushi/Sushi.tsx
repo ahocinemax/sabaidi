@@ -379,7 +379,11 @@ export const Sushi = () => {
   const handleTitleClick = (title: string) => {
     setActiveTitle(title);
   };
-          
+
+  useEffect(() => {
+    document.title = "Menu Jap' - Sabaidi";
+  }, []);
+
   return (
     <div className="menu-section">
       <h2>Menu Japonais</h2>

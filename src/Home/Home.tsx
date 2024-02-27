@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import MenuItem from '../MenuItem/MenuItem';
 import { BestSellerItem, MenuItemProps } from '../interfaces';
 import BestSellers from '../BestSellers/BestSellers';
@@ -8,7 +8,7 @@ const submenu: MenuItemProps[] = [
   {
     imageUrl: 'starters.png',
     linkTo: '/Starters',
-    title: 'Starters',
+    title: 'Entrées',
     description: 'Vous trouverez ici nos entrées chaudes et froides, ainsi que nos soupes et salades',
   },
   {
@@ -65,6 +65,10 @@ const BestSellersItems: BestSellerItem[] = [
 ];
 
 export const Home: React.FC = () => {
+  useEffect(() => {
+    document.title = "Accueil - Sabaidi";
+}, []);
+
   return (
     <div className="main-container">
       <div className="section home">

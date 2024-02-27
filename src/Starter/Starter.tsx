@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SushiItemProps } from '../interfaces';
 
 export const Starter = () => {
@@ -70,6 +70,10 @@ export const Starter = () => {
       description: "Soupe miso traditionnelle japonaise, au tofu et algues.",
       price: "3.90",
   }];
+
+  useEffect(() => {
+    document.title = "Entrées - Sabaidi";
+  }, []);
 
   return (
       <div className='container-thai'>
