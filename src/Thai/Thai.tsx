@@ -5,6 +5,7 @@ import { SushiItemProps, SidebarProps } from "../interfaces";
 import "../styles/fonts.css";
 import Sidebar from "../Sidebar/Sidebar";
 import { useSidebar } from "../Context/SidebarContext";
+import { Helmet } from "react-helmet";
 
 const ThaiItem: React.FC<SushiItemProps> = ({ title, price, description, imageUrl }) => {
   return (
@@ -145,10 +146,6 @@ export const Thai: React.FC = () => {
     "Nouilles": nouillesItems,
   };
 
-  useEffect(() => {
-    document.title = "Menu Thaï - Sabaidi";
-  }, []);
-
   const keys = Object.keys(itemsList);
   const firstKey = keys.length > 0 ? keys[0] : "";
 
@@ -166,6 +163,9 @@ export const Thai: React.FC = () => {
 
   return (
     <div className="container-thai">
+      <Helmet>
+        <title>Menu Thaï - Sabaidi</title>
+      </Helmet>
       <h2>Menu Thai</h2>
       <Sidebar titles={submenus.titles} activeTitle={submenus.activeTitle} onTitleClick={handleTitleClick}/>
       <div className="thai-items">

@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Sushi.css";
 import "../styles/fonts.css";
 import { SushiItemProps, SidebarProps } from "../interfaces";
 import Sidebar from "../Sidebar/Sidebar";
 import { useSidebar } from "../Context/SidebarContext";
+import { Helmet } from "react-helmet";
 
 export const Sushi = () => {
   const { activeTitle, setActiveTitle } = useSidebar();
@@ -380,12 +381,11 @@ export const Sushi = () => {
     setActiveTitle(title);
   };
 
-  useEffect(() => {
-    document.title = "Menu Jap' - Sabaidi";
-  }, []);
-
   return (
     <div className="menu-section">
+      <Helmet>
+        <title>Menu Jap' - Sabaidi</title>
+      </Helmet>
       <h2>Menu Japonais</h2>
       <Sidebar titles={submenus.titles} activeTitle={submenus.activeTitle} onTitleClick={handleTitleClick}/>
       <div className="menu-items">

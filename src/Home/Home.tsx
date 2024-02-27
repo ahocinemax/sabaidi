@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import MenuItem from '../MenuItem/MenuItem';
 import { BestSellerItem, MenuItemProps } from '../interfaces';
 import BestSellers from '../BestSellers/BestSellers';
 import About from '../About/About';
+import { Helmet } from 'react-helmet';
 
 const submenu: MenuItemProps[] = [
   {
@@ -65,12 +66,13 @@ const BestSellersItems: BestSellerItem[] = [
 ];
 
 export const Home: React.FC = () => {
-  useEffect(() => {
-    document.title = "Accueil - Sabaidi";
-}, []);
 
   return (
     <div className="main-container">
+      <Helmet>
+        <title>Accueil - Sabaidi</title>
+      </Helmet>
+
       <div className="section home">
         <div className='MenuContainer'>
           <div className='menu-title-container'><h1 className='menu-h1'>Découvez notre menu</h1></div>

@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { SushiItemProps } from '../interfaces';
+import { Helmet } from 'react-helmet';
 
 export const Starter = () => {
 
@@ -71,12 +72,12 @@ export const Starter = () => {
       price: "3.90",
   }];
 
-  useEffect(() => {
-    document.title = "Entrées - Sabaidi";
-  }, []);
-
   return (
       <div className='container-thai'>
+        <Helmet>
+          <title>Menu Jap' - Sabaidi</title>
+        </Helmet>
+
           <h2>Entrées</h2>
           <div className='thai-items'>
               {entreesItems.map((item, index) => (

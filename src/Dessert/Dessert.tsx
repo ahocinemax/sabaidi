@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { SushiItemProps } from '../interfaces';
 import { Helmet } from 'react-helmet';
 
@@ -66,12 +66,12 @@ export const Dessert = () => {
         },
     ];
 
-    useEffect(() => {
-        document.title = "Desserts - Sabaidi";
-    }, []);
-
     return (
         <div className='container-thai'>
+            <Helmet>
+                <title>Desserts - Sabaidi</title>
+            </Helmet>
+
             <h2>Desserts</h2>
             <div className='thai-items'>
                 {dessertsItems.map((item, index) => (
