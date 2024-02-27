@@ -85,8 +85,8 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </div>
-      <BestSellers items={BestSellersItems} />
-      <About />
+      {/* <BestSellers items={BestSellersItems} /> */}
+      {/* <About /> */}
     </div>
   );
 };
