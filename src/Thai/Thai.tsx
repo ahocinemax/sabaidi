@@ -27,25 +27,25 @@ export const Thai: React.FC = () => {
     {
       title: "Gyoza",
       description: "Bouchées vapeur au poulet ou aux légumes.",
-      imageUrl: "Starters/gyozas.JPG",
+      imageUrl: "Starters/gyozas.jpg",
       price: "5.20€",
     },
     {
       title: "Tempura",
       description: "Crevettes décortiquées panées.",
-      imageUrl: "Starters/tempuras.JPG",
+      imageUrl: "Starters/tempuras.jpg",
       price: "6.20€",
     },
     {
       title: "Crevette dynamite",
       description: "Crevettes décortiquées, accompagnées de leur sauce dynamite.",
-      imageUrl: "Starters/crevette-dynamite.JPG",
+      imageUrl: "Starters/crevette-dynamite.jpg",
       price: "8.90€",
     },
     {
       title: "Poulet dynamite",
       description: "Tendres morceaux de poulet, accompagnés de leur sauce dynamite.",
-      imageUrl: "Starters/poulet-dynamite.JPG",
+      imageUrl: "Starters/poulet-dynamite.jpg",
       price: "7.50€",
     },
   ];
@@ -54,13 +54,13 @@ export const Thai: React.FC = () => {
     {
       title: "Khao Prat",
       description: "Nouilles sautées au wok avec des crevettes, du tofu, des arachides et de la lime.",
-      imageUrl: "Thai/khao-prat.JPG",
+      imageUrl: "Thai/khao-prat.jpg",
       price: "12.90€",
     },
     {
       title: "Loklak",
       description: "Nouilles sautées au wok avec des crevettes, du tofu, des arachides et de la lime.",
-      imageUrl: "Thai/loc lac.JPG",
+      imageUrl: "Thai/loc lac.jpg",
       price: "14.90€",
     },
     {
@@ -72,43 +72,43 @@ export const Thai: React.FC = () => {
     {
       title: "Crevettes dynamite",
       description: "Nouilles sautées au wok avec des crevettes, du tofu, des arachides et de la lime.",
-      imageUrl: "Thai/crevette-dynamite-1.JPG",
+      imageUrl: "Thai/crevette-dynamite-1.jpg",
       price: "13.90€",
     },
     {
       title: "Chicken dynamite",
       description: "Nouilles sautées au wok avec des crevettes, du tofu, des arachides et de la lime.",
-      imageUrl: "Thai/chicken-dynamite-1.JPG",
+      imageUrl: "Thai/chicken-dynamite-1.jpg",
       price: "13.90€",
     },
     {
       title: "Basilic Rice",
       description: "Nouilles sautées au wok avec des crevettes, du tofu, des arachides et de la lime.",
-      imageUrl: "Thai/basilic-rice-1.JPG",
+      imageUrl: "Thai/basilic-rice-1.jpg",
       price: "14.90€",
     },
     {
       title: "Riz cantonais",
       description: "Nouilles sautées au wok avec des crevettes, du tofu, des arachides et de la lime.",
-      imageUrl: "Thai/riz-cantonais-1.JPG",
+      imageUrl: "Thai/riz-cantonais-1.jpg",
       price: "12.90€",
     },
     {
       title: "Keng kiew wan",
       description: "Nouilles sautées au wok avec des crevettes, du tofu, des arachides et de la lime.",
-      imageUrl: "Thai/keng-kiew-wan-1.JPG",
+      imageUrl: "Thai/keng-kiew-wan-1.jpg",
       price: "12.90€",
     },
     {
       title: "Massaman",
       description: "Nouilles sautées au wok avec des crevettes, du tofu, des arachides et de la lime.",
-      imageUrl: "Thai/massaman-1.JPG",
+      imageUrl: "Thai/massaman-1.jpg",
       price: "13.90€",
     },
     {
       title: "Tigre qui pleure",
       description: "Nouilles sautées au wok avec des crevettes, du tofu, des arachides et de la lime.",
-      imageUrl: "Thai/tigre-qui-pleure-1.JPG",
+      imageUrl: "Thai/tigre-qui-pleure-1.jpg",
       price: "14.90€",
     },
   ];
@@ -117,25 +117,25 @@ export const Thai: React.FC = () => {
     {
       title: "Pad thaï",
       description: "Soupe épicée aux crevettes avec des champignons, de la citronnelle et des épices.",
-      imageUrl: "Thai/pad-thai-1.JPG",
+      imageUrl: "Thai/pad-thai-1.jpg",
       price: "12.90€",
     },
     {
       title: "Udon",
       description: "Soupe épicée aux crevettes avec des champignons, de la citronnelle et des épices.",
-      imageUrl: "Thai/udon-1.JPG",
+      imageUrl: "Thai/udon-1.jpg",
       price: "12.90€",
     },
     {
       title: "Mi prat",
       description: "Soupe épicée aux crevettes avec des champignons, de la citronnelle et des épices.",
-      imageUrl: "Thai/mi-prat-1.JPG",
+      imageUrl: "Thai/mi-prat-1.jpg",
       price: "12.90€",
     },
     {
       title: "Bobun",
       description: "Soupe épicée aux crevettes avec des champignons, de la citronnelle et des épices.",
-      imageUrl: "Thai/bobun2.JPG",
+      imageUrl: "Thai/bobun2.jpg",
       price: "11.90€",
     },
   ];
