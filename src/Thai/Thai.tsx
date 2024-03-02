@@ -23,33 +23,6 @@ const ThaiItem: React.FC<SushiItemProps> = ({ title, price, description, imageUr
 export const Thai: React.FC = () => {
   const { activeTitle, setActiveTitle } = useSidebar();
 
-  const entreesItems: SushiItemProps[] = [
-    {
-      title: "Gyoza",
-      description: "Bouchées vapeur au poulet ou aux légumes.",
-      imageUrl: "Starters/gyozas.jpg",
-      price: "5.20€",
-    },
-    {
-      title: "Tempura",
-      description: "Crevettes décortiquées panées.",
-      imageUrl: "Starters/tempuras.jpg",
-      price: "6.20€",
-    },
-    {
-      title: "Crevette dynamite",
-      description: "Crevettes décortiquées, accompagnées de leur sauce dynamite.",
-      imageUrl: "Starters/crevette-dynamite.jpg",
-      price: "8.90€",
-    },
-    {
-      title: "Poulet dynamite",
-      description: "Tendres morceaux de poulet, accompagnés de leur sauce dynamite.",
-      imageUrl: "Starters/poulet-dynamite.jpg",
-      price: "7.50€",
-    },
-  ];
-
   const rizItems: SushiItemProps[] = [
     {
       title: "Khao Prat",

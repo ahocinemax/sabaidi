@@ -6,6 +6,8 @@
     width: 100%;
     transition: transform 3s ease-in-out;
     padding-bottom: 23px;
+    background-color: #d60b76;
+    border-radius: 10px;
 }
 
 .topbar img {
@@ -38,7 +40,7 @@
 
 .navigation-links a {
     text-decoration: none;
-    color: #333333;
+    color: #efefef;
     font-weight: bold;
     font-size: 2em;
 }

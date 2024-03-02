@@ -7,13 +7,13 @@ import { Helmet } from 'react-helmet';
 
 const submenu: MenuItemProps[] = [
   {
-    imageUrl: 'starters.png',
+    imageUrl: 'starter.png',
     linkTo: '/Starters',
     title: 'Entrées',
     description: 'Vous trouverez ici nos entrées chaudes et froides, ainsi que nos soupes et salades',
   },
   {
-    imageUrl: 'sushis2.png',
+    imageUrl: 'jap.png',
     linkTo: '/Sushis',
     title: 'Jap\'',
     description: 'Découvrez nos sushis, makis, sashimis et autres spécialités. Signatures et compositions originales vous attendent',
@@ -25,7 +25,7 @@ const submenu: MenuItemProps[] = [
     description: 'Vos plat thailandais préférés: Pad Thai, Loc lac, Tigre qui pleure et bien d\'autres',
   },
   {
-    imageUrl: 'dessert.png',
+    imageUrl: 'dessrt.png',
     linkTo: '/Desserts',
     title: 'Desserts',
     description: 'Boissons, cocktails et desserts pour agrémenter vos repas',

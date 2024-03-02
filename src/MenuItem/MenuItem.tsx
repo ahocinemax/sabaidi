@@ -8,7 +8,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ imageUrl, linkTo, title, descriptio
   return (
     <Link to={linkTo} className="MenuLink">
       <div className="MenuItem">
-        <h1 className="title">{title}</h1>
+        {/* <h1 className="title">{title}</h1> */}
         <img className="MenuItemImage" src={imageUrl} alt="Submenu item" />
       </div>
     </Link>
