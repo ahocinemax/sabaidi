@@ -114,7 +114,6 @@ export const Thai: React.FC = () => {
   ];
 
   const itemsList: Record<string, SushiItemProps[]> = {
-    // "Entrées": entreesItems,
     "Riz": rizItems,
     "Nouilles": nouillesItems,
   };
@@ -139,7 +138,7 @@ export const Thai: React.FC = () => {
       <Helmet>
         <title>Menu Thaï - Sabaidi</title>
       </Helmet>
-      <h2>Menu Thai</h2>
+      <h2>Menu Thaïlandais</h2>
       <Sidebar titles={submenus.titles} activeTitle={submenus.activeTitle} onTitleClick={handleTitleClick}/>
       <div className="thai-items">
         {activeSubmenu?.map((item, index) => (
