@@ -78,19 +78,19 @@ export const Starter = () => {
           <title>Menu Jap' - Sabaidi</title>
         </Helmet>
 
-          <h2>Entrées</h2>
-          <div className='thai-items'>
-              {entreesItems.map((item, index) => (
-                  <div key={index} className="menu-item">
-                      <img className="ItemImage" src={item.imageUrl} alt={item.title} />
-                      <div className="ItemDetails">
-                          <h3>{item.title}</h3>
-                          <p>{item.description}</p>
-                          <p>{item.price}€</p>
-                      </div>
-                  </div>
-              ))}
-          </div>
-      </div>
+        <h2>Entrées</h2>
+        <div className='thai-items'>
+            {entreesItems.map((item, index) => (
+                <div key={index} className="menu-item">
+                    <img className="ItemImage" src={item.imageUrl} alt={item.title} />
+                    <div className="ItemDetails">
+                        <h3>{item.title}</h3>
+                        <p>{item.description}</p>
+                        <p>{item.price}€</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
   );
 }

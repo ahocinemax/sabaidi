@@ -1,5 +1,5 @@
 .MenuItem {
-    overflow: clip;
+    overflow: hidden;
     border-radius: 8px;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 0.3s ease-in-out;
 }
 
 .title {
@@ -21,7 +22,6 @@
     position:relative;
     display: flex;
     text-decoration: none;
-    /* border-radius: 8px; */
 }
 
 .MenuItemImage {
@@ -72,3 +72,36 @@
     gap: 7px;
     justify-content: center;
 }
+
+@media (max-width: 580px) {
+    .menu-list {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .MenuItem {
+        width: 40%;
+        margin-bottom: 12px;
+        background-color: red;
+    }
+
+    .MenuItemImage {
+        height: 100%;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .TextOverlay p:not(.heading) {
+        font-size: 1.2em;
+    }
+
+    .TextOverlay p:last-child {
+        font-size: 1.2em;
+    }
+
+    .MenuContainer {
+        height: 100%;
+    }
+  }
