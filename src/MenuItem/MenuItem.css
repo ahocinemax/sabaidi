@@ -63,7 +63,7 @@
     height: 77vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     row-gap: 12px;
 }
 
@@ -76,18 +76,21 @@
 @media (max-width: 580px) {
     .menu-list {
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-evenly;
     }
   
     .MenuItem {
-        width: 40%;
         margin-bottom: 12px;
         background-color: red;
     }
 
-    .MenuItemImage {
-        height: 100%;
-    }
+    .menu-list>* {
+        flex: 0 0 43%;
+      }
+
+    /* .MenuItemImage { */
+        /* height: 100%; */
+    /* } */
 
     .title {
         font-size: 1.5rem;
