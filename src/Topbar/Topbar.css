@@ -53,3 +53,27 @@
 .navigation-links a:active {
     color: #007bff;
 }
+
+@media screen and (max-width: 768px) {
+    .navigation-links {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .right {
+        gap: 0;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        left: 0;
+    }
+
+    .left {
+        gap: 0;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        right: 0;
+    }
+    
+}
