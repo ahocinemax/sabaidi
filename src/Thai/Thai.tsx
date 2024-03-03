@@ -39,7 +39,7 @@ export const Thai: React.FC = () => {
     {
       title: "Poulet curry katsu",
       description: "Nouilles sautées au wok avec des crevettes, du tofu, des arachides et de la lime.",
-      imageUrl: "poulet curry katsu.jpg",
+      imageUrl: "Thai/poulet curry katsu.jpg",
       price: "14.90€",
     },
     {
