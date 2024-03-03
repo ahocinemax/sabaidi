@@ -54,10 +54,14 @@
     color: #007bff;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 568px) {
     .navigation-links {
         width: 100%;
         justify-content: space-evenly;
+    }
+
+    .navigation-links a {
+        font-size: 1.2em;
     }
 
     .right {

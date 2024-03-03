@@ -143,8 +143,13 @@ font-weight: bold;
     width: 100%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 528px) {
     .container-thai h2 {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .ItemDetails p:last-child{
+        font-size: .7rem;
+        font-weight: bold;
     }
 }

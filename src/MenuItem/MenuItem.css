@@ -73,7 +73,7 @@
     justify-content: center;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 568px) {
     .menu-list {
       flex-wrap: wrap;
       justify-content: space-evenly;
