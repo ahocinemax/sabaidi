@@ -73,3 +73,14 @@
     margin-left: 20px;
     width: 40%;
 }
+
+@media screen and (max-width: 768px) {
+    .menu-item {
+        width: 90%;
+    }
+
+    .menu-item-content {
+        width: 100%;
+    }
+    
+}

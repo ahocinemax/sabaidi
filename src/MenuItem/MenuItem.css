@@ -60,7 +60,7 @@
 
 .MenuContainer {
     position: relative;
-    height: 77vh;
+    /* height: 77vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,7 +104,7 @@
         font-size: 1.2em;
     }
 
-    .MenuContainer {
+    /* .MenuContainer {
         height: 100%;
-    }
+    } */
   }
