@@ -156,4 +156,9 @@ font-weight: bold;
     .ItemDetails h3 {
         font-size: 1rem;
     }
+
+    .menu-item {
+        width: 90%;
+        flex-direction: column;
+    }
 }

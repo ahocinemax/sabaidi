@@ -77,6 +77,11 @@
 @media screen and (max-width: 528px) {
     .menu-item {
         width: 90%;
+        flex-direction: column-reverse;
+    }
+
+    .menu-item:nth-child(even) {
+        flex-direction: column-reverse;
     }
 
     .menu-item-content {
