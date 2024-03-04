@@ -94,4 +94,10 @@
   
   .right-arrow {
 	right: 0;
-  }
+}
+
+@media screen and (max-width: 528px) {
+	.nav-link {
+		font-size: .71rem;
+	}
+}

@@ -152,4 +152,8 @@ font-weight: bold;
         font-size: .7rem;
         font-weight: bold;
     }
+
+    .ItemDetails h3 {
+        font-size: 1rem;
+    }
 }
