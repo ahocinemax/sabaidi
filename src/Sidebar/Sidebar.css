@@ -100,4 +100,8 @@
 	.nav-link {
 		font-size: .71rem;
 	}
+
+	.left-arrow, .right-arrow {
+		width: 23px;
+	}
 }
