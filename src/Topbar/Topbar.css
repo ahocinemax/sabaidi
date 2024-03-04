@@ -65,7 +65,7 @@
     }
 
     .right {
-        gap: 0;
+        gap: 25px;
         display: flex;
         position: relative;
         flex-direction: column;
@@ -73,7 +73,7 @@
     }
 
     .left {
-        gap: 0;
+        gap: 25px;
         display: flex;
         flex-direction: column;
         position: relative;
