@@ -31,7 +31,7 @@ export const App = () =>
                 <Topbar />
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/Sushis" element={<Sushi />} />
+                    <Route path="/Jap" element={<Sushi />} />
                     <Route path="/Desserts" element={<Dessert />} />
                     <Route path="/Thai" element={<Thai />} />
                     <Route path="/Starters" element={<Starter />} />
