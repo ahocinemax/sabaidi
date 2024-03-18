@@ -319,7 +319,7 @@ export const Sushi = () => {
     },
     {
       imageUrl: "Jap/roll-nachos-2.jpg",
-      title: "SR5. Nachos roll",
+      title: "SR5. Mexican roll",
       description: "Boeuf assaisonné, avocat, poivrons, spicy sauce, saumon braisé on the top.",
       price: "13.90",
     },
@@ -342,9 +342,9 @@ export const Sushi = () => {
       price: "13.90",
     },
     {
-      imageUrl: "coming-soon.jpg",
-      title: "SP4. Sumo Saint-Jacques",
-      description: "Surimi, avocat, cheese, crevettes, Saint Jacques braisés on the top.",
+      imageUrl: "rock'n'roll-2.jpg",
+      title: "SP4. Rock'n'Roll",
+      description: "Pas .",
       price: "14.90",
     },
     {
