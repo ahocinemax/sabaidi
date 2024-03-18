@@ -150,27 +150,27 @@ export const Sushi = () => {
   const sashimiItems : SushiItemProps[] = [
     {
       imageUrl: "coming-soon.jpg",
-      title: "Saumon mango ciboulette spicy",
-      description: "Sashimi de saumon cru, accompagné de mangue, de ciboulette et d'une sauce épicée.",
+      title: "Sashimi saumon (x5)",
+      description: "Sashimi de saumon cru, 5 généreuses pièces serives avec du riz.",
+      price: "6.50",
+    },
+    {
+      imageUrl: "coming-soon.jpg",
+      title: "Sashimi saumon (x15)",
+      description: "Sashimi de saumon cru, 15 généreuses pièces serives avec du riz.",
+      price: "16.50",
+    },
+    {
+      imageUrl: "coming-soon.jpg",
+      title: "Sashimi saumon mangue ciboulette",
+      description: "Sashimi de saumon cru et de mangue, relevé à la ciboulette. Servi avec du riz.",
       price: "10.90",
     },
     {
       imageUrl: "coming-soon.jpg",
-      title: "Saumon snacké avocat cheese",
-      description: "Sashimi de saumon snacké, servi avec du fromage et de l'avocat.",
-      price: "10.90",
-    },
-    {
-      imageUrl: "coming-soon.jpg",
-      title: "Poulet mayo avocat cheese",
-      description: "Tartare de poulet à la mayonnaise, à l'avocat et au fromage.",
-      price: "9.90",
-    },
-    {
-      imageUrl: "coming-soon.jpg",
-      title: "Thon cuit mayo avocat",
-      description: "Sashimi de thon cuit à la mayonnaise, accompagné d'avocat.",
-      price: "12.90",
+      title: "Tataki saumon (x15)",
+      description: "Sashimi de saumon snacké, accompagné de riz.",
+      price: "17.20",
     },
   ]
 
@@ -356,14 +356,14 @@ export const Sushi = () => {
   ];
 
   const itemsList: Record<string, SushiItemProps[]> = {
-    "Tartare": tartareItems,
-    "Yakitori": yakitoriItems,
+    "Signatures": signaturesItems,
+    "Plateaux": plateauxItems,
     "Poké": pokeItems,
+    "Yakitori": yakitoriItems,
+    "Tartare": tartareItems,
     "Chirachi": chirachiItems,
     "Sashimi": sashimiItems,
     "Sushis": sushiItems,
-    "Plateaux": plateauxItems,
-    "Signatures": signaturesItems,
   };
 
   const keys = Object.keys(itemsList);
