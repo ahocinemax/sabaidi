@@ -342,7 +342,7 @@ export const Sushi = () => {
       price: "13.90",
     },
     {
-      imageUrl: "rock'n'roll-2.jpg",
+      imageUrl: "Jap/rock'n'roll-2.jpg",
       title: "SP4. Rock'n'Roll",
       description: "Pas .",
       price: "14.90",
