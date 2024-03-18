@@ -14,7 +14,7 @@ const submenu: MenuItemProps[] = [
   },
   {
     imageUrl: 'jap.png',
-    linkTo: '/Sushis',
+    linkTo: '/Jap',
     title: 'Jap\'',
     description: 'Découvrez nos sushis, makis, sashimis et autres spécialités. Signatures et compositions originales vous attendent',
   },
