@@ -85,7 +85,7 @@ export const Home: React.FC = () => {
               description={item.description}
             />
           ))}
-            <div className="scrollbar" id="style-8">
+            <div className="scrollbar">
               {/* <img src="down-arrow.svg" alt="down" /> */}
             </div>
           </div>

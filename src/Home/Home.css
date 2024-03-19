@@ -61,8 +61,18 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: rgb(76, 86, 86);
     font-size: 1vw;
-    width: 98.4%;
     margin: auto;
     background-color: #edb8da;
     border-radius: 15px;
+}
+
+@media screen and (max-width: 568px) {
+    .main-container {
+        height: 80vh;
+    }
+
+    .section {
+        height: 77vh;
+    }
+    
 }

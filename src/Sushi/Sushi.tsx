@@ -5,6 +5,7 @@ import { SushiItemProps, SidebarProps } from "../interfaces";
 import Sidebar from "../Sidebar/Sidebar";
 import { useSidebar } from "../Context/SidebarContext";
 import { Helmet } from "react-helmet";
+import { DynamicContainer } from "../DynamicContainer/DynamicContainer";
 
 export const Sushi = () => {
   const { activeTitle, setActiveTitle } = useSidebar();
@@ -356,6 +357,7 @@ export const Sushi = () => {
   ];
 
   const itemsList: Record<string, SushiItemProps[]> = {
+    // "Compose ton roll": [],
     "Signatures": signaturesItems,
     "Plateaux": plateauxItems,
     "Poké": pokeItems,
@@ -389,16 +391,20 @@ export const Sushi = () => {
       <h2>Menu Japonais</h2>
       <Sidebar titles={submenus.titles} activeTitle={submenus.activeTitle} onTitleClick={handleTitleClick}/>
       <div className="menu-items">
-        {activeSubmenu?.map((item, index) => (
-          <div className="menu-item" key={index}>
-            <img src={item.imageUrl} alt="Sushi" />
-            <div className="menu-item-content">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              <p>{item.price}€</p>
+        {activeTitle === "Compose ton roll" ? 
+          <DynamicContainer className="compose-ton-roll-container" />
+            : 
+          ( activeSubmenu?.map((item, index) => (
+            <div className="menu-item" key={index}>
+              <img src={item.imageUrl} alt="Sushi" />
+              <div className="menu-item-content">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <p>{item.price}€</p>
+              </div>
             </div>
-          </div>
-        ))}
+          )))
+        }
       </div>
     </div>
   );

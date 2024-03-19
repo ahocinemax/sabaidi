@@ -48,3 +48,8 @@ export interface SidebarContextProps {
     activeTitle: string;
     setActiveTitle: (title: string) => void;
 }
+
+export interface DynamicContainerProps {
+    children?: React.ReactNode;
+    className?: string;
+}
