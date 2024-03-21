@@ -1,7 +1,7 @@
 import React from "react";
 import "./Sushi.css";
 import "../styles/fonts.css";
-import { SushiItemProps, SidebarProps } from "../interfaces";
+import { SushiItemProps, SidebarProps, ComposeItemProps } from "../interfaces";
 import Sidebar from "../Sidebar/Sidebar";
 import { useSidebar } from "../Context/SidebarContext";
 import { Helmet } from "react-helmet";
@@ -357,7 +357,7 @@ export const Sushi = () => {
   ];
 
   const itemsList: Record<string, SushiItemProps[]> = {
-    // "Compose ton roll": [],
+    "Compose ton roll": [],
     "Signatures": signaturesItems,
     "Plateaux": plateauxItems,
     "Poké": pokeItems,
@@ -367,6 +367,34 @@ export const Sushi = () => {
     "Sashimi": sashimiItems,
     "Sushis": sushiItems,
   };
+
+  const composeProps: ComposeItemProps[] = [
+    {
+      name: "Base",
+      items: [
+        "Maki", "Ice roll", "Egg roll", "Crispy roll", "Saumon roll", "Dinde roll", "Pané roll", "California", "Spring roll", "Avocado roll"
+      ],
+      price: [
+        "4.90", "5.90", "5.90", "6.50", "7.50", "7.50", "8.90", "6.90", "6.90", "7.90"
+      ],
+    },
+    {
+      name: "Protéine",
+      items: [
+        "poulet mayo", "thon mayo", "poulet pané", "saumon", "saumon fumé", "surimi", "crevette", "crevette tempura"
+      ],
+    },
+    {
+      name: "Végéteaux",
+      items: [
+        "avocat", "concombre", "salade", "tomate cerise", "carotte", "poivron", "ciboulette", "coriandre", "ananas", "mangue"
+      ],
+    },
+    {
+      name: "Fromage",
+      items: [ "boursin", "cheese" ],
+    }
+  ];
 
   const keys = Object.keys(itemsList);
   const firstKey = keys.length > 0 ? keys[0] : "";
@@ -392,7 +420,7 @@ export const Sushi = () => {
       <Sidebar titles={submenus.titles} activeTitle={submenus.activeTitle} onTitleClick={handleTitleClick}/>
       <div className="menu-items">
         {activeTitle === "Compose ton roll" ? 
-          <DynamicContainer className="compose-ton-roll-container" />
+          <DynamicContainer className="compose-ton-roll-container" props={composeProps}/>
             : 
           ( activeSubmenu?.map((item, index) => (
             <div className="menu-item" key={index}>

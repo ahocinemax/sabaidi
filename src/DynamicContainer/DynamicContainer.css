@@ -1,12 +1,71 @@
 .compose-ton-roll-container {
-  background-color: red;
+  /* background-color: red; */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 50dvh;
   padding: 0 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+}
+
+.category {
+  width: calc(20% - 20px);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #d60b76;
+  color: #e1e1e1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Titre de la catégorie */
+.category h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Liste des éléments */
+.bullet-point ul {
+  /* list-style-type: none; */
+  padding: 0 0 0 28px;
+}
+
+/* Élément de la liste */
+.bullet-point ul li {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #233748;
+}
+
+.category:nth-child(even) {
+  background-color: #233748;
+}
+
+.category:nth-child(even) h1 {
+  color: #d60b76;
+}
+
+.category:nth-child(even) ul li {
+  color: #e1e1e1;
+}
+
+@media screen and (max-width: 768px) {
+  .compose-ton-roll-container {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+
+  .category {
+    width: 80%;
+  }
+
+  .category h1 {
+    font-size: 27px;
+  }
+
+  .bullet-point ul li {
+    font-size: 16px;
+  }
 }

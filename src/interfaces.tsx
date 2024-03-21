@@ -12,6 +12,12 @@ export interface SushiItemProps {
     price: string;
 }
 
+export interface ComposeItemProps {
+    name: string;
+    items: string[];
+    price?: string[];
+}
+
 export interface TopbarProps {
     darkMode: boolean;
     toggleDarkMode: () => void;
@@ -51,5 +57,6 @@ export interface SidebarContextProps {
 
 export interface DynamicContainerProps {
     children?: React.ReactNode;
+    props?: ComposeItemProps[];
     className?: string;
 }
