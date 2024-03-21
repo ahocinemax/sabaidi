@@ -13,9 +13,10 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
           <div className='bullet-point'>
             <ul>
               {cat.items.map((item, idx) => (
-                <li key={idx}>
-                  <input type="checkbox" />{item}
-                </li>
+              <div className='line'>
+                <li key={idx}>{item.name}</li>
+                {item.price && <p key={idx}>{item.price}</p>}
+              </div>
               ))}
             </ul>
           </div>

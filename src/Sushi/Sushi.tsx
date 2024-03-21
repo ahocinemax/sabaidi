@@ -372,28 +372,53 @@ export const Sushi = () => {
     {
       name: "Base",
       items: [
-        "Maki", "Ice roll", "Egg roll", "Crispy roll", "Saumon roll", "Dinde roll", "Pané roll", "California", "Spring roll", "Avocado roll"
-      ],
-      price: [
-        "4.90", "5.90", "5.90", "6.50", "7.50", "7.50", "8.90", "6.90", "6.90", "7.90"
-      ],
+        { name: "Maki", price: "4.90" },
+        { name: "Ice roll", price: "5.90" },
+        { name: "Egg roll", price: "5.90" },
+        { name: "Crispy roll", price: "6.50" },
+        { name: "Saumon roll", price: "7.50" },
+        { name: "Dinde roll", price: "7.50" },
+        { name: "Pané roll", price: "8.90" },
+        { name: "California", price: "6.90" },
+        { name: "Spring roll", price: "6.90" },
+        { name: "Avocado roll", price: "7.90" }
+      ]
     },
     {
       name: "Protéine",
       items: [
-        "poulet mayo", "thon mayo", "poulet pané", "saumon", "saumon fumé", "surimi", "crevette", "crevette tempura"
+        { name: "poulet mayo" },
+        { name: "thon mayo"  },
+        { name: "poulet pané"  },
+        { name: "saumon"  },
+        { name: "saumon fumé"  },
+        { name: "surimi"  },
+        { name: "crevette"  },
+        { name: "crevette tempura" }
       ],
     },
     {
       name: "Végéteaux",
       items: [
-        "avocat", "concombre", "salade", "tomate cerise", "carotte", "poivron", "ciboulette", "coriandre", "ananas", "mangue"
-      ],
-    },
-    {
+          { name: "avocat" },
+          { name: "concombre" },
+          { name: "salade" },
+          { name: "tomate cerise" },
+          { name: "carotte" },
+          { name: "poivron" },
+          { name: "ciboulette" },
+          { name: "coriandre" },
+          { name: "ananas" },
+          { name: "mangue" }
+      ]
+  },
+  {
       name: "Fromage",
-      items: [ "boursin", "cheese" ],
-    }
+      items: [
+          { name: "boursin" },
+          { name: "cheese" }
+      ]
+  }
   ];
 
   const keys = Object.keys(itemsList);

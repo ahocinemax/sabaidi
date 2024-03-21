@@ -14,8 +14,7 @@ export interface SushiItemProps {
 
 export interface ComposeItemProps {
     name: string;
-    items: string[];
-    price?: string[];
+    items: { name: string, price?: string; }[];
 }
 
 export interface TopbarProps {

@@ -50,6 +50,13 @@
   color: #e1e1e1;
 }
 
+.line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.line p {margin: auto 0 auto 0;}
+
 @media screen and (max-width: 768px) {
   .compose-ton-roll-container {
     flex-direction: column;
