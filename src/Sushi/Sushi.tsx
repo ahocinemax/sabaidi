@@ -264,7 +264,7 @@ export const Sushi = () => {
       6 Spring saumon avocat\
       6 Crispy Roll poulet mayo avocat\
       6 Egg Roll crevette avocat",
-      price: "17.90",
+      price: "21.90",
     },
     {
       imageUrl: "Jap/P7-2.jpg",
