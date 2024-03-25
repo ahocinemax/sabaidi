@@ -10,6 +10,33 @@ import { DynamicContainer } from "../DynamicContainer/DynamicContainer";
 export const Sushi = () => {
   const { activeTitle, setActiveTitle } = useSidebar();
 
+  const formulesItem: SushiItemProps[] = [
+    {
+      imageUrl: "coming-soon.jpg",
+      title: "Boeuf fromage (x5)",
+      description: "5 brochettes de boeuf et fromage. Servi avec du riz.",
+      price: "11.90",
+    },
+    {
+      imageUrl: "coming-soon.jpg",
+      title: "Poulet décliné (x6)",
+      description: "6 brochettes de poulet (3x mariné et 3x nature). Servi avec du riz.",
+      price: "14.50",
+    },
+    {
+      imageUrl: "coming-soon.jpg",
+      title: "Full brochette (x10)",
+      description: "Assortiment de 10 brochettes (2 de chaque). Servi avec du riz.",
+      price: "17.90",
+    },
+    {
+      imageUrl: "coming-soon.jpg",
+      title: "Formule mixte",
+      description: "6 california avocat, 4 sushi saumon, 2 brochettes de poulet, 2 brochette boeuf fromage, 6 sashimi thon.",
+      price: "21.90",
+    },
+  ];
+
   const yakitoriItems: SushiItemProps[] = [
     {
       imageUrl: "coming-soon.jpg",
@@ -45,10 +72,10 @@ export const Sushi = () => {
 
   const tartareItems: SushiItemProps[] = [
     {
-      imageUrl: "Jap/tartare-ceviche-2.jpg",
-      title: "Poulet mayo avocat cheese",
-      description: "Tartare de poulet à la mayonnaise, avocat et fromage.",
-      price: "9.90",
+      imageUrl: "Jap/tartare-ceviche.jpg",
+      title: "Saumon avocat ceviche",
+      description: "Tartare de saumon et d'avocat façon ceviche, avec mangue, oignon rouge, menthe, coriandre, ciboulette, citron et 7 épices.",
+      price: "12.90",
     },
     {
       imageUrl: "Jap/tartare-ceviche.jpg",
@@ -63,15 +90,15 @@ export const Sushi = () => {
       price: "10.90",
     },
     {
-      imageUrl: "Jap/tartare-ceviche.jpg",
-      title: "Thon cuit mayo avocat",
-      description: "Tartare de thon cuit à la mayonnaise et avocat.",
-      price: "12.90",
+      imageUrl: "Jap/tartare-ceviche-2.jpg",
+      title: "Poulet mayo avocat cheese",
+      description: "Tartare de poulet à la mayonnaise, avocat et fromage.",
+      price: "9.90",
     },
     {
       imageUrl: "Jap/tartare-ceviche.jpg",
-      title: "Saumon avocat ceviche",
-      description: "Tartare de saumon et d'avocat façon ceviche, avec mangue, oignon rouge, menthe, coriandre, ciboulette, citron et 7 épices.",
+      title: "Thon cuit mayo avocat",
+      description: "Tartare de thon cuit à la mayonnaise et avocat.",
       price: "12.90",
     },
   ];
@@ -118,18 +145,6 @@ export const Sushi = () => {
   const chirachiItems: SushiItemProps[] = [
     {
       imageUrl: "coming-soon.jpg",
-      title: "Poulet mayo ou thon cuit avocat",
-      description: "Chirashi composé de poulet mariné à la mayonnaise ou de thon cuit, accompagné d'avocat et de riz vinaigré.",
-      price: "12.90",
-    },
-    {
-      imageUrl: "coming-soon.jpg",
-      title: "Poulet croustillant avocat",
-      description: "Chirashi de poulet croustillant et d'avocat, accompagné de riz vinaigré.",
-      price: "13.90",
-    },
-    {
-      imageUrl: "coming-soon.jpg",
       title: "Saumon",
       description: "Chirashi de saumon cru, accompagné de riz vinaigré.",
       price: "14.90",
@@ -145,6 +160,18 @@ export const Sushi = () => {
       title: "Saumon snacké avocat",
       description: "Chirashi de saumon snacké et d'avocat, accompagné de riz vinaigré.",
       price: "16.20",
+    },
+    {
+      imageUrl: "coming-soon.jpg",
+      title: "Poulet mayo ou thon cuit avocat",
+      description: "Chirashi composé de poulet mariné à la mayonnaise ou de thon cuit, accompagné d'avocat et de riz vinaigré.",
+      price: "12.90",
+    },
+    {
+      imageUrl: "coming-soon.jpg",
+      title: "Poulet croustillant avocat",
+      description: "Chirashi de poulet croustillant et d'avocat, accompagné de riz vinaigré.",
+      price: "13.90",
     },
   ];
 
@@ -177,24 +204,6 @@ export const Sushi = () => {
 
   const sushiItems: SushiItemProps[] = [
     {
-      imageUrl: "Jap/sushi-tacos.jpg",
-      title: "Sushi tacos saumon spicy avocat",
-      description: "Coupe de riz pané garnie au saumon épicé et à l'avocat.",
-      price: "8.90",
-    },
-    {
-      imageUrl: "Jap/sushi-tacos.jpg",
-      title: "Sushi tacos poulet croustillant cheese avocat",
-      description: "Coupe de riz pané garnie de poulet croustillant, de fromage et d'avocat.",
-      price: "8.90",
-    },
-    {
-      imageUrl: "Jap/sushi-tacos.jpg",
-      title: "Sushi tacos crabe spicy avocat cheese",
-      description: "Coupe de riz pané garnie de chair de crabe épicée, d'avocat et de fromage.",
-      price: "8.90",
-    },
-    {
       imageUrl: "coming-soon.jpg",
       title: "Sushi saumon",
       description: "Nigiri de saumon cru.",
@@ -220,6 +229,27 @@ export const Sushi = () => {
     },
   ];
 
+  const tacosItems: SushiItemProps[] = [
+    {
+      imageUrl: "Jap/sushi-tacos.jpg",
+      title: "Sushi tacos saumon spicy avocat",
+      description: "Coupe de riz pané garnie au saumon épicé et à l'avocat.",
+      price: "8.90",
+    },
+    {
+      imageUrl: "Jap/sushi-tacos.jpg",
+      title: "Sushi tacos poulet croustillant cheese avocat",
+      description: "Coupe de riz pané garnie de poulet croustillant, de fromage et d'avocat.",
+      price: "8.90",
+    },
+    {
+      imageUrl: "Jap/sushi-tacos.jpg",
+      title: "Sushi tacos crabe spicy avocat cheese",
+      description: "Coupe de riz pané garnie de chair de crabe épicée, d'avocat et de fromage.",
+      price: "8.90",
+    },
+  ]
+
   const plateauxItems: SushiItemProps[] = [
     {
       imageUrl: "Jap/P1-2.jpg",
@@ -230,7 +260,7 @@ export const Sushi = () => {
     },
     {
       imageUrl: "Jap/P2-2.jpg",
-      title: "P2. Sabaidi love",
+      title: "P2. Havana love",
       description: "6 Sushi saumon\
       6 California saumon avocat",
       price: "10.90",
@@ -295,62 +325,62 @@ export const Sushi = () => {
 
   const signaturesItems: SushiItemProps[] = [
     {
-      imageUrl: "Jap/roll-chicken-dynamite-2.jpg",
-      title: "SR1. Dynamite chicken \"R\"",
-      description: "California poulet mayo, avocat, concombre, recouvert de poulet dynamite, spicy sauce.",
-      price: "10.90",
-    },
-    {
-      imageUrl: "Jap/roll-saumon-crevette-2.jpg",
-      title: "SR2. Salmon shrimp roll",
-      description: "Tempura, salade, avocat, boursin, crevette, recouvert de saumon.",
-      price: "11.90",
-    },
-    {
       imageUrl: "Jap/roll-mango-2.jpg",
-      title: "SR3. Mango roll",
+      title: "Mango roll",
       description: "California saumon, cheese, salade, recouvert de mangue et avocat, spicy sauce, ciboulette.",
       price: "12.90",
     },
     {
       imageUrl: "Jap/roll-tyger-2.jpg",
-      title: "SR4. Tyger roll",
+      title: "Tyger roll",
       description: "Tempura, cheese, concombre, recouvert de saumon snacké avocado spicy sauce.",
       price: "12.90",
     },
     {
+      imageUrl: "Jap/rock'n'roll-2.jpg",
+      title: "Rock'n'Roll",
+      description: "Saumon, thon, salade, avocat, chips, piment et ciboulette.",
+      price: "14.90",
+    },
+    {
+      imageUrl: "Jap/roll-chicken-dynamite-2.jpg",
+      title: "Dynamite chicken \"R\"",
+      description: "California poulet mayo, avocat, concombre, recouvert de poulet dynamite, spicy sauce.",
+      price: "10.90",
+    },
+    {
+      imageUrl: "Jap/roll-saumon-crevette-2.jpg",
+      title: "Salmon shrimp roll",
+      description: "Tempura, salade, avocat, boursin, crevette, recouvert de saumon.",
+      price: "11.90",
+    },
+    {
       imageUrl: "Jap/roll-nachos-2.jpg",
-      title: "SR5. Mexican roll",
+      title: "Mexican roll",
       description: "Boeuf assaisonné, avocat, poivrons, spicy sauce, saumon braisé on the top.",
       price: "13.90",
     },
     {
       imageUrl: "Jap/sumo-pane-thai-2.jpg",
-      title: "SP1. Sumo thaï",
+      title: "Sa thaï",
       description: "Avocat, cheese, concombre, poulet saté, recouvert de cacahuètes.",
       price: "11.90",
     },
     {
-      imageUrl: "coming-soon.jpg",
-      title: "SP2. Sumo Kai",
+      imageUrl: "Jap/sumo-kung-2.jpg",
+      title: "Pané Kai",
       description: "Poulet mayo, avocat, poulet pané, cheese.",
       price: "13.90",
     },
     {
-      imageUrl: "coming-soon.jpg",
-      title: "SP3. Sumo saumon",
+      imageUrl: "Jap/sumo-kung-2.jpg",
+      title: "Pané saumon",
       description: "Avocat, saumon cheese, saumon fumé.",
       price: "13.90",
     },
     {
-      imageUrl: "Jap/rock'n'roll-2.jpg",
-      title: "SP4. Rock'n'Roll",
-      description: "Pas .",
-      price: "14.90",
-    },
-    {
       imageUrl: "Jap/sumo-kung-2.jpg",
-      title: "SP5. Sumo kung",
+      title: "Sumo kung",
       description: "Crevette, avocat, cheese, tempura, surimi.",
       price: "14.90",
     },
@@ -362,10 +392,12 @@ export const Sushi = () => {
     "Plateaux": plateauxItems,
     "Poké": pokeItems,
     "Yakitori": yakitoriItems,
+    "Formules": formulesItem,
     "Tartare": tartareItems,
     "Chirachi": chirachiItems,
     "Sashimi": sashimiItems,
     "Sushis": sushiItems,
+    "Tacos": tacosItems,
   };
 
   const keys = Object.keys(itemsList);
