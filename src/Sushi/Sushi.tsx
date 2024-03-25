@@ -255,7 +255,7 @@ export const Sushi = () => {
       imageUrl: "Jap/P5-2.jpg",
       title: "P5. Full mix",
       description: "6 Avocado tempura cheese 6 Spring saumon avocat 6 Crispy Roll poulet mayo avocat 6 Egg Roll crevette avocat",
-      price: "17.90",
+      price: "21.90",
     },
     {
       imageUrl: "Jap/P7-2.jpg",

@@ -83,6 +83,7 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
 
   return (
     <div className={className}>
+      <h1 className="">{totalPrice.toFixed(2)}</h1>
       {props?.map((cat, index) => (
         <div className="category" key={index}>
           <h1>{cat.name}</h1>
