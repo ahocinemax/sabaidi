@@ -319,7 +319,7 @@ export const Sushi = () => {
       description: "6 Pané roll saumon cheese spicy\
       6 Pané roll tempura cheese spicy\
       6 Pané roll poulet mayo avocat spicy",
-      price: "21",
+      price: "19.90",
     },
   ];
 
