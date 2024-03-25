@@ -8,7 +8,7 @@
     width: 200px;
   }
   
-  label {
+  /* label {
     top: 15px;
     left: 25px;
     position: absolute;
@@ -18,13 +18,13 @@
     border-radius: 50px;
     cursor: pointer;
     z-index: 10;
-    /* color: var(--light); */
-  }
+    /* color: var(--light); 
+  } */
   
-  input {
+  /* input {
     position: absolute;
     display: none;
-  }
+  } */
   
   .slider {
     position: absolute;

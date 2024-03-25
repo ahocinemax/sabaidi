@@ -224,15 +224,13 @@ export const Sushi = () => {
     {
       imageUrl: "Jap/P1-2.jpg",
       title: "P1. Sushi time",
-      description: "6 Sushi saumon\
-      6 Sushi saumon snacké",
+      description: "6 Sushi saumon 6 Sushi saumon snacké",
       price: "11.90",
     },
     {
       imageUrl: "Jap/P2-2.jpg",
       title: "P2. Sabaidi love",
-      description: "6 Sushi saumon\
-      6 California saumon avocat",
+      description: "6 Sushi saumon 6 California saumon avocat",
       price: "10.90",
     },
     {
@@ -244,51 +242,37 @@ export const Sushi = () => {
     {
       imageUrl: "Jap/P4-2.jpg",
       title: "P4. Salmon lover",
-      description: "6 Salmon roll cheese\
-      6 California saumon avocat\
-      6 Maki saumon",
+      description: "6 Salmon roll cheese 6 California saumon avocat 6 Maki saumon",
       price: "14.50",
     },
     {
       imageUrl: "Jap/P6-2.jpg",
       title: "P6. Crispy dream",
-      description: "6 Crispy roll saumon avocat\
-      6 Crispy roll thon mayo avocat\
-      6 Crispy roll poulet mayo avocat",
+      description: "6 Crispy roll saumon avocat 6 Crispy roll thon mayo avocat 6 Crispy roll poulet mayo avocat",
       price: "16.50",
     },
     {
       imageUrl: "Jap/P5-2.jpg",
       title: "P5. Full mix",
-      description: "6 Avocado tempura cheese\
-      6 Spring saumon avocat\
-      6 Crispy Roll poulet mayo avocat\
-      6 Egg Roll crevette avocat",
+      description: "6 Avocado tempura cheese 6 Spring saumon avocat 6 Crispy Roll poulet mayo avocat 6 Egg Roll crevette avocat",
       price: "17.90",
     },
     {
       imageUrl: "Jap/P7-2.jpg",
       title: "P7. California deam",
-      description: "6 California saumon avocat\
-      6 California thon mayo avocat\
-      6 California poulet mayo avocat",
+      description: "6 California saumon avocat 6 California thon mayo avocat 6 California poulet mayo avocat",
       price: "17.90",
     },
     {
       imageUrl: "Jap/P8-2.jpg",
       title: "P8. Fresh salmon",
-      description: "6 Salmon Roll cheese\
-      6 Salmon Roll avocat cheese\
-      6 Salmon Roll saumon fumé cheese\
-      6 Salmon Roll concombre cheese",
+      description: "6 Salmon Roll cheese 6 Salmon Roll avocat cheese 6 Salmon Roll saumon fumé cheese 6 Salmon Roll concombre cheese",
       price: "21.90",
     },
     {
       imageUrl: "Jap/P9-2.jpg",
       title: "P9. PP",
-      description: "6 Pané roll saumon cheese spicy\
-      6 Pané roll tempura cheese spicy\
-      6 Pané roll poulet mayo avocat spicy",
+      description: "6 Pané roll saumon cheese spicy 6 Pané roll tempura cheese spicy 6 Pané roll poulet mayo avocat spicy",
       price: "21",
     },
   ];
@@ -398,7 +382,7 @@ export const Sushi = () => {
       ],
     },
     {
-      name: "Végéteaux",
+      name: "Végétaux",
       items: [
           { name: "avocat" },
           { name: "concombre" },
@@ -425,7 +409,7 @@ export const Sushi = () => {
   const firstKey = keys.length > 0 ? keys[0] : "";
 
   const activeSubmenu: SushiItemProps[] = itemsList[activeTitle] || itemsList[firstKey];
-  
+
   const submenus: SidebarProps = {
     titles: Object.keys(itemsList),
     activeTitle: activeTitle,
@@ -444,7 +428,12 @@ export const Sushi = () => {
       <h2>Menu Japonais</h2>
       <Sidebar titles={submenus.titles} activeTitle={submenus.activeTitle} onTitleClick={handleTitleClick}/>
       <div className="menu-items">
-        {activeTitle === "Compose ton roll" ? 
+        { activeTitle === "Compose ton roll" && <div className="compose-details">
+          <h1>Compose ton roll!</h1>
+          {/* <p>Prix: {totalPrice}</p> */}
+        </div>}
+
+        {activeTitle === "Compose ton roll" ?
           <DynamicContainer className="compose-ton-roll-container" props={composeProps}/>
             : 
           ( activeSubmenu?.map((item, index) => (

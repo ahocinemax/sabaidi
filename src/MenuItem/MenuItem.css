@@ -86,7 +86,7 @@
 
     .menu-list>* {
         flex: 0 0 43%;
-      }
+    }
 
     /* .MenuItemImage { */
         /* height: 100%; */
@@ -107,4 +107,4 @@
     /* .MenuContainer {
         height: 100%;
     } */
-  }
+}

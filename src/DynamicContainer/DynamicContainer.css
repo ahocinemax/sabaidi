@@ -17,6 +17,7 @@
   background-color: #d60b76;
   color: #e1e1e1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
 }
 
 /* Titre de la catégorie */
@@ -55,7 +56,13 @@
   justify-content: space-between;
 }
 
-.line p {margin: auto 0 auto 0;}
+.line p {
+  margin: auto 0 auto 0;
+}
+
+.line label {
+  margin-left: 25px;
+}
 
 @media screen and (max-width: 768px) {
   .compose-ton-roll-container {
@@ -66,6 +73,7 @@
 
   .category {
     width: 80%;
+    margin-top: 15px;
   }
 
   .category h1 {
