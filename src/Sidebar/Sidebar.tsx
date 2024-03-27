@@ -63,6 +63,11 @@ const Sidebar: React.FC<SidebarProps> = ({ titles, activeTitle, onTitleClick }) 
       {showArrows && (
         <button className='right-arrow' onClick={() => scrollHandler(1)}>&gt;</button>
       )}
+      {/* <div className="cart-button">
+        <span className="cart">
+          <img src="cart.svg" alt="cart" />
+        </span>
+      </div> */}
     </div>
   );
 };

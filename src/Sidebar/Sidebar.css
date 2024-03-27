@@ -7,11 +7,11 @@
 	box-sizing: content-box;
 	gap: 7%;
 	height: 50px;
-	min-width: 100%;
 	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
 	-webkit-overflow-scrolling: touch;
 	overflow-x: auto;
 	scroll-behavior: smooth;
+	width: 100%;
 }
 .sidebar::-webkit-scrollbar {
 	width: 10px;
@@ -35,7 +35,6 @@
   }
 .nav-link {
 	position: relative;
-	display: flex;
 	text-decoration: none;
 	letter-spacing: 0.0892857143em;
 	font-size: 1.2rem;
@@ -48,11 +47,11 @@
 }
 
 .nav-link:last-child {
-	padding-right: 7%;
+	padding-right: 3%;
 }
 
 .nav-link:first-child {
-	padding-left: 6dvw;
+	padding-left: 3dvw;
 }
 
 .cart-button {
@@ -64,21 +63,20 @@
 	cursor: pointer;
 }
 
-.cart-button .cart img {
+.cart-button img {
 	height: 32px;
 }
 
 .sidebar-container {
 	display: flex;
 	flex-direction: row;
-	/* overflow-x: auto; */
+	overflow-x: auto;
 	position: relative;
 	margin: auto;
 	width: 100%;
 }
 
 .left-arrow, .right-arrow {
-	position: absolute;
 	height: 50px;
 	width: 50px;
 	display: flex;
