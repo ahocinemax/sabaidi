@@ -44,6 +44,11 @@
     flex-direction: row-reverse;
 }
 
+.compose-details h1 {
+    font-size: 2rem;
+    margin: 6px;
+}
+
 .menu-section .menu-item img {
     width: 60%;
     max-height: 227px;

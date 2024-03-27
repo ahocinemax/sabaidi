@@ -18,7 +18,7 @@ export const Dessert = () => {
         },
         {
           imageUrl: "coming-soon.jpg",
-          title: "Fondant",
+          title: "Fondant chocolat",
           description: "Un gâteau moelleux au chocolat avec un cœur coulant.",
           price: "5.50",
         },
