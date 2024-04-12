@@ -12,25 +12,25 @@ export const Starter = () => {
   const soupeItems: SushiItemProps[] = [
     {
       imageUrl: "Starters/soupe.jpg",
-      title: "Soupe miso classique",
+      title: "SOUPE MISO CLASSIQUE",
       description: "Bouillon à base de miso et de Dashi, champignons et algues.",
       price: "3.00",
     },
     {
       imageUrl: "Starters/soupe.jpg",
-      title: "Soupe miso saumon",
+      title: "SOUPE MISO SAUMON",
       description: "Bouillon à base de miso, saumon et Dashi, champignons et algues.",
       price: "3.50",
     },
     {
       imageUrl: "Starters/soupe.jpg",
-      title: "Soupe poulet Tom K Kaw",
+      title: "SOUPE POULET TOM K KAW",
       description: "Soupe traditionnelle thaïlandaise au lait de coco légèrement épicé, légumes frais et morceaux de poulet.",
       price: "6.50",
     },
     {
       imageUrl: "Starters/soupe.jpg",
-      title: "Crevette Tom Yom",
+      title: "CREVETTE TOM YOM",
       description: "Soupe traditionnelle thaïlandaise aux crevettes à la citronnelle, au lait de coco et ses légumes frais.",
       price: "7.50",
     },
@@ -39,19 +39,19 @@ export const Starter = () => {
   const saladesItems: SushiItemProps[] = [
     {
       imageUrl: "coming-soon.jpg",
-      title: "Salade thaï mangue",
+      title: "SALADE THAÏ MANGUE",
       description: "Délicieuse salade fraîche, au mélange d’épices et de mangue.",
       price: "6.50",
     },
     {
       imageUrl: "coming-soon.jpg",
-      title: "Salade thaï papaye",
+      title: "SALADE THAÏ PAPAYE",
       description: "Délicieuse salade fraîche, papaye et oignons frits.",
       price: "6.50",
     },
     {
       imageUrl: "coming-soon.jpg",
-      title: "Salade thaï poulet ou boeuf piquant",
+      title: "SALADE THAÏ POULET OU BOEUF PIQUANT",
       description: "Salade au mélange de légumes frais, surmontée au bœuf ou poulet caramélisé et oignons frits.",
       price: "7.50",
     },
@@ -60,25 +60,25 @@ export const Starter = () => {
   const accompagnementsItems: SushiItemProps[] = [
     {
       imageUrl: "Starters/edamame.jpg",
-      title: "Edamame",
+      title: "EDAMAME",
       description: "Fèves de soja.",
       price: "3.90",
     },
     {
       imageUrl: "Starters/wakame.jpg",
-      title: "Wakame",
+      title: "WAKAME",
       description: "Salade d'algues wakame.",
       price: "3.90",
     },
     {
       imageUrl: "Starters/choux.jpg",
-      title: "Choux",
+      title: "CHOUX",
       description: "Salade de chou chinois, sésame et vinaigrette.",
       price: "4.90",
     },
     {
       imageUrl: "Starters/riz.jpg",
-      title: "Riz",
+      title: "RIZ",
       description: "Riz blanc ou vinaigré nature, servi avec une sauce au choix.",
       price: "3.90",
     },
@@ -87,43 +87,43 @@ export const Starter = () => {
   const startersItems: SushiItemProps[] = [
     {
       imageUrl: "Starters/nems-poulet.jpg",
-      title: "Nems poulet",
+      title: "NEMS POULET",
       description: "Bouchées vapeur au poulet et aux légumes.",
       price: "4.90",
     },
     {
       imageUrl: "Starters/nems-crevette.jpg",
-      title: "Nems crevette",
+      title: "NEMS CREVETTE",
       description: "Crevettes décortiquées panées.",
       price: "5.90",
     },
     {
       imageUrl: "Starters/gyozas.jpg",
-      title: "Gyoza",
+      title: "GYOZA",
       description: "Raviolis japonais grillés ou vapeur, au poulet ou aux légumes.",
       price: "5.20",
     },
     {
       imageUrl: "Starters/tempuras.jpg",
-      title: "Tempura",
+      title: "TEMPURA",
       description: "Crevettes décortiquées panées.",
       price: "6.20",
     },
     {
       imageUrl: "Starters/poulet-dynamite.jpg",
-      title: "Poulet dynamite",
+      title: "POULET DYNAMITE",
       description: "Tendres morceaux de poulet, accompagnés de leur sauce dynamite.",
       price: "7.50",
     },
     {
       imageUrl: "Starters/crevette-dynamite.jpg",
-      title: "Crevette dynamite",
+      title: "CREVETTE DYNAMITE",
       description: "Crevettes décortiquées, accompagnées de leur sauce dynamite.",
       price: "8.90",
     },
     {
       imageUrl: "coming-soon.jpg",
-      title: "Samossa (x3)",
+      title: "SAMOSSA (X3)",
       description: "3 triangles frits, farcis de légumes et de viande.",
       price: "4.90",
     },

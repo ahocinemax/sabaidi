@@ -35,8 +35,8 @@ export const Topbar: React.FC = () => {
             <div className="navigation-links">
                 {isActive && (
                     <div className="left">
-                    <Link to="/Starters">Entrées</Link>
-                    <Link to="/Jap">Jap'</Link>
+                    <Link to="/Starters">ENTRÉES</Link>
+                    <Link to="/Jap">JAP'</Link>
                     </div>
                 )}
                 <Link to={'/'} className='logo'>
@@ -44,8 +44,8 @@ export const Topbar: React.FC = () => {
                 </Link>
                 {isActive && (
                     <div className="right">
-                    <Link to="/Thai">Thaï</Link>
-                    <Link to="/Desserts">Desserts</Link>
+                    <Link to="/Thai">THAÏ</Link>
+                    <Link to="/Desserts">DESSERTS</Link>
                     </div>
                 )}
             </div>
