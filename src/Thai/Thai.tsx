@@ -19,9 +19,9 @@ const ThaiItem: React.FC<SushiItemProps> = ({ title, price, description, imageUr
         <p>{description}</p>
         <p>{price}€</p>
       </div>
-      <div className="add-container" onClick={() => addToCart(item)}>
+      {/* <div className="add-container" onClick={() => addToCart(item)}>
         <img className="add-cart" src="Logo-plus.png" />
-      </div>
+      </div> */}
     </div>
   );
 };
