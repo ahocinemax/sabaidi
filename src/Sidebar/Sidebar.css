@@ -18,21 +18,22 @@
 	height: 4px;
 	top: 3px;
 	background-color: #f5f5f5;
-  }
-  
-  .sidebar::-webkit-scrollbar-thumb {
+}
+
+.sidebar::-webkit-scrollbar-thumb {
 	background-color: #ccc;
 	border-radius: 19px;
-  }
-  
-  .sidebar::-webkit-scrollbar-track {
+}
+
+.sidebar::-webkit-scrollbar-track {
 	background-color: #f5f5f5;
-  }
-  
-  .sidebar::-webkit-scrollbar-button {
+}
+
+.sidebar::-webkit-scrollbar-button {
 	width: 0;
 	height: 0;
-  }
+}
+
 .nav-link {
 	position: relative;
 	text-decoration: none;
@@ -83,7 +84,7 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	z-index: 100;
+	z-index: 10;
 	border: 1px solid #e1e1e1;
 	opacity: 0.5;
   }

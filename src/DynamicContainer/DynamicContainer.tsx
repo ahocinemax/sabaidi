@@ -21,7 +21,6 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
   const handleCheckboxClick = (e: React.ChangeEvent<HTMLInputElement>, key: string, ingredient: any) => {
     const isChecked = e.target.checked;
   
-    console.log("🚀 ~ handleCheckboxClick ~ key:", key)
     switch (key) {
       case "Base":
         if (isChecked) setSelectedBase({ name: ingredient.name, price: parseFloat(ingredient.price || undefined) });
@@ -55,9 +54,6 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
   
 
   useEffect(() => {
-    console.log("Base:", selectedBase);
-    console.log("Protéines:", selectedProtein);
-    console.log("Légumes/Fromage:", selectedVegetableCheese);
     let vegetableCheeseSupplement = 0;
     let proteinSupplement = 0;
     let supplement = selectedProtein.length + selectedVegetableCheese.length;
@@ -75,44 +71,44 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
         }
         supplement--;
       }
-      console.log("🚀 nb protein:", proteinSupplement);
-      console.log("🚀 nb veg/cheese:", vegetableCheeseSupplement);
       setTotalPrice(selectedBase?.price ? selectedBase.price + vegetableCheeseSupplement * priceVegetableCheese + proteinSupplement * priceProtein : 0);
     }
   }, [selectedBase, selectedProtein, selectedVegetableCheese]);
 
   return (
     <div className={className}>
-      <h1 className="">{totalPrice.toFixed(2)}</h1>
-      {props?.map((cat, index) => (
-        <div className="category" key={index}>
-          <h1>{cat.name}</h1>
-          <div className='bullet-point'>
-            {cat.items.map((item, idx) => (
-              <div className='line'>
-                <div>
-                  {!index ? 
-                    <input
-                      type="radio"
-                      name={`item-${idx}`}
-                      onChange={(e) => handleCheckboxClick(e, cat.name, item)}
-                      checked={selectedBase?.name === item.name}
-                    />
-                  :
-                    <input
-                      type={"checkbox"}
-                      name={`item-${idx}`}
-                      onChange={(e) => handleCheckboxClick(e, cat.name, item)}
-                    />
-                  }
-                  <label htmlFor={`item-${idx}`}>{item.name}</label>
+      <div className='compose-sub'>
+        {props?.map((cat, index) => (
+          <div className="category" key={index}>
+            <h1 key={index}>{cat.name}</h1>
+            <div className='bullet-point'>
+              {cat.items.map((item, idx) => (
+                <div className='line'>
+                  <div>
+                    {!index ? 
+                      <input
+                        type="radio"
+                        name={`item-${idx}`}
+                        onChange={(e) => handleCheckboxClick(e, cat.name, item)}
+                        checked={selectedBase?.name === item.name}
+                      />
+                    :
+                      <input
+                        type={"checkbox"}
+                        name={`item-${idx}`}
+                        onChange={(e) => handleCheckboxClick(e, cat.name, item)}
+                      />
+                    }
+                    <label htmlFor={`item-${idx}`}>{item.name}</label>
+                  </div>
+                  {item.price && <p key={idx}>{item.price}</p>}
                 </div>
-                {item.price && <p key={idx}>{item.price}</p>}
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+      <h1 className="">{totalPrice.toFixed(2)}</h1>
     </div>
   );
 }

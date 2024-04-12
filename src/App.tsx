@@ -9,34 +9,26 @@ import { Topbar } from './Topbar/Topbar';
 import { SidebarProvider } from './Context/SidebarContext';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import { CartProvider, useCart } from './Context/CartContext';
 
 export const App = () =>
-{    
-    // const [darkMode, setDarkMode] = React.useState(false);
-//     const [shouldRenderSidebar, setShouldRenderSidebar] = React.useState(false);
-//     const location = useLocation();
-//     React.useEffect(() => {
-//         if (location.pathname === "/") {
-//             setShouldRenderSidebar(false);
-//         } else {
-//             setShouldRenderSidebar(true);
-//         }
-//     }, [location]);
-
+{
     return (
         <div className="app">
             <Analytics/>
             <SpeedInsights/>
-            <SidebarProvider>
-                <Topbar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/Jap" element={<Sushi />} />
-                    <Route path="/Desserts" element={<Dessert />} />
-                    <Route path="/Thai" element={<Thai />} />
-                    <Route path="/Starters" element={<Starter />} />
-                </Routes>
-            </SidebarProvider>
+            <CartProvider>
+                <SidebarProvider>
+                    <Topbar />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/Jap" element={<Sushi />} />
+                        <Route path="/Desserts" element={<Dessert />} />
+                        <Route path="/Thai" element={<Thai />} />
+                        <Route path="/Starters" element={<Starter />} />
+                    </Routes>
+                </SidebarProvider>
+            </CartProvider>
         </div>
     )
 }

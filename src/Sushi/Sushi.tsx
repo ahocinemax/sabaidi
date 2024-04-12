@@ -4,11 +4,13 @@ import "../styles/fonts.css";
 import { SushiItemProps, SidebarProps, ComposeItemProps } from "../interfaces";
 import Sidebar from "../Sidebar/Sidebar";
 import { useSidebar } from "../Context/SidebarContext";
+import { useCart } from "../Context/CartContext";
 import { Helmet } from "react-helmet";
 import { DynamicContainer } from "../DynamicContainer/DynamicContainer";
 
 export const Sushi = () => {
   const { activeTitle, setActiveTitle } = useSidebar();
+  const { addToCart } = useCart();
 
   const formulesItem: SushiItemProps[] = [
     {
@@ -476,11 +478,14 @@ export const Sushi = () => {
             : 
           ( activeSubmenu?.map((item, index) => (
             <div className="menu-item" key={index}>
-              <img src={item.imageUrl} alt="Sushi" />
+              <img className="item-image" src={item.imageUrl} alt="Sushi" />
               <div className="menu-item-content">
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
                 <p>{item.price}€</p>
+              </div>
+              <div className="add-container" onClick={() => addToCart(item)}>
+                <img className="add-cart" src="Logo-plus.png" />
               </div>
             </div>
           )))

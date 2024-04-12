@@ -5,16 +5,22 @@ import { SushiItemProps, SidebarProps } from "../interfaces";
 import "../styles/fonts.css";
 import Sidebar from "../Sidebar/Sidebar";
 import { useSidebar } from "../Context/SidebarContext";
+import { useCart } from "../Context/CartContext";
 import { Helmet } from "react-helmet";
 
 const ThaiItem: React.FC<SushiItemProps> = ({ title, price, description, imageUrl }) => {
+  const { addToCart } = useCart();
+  const item = { title, price, description, imageUrl };
   return (
     <div className="menu-item">
       <img className="ItemImage" src={imageUrl} alt={title} />
       <div className="ItemDetails">
         <h3>{title}</h3>
         <p>{description}</p>
-        <p>{price}</p>
+        <p>{price}€</p>
+      </div>
+      <div className="add-container" onClick={() => addToCart(item)}>
+        <img className="add-cart" src="Logo-plus.png" />
       </div>
     </div>
   );
@@ -28,61 +34,61 @@ export const Thai: React.FC = () => {
       title: "Khao Prat",
       description: "Riz sauté au légume.",
       imageUrl: "Thai/khao-prat.jpg",
-      price: "12.90€",
+      price: "12.90",
     },
     {
       title: "Loklak",
       description: "Riz rouge sauté à l'ail et son boeuf assaisonné façon cambodgienne.",
       imageUrl: "Thai/loc lac.jpg",
-      price: "14.90€",
+      price: "14.90",
     },
     {
       title: "Poulet curry katsu",
       description: "Curry japonnais, pomme de terre et carotte parsemé d'emmental rapé et son poulet croustillant.",
       imageUrl: "Thai/poulet curry katsu.jpg",
-      price: "14.90€",
+      price: "14.90",
     },
     {
       title: "Crevettes dynamite",
       description: "Crevette croustillante sauce spicy maison accompagné de son riz rouge à l'ail.",
       imageUrl: "Thai/crevette-dynamite-1.jpg",
-      price: "13.90€",
+      price: "13.90",
     },
     {
       title: "Chicken dynamite",
       description: "Poulet croustillant sauce spicy maison accompagné de son riz rouge à l'ail.",
       imageUrl: "Thai/chicken-dynamite-1.jpg",
-      price: "13.90€",
+      price: "13.90",
     },
     {
       title: "Basilic Rice",
       description: "Riz blanc et ses légumes sautés au basilic.",
       imageUrl: "Thai/basilic-rice-1.jpg",
-      price: "14.90€",
+      price: "14.90",
     },
     {
       title: "Riz cantonais",
       description: "Riz blanc parfumé, oeuf, petits pois morceaux de jambon accompagné d'une viande au choix.",
       imageUrl: "Thai/riz-cantonais-1.jpg",
-      price: "12.90€",
+      price: "12.90",
     },
     {
       title: "Keng kiew wan",
       description: "Riz blanc recouvert d'une sauce curry vert au lait de coco.",
       imageUrl: "Thai/keng-kiew-wan-1.jpg",
-      price: "12.90€",
+      price: "12.90",
     },
     {
       title: "Massaman",
       description: "Riz blanc recouvert d'une sauce lait de coco curry jaune, pomme de terre carotte.",
       imageUrl: "Thai/massaman-1.jpg",
-      price: "13.90€",
+      price: "13.90",
     },
     {
       title: "Tigre qui pleure",
       description: "Viande assaisonnée coupé en lamelles avec sa sauce thaï piquante.",
       imageUrl: "Thai/tigre-qui-pleure-1.jpg",
-      price: "14.90€",
+      price: "14.90",
     },
   ];
 
@@ -91,25 +97,25 @@ export const Thai: React.FC = () => {
       title: "Pad thaï",
       description: "Nouilles de riz sauté à la thaïlandaise.",
       imageUrl: "Thai/pad-thai-1.jpg",
-      price: "12.90€",
+      price: "12.90",
     },
     {
       title: "Udon",
       description: "Nouilles de riz sautées à la japonaise et ses légumes.",
       imageUrl: "Thai/udon-1.jpg",
-      price: "12.90€",
+      price: "12.90",
     },
     {
       title: "Mi prat",
       description: "Nouilles de blé fine sautées aux légumes.",
       imageUrl: "Thai/mi-prat-1.jpg",
-      price: "12.90€",
+      price: "12.90",
     },
     {
       title: "Bobun",
       description: "Vermicelle, salade mélangé, concombre, tomate cerise, oignon rouge oignon frit, cacahuètes, Nems.",
       imageUrl: "Thai/bobun2.jpg",
-      price: "11.90€",
+      price: "11.90",
     },
   ];
 

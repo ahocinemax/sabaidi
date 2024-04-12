@@ -7,6 +7,7 @@
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   justify-content: space-between;
+  flex-direction: column;
 }
 
 .category {
@@ -18,7 +19,33 @@
   color: #e1e1e1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   margin-top: 20px;
+  overflow-y: scroll;
 }
+
+.category::-webkit-scrollbar {
+	width: 10px;
+	height: 4px;
+	top: 3px;
+	/* background-color: #f5f5f5; */
+}
+
+.category::-webkit-scrollbar-thumb {
+	background-color: #ccc;
+	border-radius: 19px;
+  width: 3px;
+}
+
+.category::-webkit-scrollbar-button {
+	width: 0;
+	height: 0;
+}
+
+.compose-sub {
+  display: flex;
+  flex-direction: row;
+  gap: 10px
+}
+
 
 /* Titre de la catégorie */
 .category h1 {

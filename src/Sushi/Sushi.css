@@ -49,7 +49,7 @@
     margin: 6px;
 }
 
-.menu-section .menu-item img {
+.item-image {
     width: 60%;
     max-height: 227px;
     object-fit: cover;
@@ -77,6 +77,16 @@
     justify-content: center;
     margin-left: 20px;
     width: 40%;
+}
+
+.add-cart {
+    width: 3.5rem;
+    position: relative;
+    right: 0;
+}
+
+.add-container {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 528px) {

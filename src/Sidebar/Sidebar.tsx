@@ -2,11 +2,14 @@ import React, { useRef, useEffect, useState } from 'react';
 import './Sidebar.css';
 import { SidebarProps } from '../interfaces';
 import { useSidebar } from '../Context/SidebarContext';
+import { useCart } from '../Context/CartContext';
+import { Cart } from './Cart';
 
 const Sidebar: React.FC<SidebarProps> = ({ titles, activeTitle, onTitleClick }) => {
   const sidebarRef = useRef<HTMLDivElement | null>(null);
   const { setActiveTitle } = useSidebar();
   const [showArrows, setShowArrows] = useState(false);
+  const { cart, setShowCart, showCart } = useCart();
 
   const switchSection = (title: string) => {
     if (activeTitle !== title) {
@@ -42,11 +45,15 @@ const Sidebar: React.FC<SidebarProps> = ({ titles, activeTitle, onTitleClick }) 
         behavior: 'smooth',
       });
       sidebarRef.current.scrollLeft += scrollDistance * dir;
-      console.log(sidebarRef.current.clientLeft);
       // Met à jour l'affichage des flèches de défilement après le défilement
       displayArrows();
     }
   };
+
+  const handleCartButton = () => {
+    setShowCart(true);
+    console.log("Cart button pressed");
+  }
 
   return (
     <div className='sidebar-container'>
@@ -63,11 +70,12 @@ const Sidebar: React.FC<SidebarProps> = ({ titles, activeTitle, onTitleClick }) 
       {showArrows && (
         <button className='right-arrow' onClick={() => scrollHandler(1)}>&gt;</button>
       )}
-      <div className="cart-button">
+      <div className="cart-button" onClick={handleCartButton}>
         <span className="cart">
           <img src="cart.svg" alt="cart" />
         </span>
       </div>
+      {showCart && <Cart />}
     </div>
   );
 };
