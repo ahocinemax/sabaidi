@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import './Topbar.css';
 import { Link } from 'react-router-dom';
+import { Tooltip } from 'react-tooltip';
 
 
 export const Topbar: React.FC = () => {
@@ -39,9 +40,10 @@ export const Topbar: React.FC = () => {
                     <Link to="/Jap">JAP'</Link>
                     </div>
                 )}
-                <Link to={'/'} className='logo'>
+                <Link to={'/'} className='logo' data-tooltip-id="my-tooltip" data-tooltip-content="Retour à l'accueil" data-tooltip-place="bottom">
                     <img src="sabaidi.jpg" alt="Logo Sabaidi" />
                 </Link>
+                <Tooltip id="my-tooltip" />
                 {isActive && (
                     <div className="right">
                     <Link to="/Thai">THAÏ</Link>

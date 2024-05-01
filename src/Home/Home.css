@@ -13,7 +13,6 @@ body {
     padding: 0;
     color: #e1e1e1;
     font-weight: 700;
-    /* background-color: rgb(35, 55, 72); */
     margin-bottom: 15px;
     border-radius: 8px;
     width: 45%;
@@ -49,7 +48,6 @@ body {
 }
 
 .section {
-    height: 74vh;
     scroll-snap-align: start;
     display: flex;
     justify-content: center;

@@ -10,6 +10,7 @@ export interface SushiItemProps {
     title: string;
     description: string;
     price: string;
+    customize?: boolean;
 }
 
 export interface ComposeItemProps {

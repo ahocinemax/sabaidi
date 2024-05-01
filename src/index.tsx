@@ -5,6 +5,7 @@ import './index.css';
 import './Home/Home.css';
 import { App } from './App';
 import { Helmet } from 'react-helmet';
+import 'react-tooltip/dist/react-tooltip.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>

@@ -7,17 +7,27 @@ import Sidebar from "../Sidebar/Sidebar";
 import { useSidebar } from "../Context/SidebarContext";
 import { useCart } from "../Context/CartContext";
 import { Helmet } from "react-helmet";
+import { Tooltip } from "react-tooltip";
 
-const ThaiItem: React.FC<SushiItemProps> = ({ title, price, description, imageUrl }) => {
+const ThaiItem: React.FC<SushiItemProps> = ({ title, price, description, imageUrl, customize }) => {
   const { addToCart } = useCart();
+  const meat: string= "Personnalisez votre viande: choix en bas de page";
   const item = { title, price, description, imageUrl };
+
   return (
     <div className="menu-item">
       <img className="ItemImage" src={imageUrl} alt={title} />
       <div className="ItemDetails">
         <h3>{title}</h3>
         <p>{description}</p>
-        <p>{price}€</p>
+        <div className="meal-info">
+          <p className="itemPrice">{price}€</p>
+          {customize === true ? 
+          <><span className="info-meat" data-tooltip-id="my-tooltip" data-tooltip-content={meat} data-tooltip-place="bottom">
+            <img src="infobull.png" alt="Personnalisez votre viande" />
+          </span>
+          <Tooltip id="my-tooltip"/></> : null}
+        </div>
       </div>
       {/* <div className="add-container" onClick={() => addToCart(item)}>
         <img className="add-cart" src="Logo-plus.png" />
@@ -35,6 +45,7 @@ export const Thai: React.FC = () => {
       description: "Riz sauté au légume.",
       imageUrl: "Thai/khao-prat.jpg",
       price: "12.90",
+      customize: true,
     },
     {
       title: "LOKLAK",
@@ -65,24 +76,28 @@ export const Thai: React.FC = () => {
       description: "Riz blanc et ses légumes sautés au basilic.",
       imageUrl: "Thai/basilic-rice-1.jpg",
       price: "14.90",
+      customize: true,
     },
     {
       title: "RIZ CANTONAIS",
       description: "Riz blanc parfumé, oeuf, petits pois morceaux de jambon accompagné d'une viande au choix.",
       imageUrl: "Thai/riz-cantonais-1.jpg",
       price: "12.90",
+      customize: true,
     },
     {
       title: "KENG KIEW WAN",
       description: "Riz blanc recouvert d'une sauce curry vert au lait de coco.",
       imageUrl: "Thai/keng-kiew-wan-1.jpg",
       price: "12.90",
+      customize: true,
     },
     {
       title: "MASSAMAN",
       description: "Riz blanc recouvert d'une sauce lait de coco curry jaune, pomme de terre carotte.",
       imageUrl: "Thai/massaman-1.jpg",
       price: "13.90",
+      customize: true,
     },
     {
       title: "TIGRE QUI PLEURE",
@@ -98,24 +113,28 @@ export const Thai: React.FC = () => {
       description: "Nouilles de riz sauté à la thaïlandaise.",
       imageUrl: "Thai/pad-thai-1.jpg",
       price: "12.90",
+      customize: true,
     },
     {
       title: "UDON",
       description: "Nouilles de riz sautées à la japonaise et ses légumes.",
       imageUrl: "Thai/udon-1.jpg",
       price: "12.90",
+      customize: true,
     },
     {
       title: "MI PRAT",
       description: "Nouilles de blé fine sautées aux légumes.",
       imageUrl: "Thai/mi-prat-1.jpg",
       price: "12.90",
+      customize: true,
     },
     {
       title: "BOBUN",
-      description: "Vermicelle, salade mélangé, concombre, tomate cerise, oignon rouge oignon frit, cacahuètes, Nems.",
+      description: "Vermicelle, salade mélangé, concombre, tomate cerise, oignon rouge oignon frit, cacahuètes, nems crevettes ou poulet.",
       imageUrl: "Thai/bobun2.jpg",
       price: "11.90",
+      customize: false,
     },
   ];
 
@@ -150,6 +169,11 @@ export const Thai: React.FC = () => {
         {activeSubmenu?.map((item, index) => (
           <ThaiItem key={index} {...item} />
         ))}
+      </div>
+      <div className="meat-list">
+        <p><strong>Viande au choix : (option Wok disponible)</strong></p>
+
+        <p>Poulet Mariné   -   Poulet crispy   -   Crevette   -   Crevette crispy   -   Boeuf   -   Veggie   -   Saumon crispy (supplément)</p>
       </div>
     </div>
   );

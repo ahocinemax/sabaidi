@@ -60,10 +60,10 @@
 
 .MenuContainer {
     position: relative;
-    /* height: 77vh; */
+    justify-content: space-around;
+    height: 77vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     row-gap: 12px;
 }
 
