@@ -60,7 +60,7 @@
 
 .MenuContainer {
     position: relative;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 77vh;
     display: flex;
     flex-direction: column;

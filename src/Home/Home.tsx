@@ -75,9 +75,6 @@ export const Home: React.FC = () => {
 
       <div className="section home">
         <div className='MenuContainer'>
-          <div className='menu-title-container'>
-            
-          </div>
           <div className='menu-list'>{submenu.map((item, index) => (
             <MenuItem
               key={index}
@@ -87,9 +84,9 @@ export const Home: React.FC = () => {
               description={item.description}
             />
           ))}
-            <div className="scrollbar">
-              {/* <img src="down-arrow.svg" alt="down" /> */}
-            </div>
+          </div>
+          <div className="scrollbar">
+            <img className='down-arrow' src="down-arrow.svg" alt="down" />
           </div>
         </div>
       </div>
