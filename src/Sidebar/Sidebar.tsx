@@ -74,6 +74,7 @@ const Sidebar: React.FC<SidebarProps> = ({ titles, activeTitle, onTitleClick }) 
         <span className="cart">
           <img src="cart.svg" alt="cart" />
         </span>
+        {cart?.length ? <div className='cart-nb-items'>{cart.length}</div> : null}
       </div>
       {showCart && <Cart />} */}
     </div>
