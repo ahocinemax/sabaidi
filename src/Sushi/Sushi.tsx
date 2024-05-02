@@ -214,13 +214,13 @@ export const Sushi = () => {
     {
       imageUrl: "Jap/nigiris.jpg",
       title: "SUSHI SAUMON CRISPY",
-      description: "Maki ou uramaki de saumon croustillant.",
+      description: "Nigiri de saumon croustillant.",
       price: "3.90",
     },
     {
       imageUrl: "Jap/nigiris.jpg",
       title: "SUSHI SAUMON CHEESE",
-      description: "Nigiri de saumon cru garni de fromage.",
+      description: "Nigiri de saumon cru garni de fromage crémeux.",
       price: "3.90",
     },
     {
