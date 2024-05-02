@@ -56,7 +56,7 @@ const Sidebar: React.FC<SidebarProps> = ({ titles, activeTitle, onTitleClick }) 
   }
 
   return (
-    <div className='sidebar-container'>
+    <div className='sidebar-container sticky-top'>
       {showArrows && (
         <button className='left-arrow' onClick={() => scrollHandler(-1)}>&lt;</button>
       )}

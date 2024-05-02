@@ -80,13 +80,15 @@
 }
 
 .add-cart {
-    width: 3.5rem;
+    width: 2.3rem;
     position: relative;
     right: 0;
+    top: 0;
 }
 
 .add-container {
     cursor: pointer;
+    position: relative;
 }
 
 @media screen and (max-width: 528px) {
