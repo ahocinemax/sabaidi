@@ -80,11 +80,12 @@ body {
 
 @media screen and (max-width: 568px) {
     .main-container {
-        height: 80vh;
+        height: 71vh;
+        min-height: 79.5%;
     }
 
     .section {
-        height: 77vh;
+        height: 67vh;
     }
     
 }
