@@ -8,24 +8,10 @@ import { Tooltip } from 'react-tooltip';
 export const Topbar: React.FC = () => {
     const location = useLocation();
     const [isActive, setIsActive] = useState(window.location.pathname !== '/');
-    // je n'arrive pas à actualiser la variable <path> à chaque changement de page
-    // const path = window.location.pathname;
-    // console.log(path);
-    // console.log(isActive);
-    // useEffect(() => {
-    //     if (path === '/' && isActive === true) {
-    //         setIsActive(false);
-    //         console.log("should hide");
-    //     } else if (path !== '/' && isActive === false) {
-    //         setIsActive(true);
-    //         console.log("should show");
-    //     }
-    // }, [path]);
-    // La solution ci-dessous consomme trop de ressources
     useEffect(() => {
         const active = location.pathname !== '/';
         setIsActive(active);
-    }, [location]); // Écoute les changements de location
+    }, [location]);
 
     return (
         <div className={`topbar active`}>
