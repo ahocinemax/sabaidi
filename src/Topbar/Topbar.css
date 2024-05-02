@@ -89,6 +89,9 @@
         flex-direction: column;
     }
 
+    .topbar {
+        height: auto;
+    }
     .right {
         display: flex;
         flex-direction: column;
