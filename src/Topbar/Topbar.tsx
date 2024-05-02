@@ -1,11 +1,12 @@
 /* Topbar.tsx */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Topbar.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Tooltip } from 'react-tooltip';
 
 
 export const Topbar: React.FC = () => {
+    const location = useLocation();
     const [isActive, setIsActive] = useState(window.location.pathname !== '/');
     // je n'arrive pas à actualiser la variable <path> à chaque changement de page
     // const path = window.location.pathname;
@@ -21,15 +22,10 @@ export const Topbar: React.FC = () => {
     //     }
     // }, [path]);
     // La solution ci-dessous consomme trop de ressources
-    setInterval(() => {
-        if (window.location.pathname === '/' && isActive === true) {
-            setIsActive(false);
-            // console.log("should hide");
-        } else if (window.location.pathname !== '/' && isActive === false) {
-            setIsActive(true);
-            // console.log("should show");
-        }
-    }, 800);
+    useEffect(() => {
+        const active = location.pathname !== '/';
+        setIsActive(active);
+    }, [location]); // Écoute les changements de location
 
     return (
         <div className={`topbar active`}>
