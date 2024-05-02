@@ -168,9 +168,9 @@ export const Starter = () => {
                   <p>{item.description}</p>
                   <p>{item.price}€</p>
                 </div>
-                <div className="add-container" onClick={() => addToCart(item)}>
+                {/* <div className="add-container" onClick={() => addToCart(item)}>
                   <img className="add-cart" src="Logo-plus.png" />
-                </div>
+                </div> */}
               </div>
             ))
           }

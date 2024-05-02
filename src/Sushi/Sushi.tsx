@@ -385,7 +385,7 @@ export const Sushi = () => {
   ];
 
   const itemsList: Record<string, SushiItemProps[]> = {
-    "Compose ton roll": [],
+    // "Compose ton roll": [],
     "Signatures": signaturesItems,
     "Plateaux": plateauxItems,
     "Poké": pokeItems,
@@ -489,9 +489,9 @@ export const Sushi = () => {
                 <p>{item.description}</p>
                 <p>{item.price}€</p>
               </div>
-              <div className="add-container" onClick={() => addToCart(item)}>
+              {/* <div className="add-container" onClick={() => addToCart(item)}>
                 <img className="add-cart" src="Logo-plus.png" />
-              </div>
+              </div> */}
             </div>
           )))
         }

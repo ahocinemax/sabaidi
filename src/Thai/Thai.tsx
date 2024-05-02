@@ -29,9 +29,9 @@ const ThaiItem: React.FC<SushiItemProps> = ({ title, price, description, imageUr
           <Tooltip id="my-tooltip" className="infobulle"/></> : null}
         </div>
       </div>
-      <div className="add-container" onClick={() => addToCart(item)}>
+      {/* <div className="add-container" onClick={() => addToCart(item)}>
         <img className="add-cart" src="Logo-plus.png" />
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -85,13 +85,13 @@ export const Home: React.FC = () => {
             />
           ))}
           </div>
-          <div className="scrollbar">
+          {/* <div className="scrollbar">
             <img className='down-arrow' src="down-arrow.svg" alt="down" />
-          </div>
+          </div> */}
         </div>
       </div>
-      <BestSellers items={BestSellersItems} />
-      <About />
+      {/* <BestSellers items={BestSellersItems} /> */}
+      {/* <About /> */}
     </div>
   );
 };
