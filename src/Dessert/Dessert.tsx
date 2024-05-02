@@ -85,8 +85,8 @@ export const Dessert = () => {
         {
           imageUrl: "coming-soon.jpg",
           title: "SODA",
-          description: "Un soda frais et pétillant, pour accompagner vos plats.",
-          price: "2.50",
+          description: "Dr peper, fuzetea, icetea/pastèque/ framboise, orangina, caraibos, oasis tropical/fraise/cassis, perrier, 7up, schweppes agrumes",
+          price: "2.00",
         },
         {
           imageUrl: "coming-soon.jpg",
@@ -96,15 +96,15 @@ export const Dessert = () => {
         },
         {
           imageUrl: "coming-soon.jpg",
-          title: "EAU GAZEUSE",
-          description: "Une eau gazeuse pétillante, pour les amateurs de bulles.",
-          price: "1.50",
+          title: "JUS DE FRUITS",
+          description: "Un jus de fruits frais et vitaminé, pour faire le plein d'énergie. litchi, mangue, passion au choix",
+          price: "2.50",
         },
         {
           imageUrl: "coming-soon.jpg",
-          title: "JUS DE FRUITS",
-          description: "Un jus de fruits frais et vitaminé, pour faire le plein d'énergie.",
-          price: "3.50",
+          title: "REDBULL",
+          description: "Boisson énergisante pour un coup de boost.",
+          price: "2.90",
         },
         // {
         //   imageUrl: "coming-soon.jpg",
