@@ -22,11 +22,11 @@ const ThaiItem: React.FC<SushiItemProps> = ({ title, price, description, imageUr
         <p>{description}</p>
         <div className="meal-info">
           <p className="itemPrice">{price}€</p>
-          {customize === true ? 
+          {customize === true ?
           <><span className="info-meat" data-tooltip-id="my-tooltip" data-tooltip-content={meat} data-tooltip-place="bottom">
             <img src="infobull.png" alt="Personnalisez votre viande" />
           </span>
-          <Tooltip id="my-tooltip"/></> : null}
+          <Tooltip id="my-tooltip" className="infobulle"/></> : null}
         </div>
       </div>
       {/* <div className="add-container" onClick={() => addToCart(item)}>

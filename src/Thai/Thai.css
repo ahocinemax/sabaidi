@@ -203,4 +203,8 @@ font-weight: bold;
         max-height: 200px;
         object-fit: cover;
     }
+
+    .infobulle {
+        width: 150px;
+    }
 }
