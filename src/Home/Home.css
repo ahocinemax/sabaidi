@@ -63,6 +63,7 @@ body {
     background-color: #edb8da;
     border-radius: 15px;
     flex-direction: column;
+    height: 95%;
 }
 
 .scrollbar {
