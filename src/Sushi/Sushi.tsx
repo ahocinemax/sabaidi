@@ -41,31 +41,31 @@ export const Sushi = () => {
 
   const yakitoriItems: SushiItemProps[] = [
     {
-      imageUrl: "coming-soon.jpg",
+      imageUrl: "Jap/boeuf fromage.jpg",
       title: "BOEUF FROMAGE",
       description: "2 brochettes de boeuf et fromage.",
       price: "5.50",
     },
     {
-      imageUrl: "coming-soon.jpg",
+      imageUrl: "Jap/brochette pane.jpg",
       title: "BOEUF FROMAGE PANÉ",
       description: "2 brochettes panées de boeuf et fromage.",
       price: "6.20",
     },
     {
-      imageUrl: "coming-soon.jpg",
+      imageUrl: "Jap/poulet caramel.jpg",
       title: "POULET CARAMÉLISÉ",
       description: "2 brochettes de poulet haché caramélisées.",
       price: "4.50",
     },
     {
-      imageUrl: "coming-soon.jpg",
+      imageUrl: "Jap/poulet_pane.jpg",
       title: "POULET MARINÉ",
       description: "2 brochettes de poulet mariné.",
       price: "5.20",
     },
     {
-      imageUrl: "coming-soon.jpg",
+      imageUrl: "Jap/brochette_saumon.jpg",
       title: "SAUMON",
       description: "2 brochettes de saumon grillé.",
       price: "5.20",
@@ -113,7 +113,7 @@ export const Sushi = () => {
       price: "12.90",
     },
     {
-      imageUrl: "coming-soon.jpg",
+      imageUrl: "Jap/poke thai.jpg",
       title: "THAÏ",
       description: "Poulet thaï saté, avocat, carotte, poivrons, cacahuètes, oignon frit, oignon rouge, pousse de soja, tomate cerise, sauce maison mayo spicy.",
       price: "13.90",
@@ -125,13 +125,13 @@ export const Sushi = () => {
       price: "13.90",
     },
     {
-      imageUrl: "coming-soon.jpg",
+      imageUrl: "Jap/poke tataki.jpg",
       title: "SAUMON TATAKI",
       description: "Saumon tataki, avocat, mangue, concombre, edamame, oignon rouge, oignon frit, ciboulette, tomate cerise, sauce sésame, sauce teriyaki.",
       price: "13.90",
     },
     {
-      imageUrl: "coming-soon.jpg",
+      imageUrl: "Jap/poke saumon.jpg",
       title: "PAVÉ DE SAUMON",
       description: "Pavé de saumon, avocat, mangue, concombre, edamame, oignon frit, oignon rouge, ciboulette, tomate cerise, sauce teriyaki.",
       price: "14.90",
@@ -152,7 +152,7 @@ export const Sushi = () => {
       price: "14.90",
     },
     {
-      imageUrl: "coming-soon.jpg",
+      imageUrl: "Jap/shirachi saumon avocat.jpg",
       title: "SAUMON AVOCAT",
       description: "Chirashi classique de saumon et d'avocat, accompagné de riz vinaigré.",
       price: "15.90",
@@ -206,28 +206,34 @@ export const Sushi = () => {
 
   const sushiItems: SushiItemProps[] = [
     {
-      imageUrl: "coming-soon.jpg",
+      imageUrl: "Jap/nigiris.jpg",
       title: "SUSHI SAUMON",
       description: "Nigiri de saumon cru.",
       price: "3.90",
     },
     {
-      imageUrl: "coming-soon.jpg",
+      imageUrl: "Jap/nigiris.jpg",
       title: "SUSHI SAUMON CRISPY",
       description: "Maki ou uramaki de saumon croustillant.",
       price: "3.90",
     },
     {
-      imageUrl: "coming-soon.jpg",
+      imageUrl: "Jap/nigiris.jpg",
       title: "SUSHI SAUMON CHEESE",
       description: "Nigiri de saumon cru garni de fromage.",
       price: "3.90",
     },
     {
-      imageUrl: "coming-soon.jpg",
+      imageUrl: "Jap/nigiris.jpg",
       title: "SUSHI SAUMON BRAISÉ",
       description: "Nigiri de saumon braisé.",
       price: "3.90",
+    },
+    {
+      imageUrl: "Jap/nigiris.jpg",
+      title: "SUSHI CREVETTE",
+      description: "Nigiri de crevette.",
+      price: "4.20",
     },
   ];
 
