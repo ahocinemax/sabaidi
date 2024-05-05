@@ -9,6 +9,30 @@ import { Helmet } from "react-helmet";
 import { DynamicContainer } from "../DynamicContainer/DynamicContainer";
 import MenuItem from "../data/jap.json";
 import composeRoll from "../data/composeRoll.json"
+import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
+import Fade from '@mui/material/Fade';
+
+interface ModalProps {
+  imageUrl: string;
+  title: string;
+  description: string;
+  price: string;
+  customize?: boolean;
+  openModal: (image: string) => void;
+}
+
+const style = {
+  border: '0px',
+  padding: '0px',
+  margin: 'auto',
+  opacity: '1',
+  transition: 'opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+  display: 'flex',
+  justifyContent: 'center',
+  height: '100dvh',
+  alignItems: 'center',
+};
 
 export const Sushi = () => {
   const { activeTitle, setActiveTitle } = useSidebar();
@@ -27,7 +51,18 @@ export const Sushi = () => {
     "Sushis": MenuItem.sushi,
     "Tacos": MenuItem.tacos,
   };
+  const [modalIsOpen, setModalIsOpen] = React.useState(false);
+  const [selectedImage, setSelectedImage] = React.useState("");
 
+  const openModal = (image: string) => {
+    if (image === "coming-soon.jpg") return;
+    setSelectedImage(image);
+    setModalIsOpen(true);
+  }
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  }
   const composeProps: ComposeItemProps[] = composeRoll;
 
   const keys = Object.keys(itemsList);
@@ -62,7 +97,7 @@ export const Sushi = () => {
             : 
           ( activeSubmenu?.map((item, index) => (
             <div className="menu-item" key={index}>
-              <img className="item-image" src={item.imageUrl} alt="Sushi" />
+              <img className="item-image" src={item.imageUrl} alt="Sushi" onClick={() => openModal(item.imageUrl)} />
               <div className="menu-item-content">
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
@@ -74,6 +109,37 @@ export const Sushi = () => {
             </div>
           )))
         }
+        <Modal
+        open={modalIsOpen}
+        onClose={closeModal}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+        sx={{
+          '& .MuiBackdrop-root': {
+            backdropFilter: 'blur(10px)',
+            border: '0px',
+            padding: '0px',
+          }
+        }}
+      >
+        <Fade in={modalIsOpen}>
+          <Box sx={style} >
+            <img src={selectedImage} alt="Enlarged view" style={{ maxWidth: "95%", maxHeight: "95%", borderRadius: '11px'}} />
+            <span className="close-cart" onClick={closeModal}>
+              <img 
+                style={{
+                  height: "3.5rem",
+                  position: "fixed",
+                  right: "45px",
+                  top: "45px"
+                }}
+                src="cross.png"
+                alt="close cross"
+              />
+            </span>
+          </Box>
+        </Fade>
+      </Modal>
       </div>
     </div>
   );

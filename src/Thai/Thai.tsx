@@ -66,6 +66,7 @@ export const Thai: React.FC  = () => {
   const [selectedImage, setSelectedImage] = useState("");
 
   const openModal = (image: string) => {
+    if (image === "coming-soon.jpg") return;
     setSelectedImage(image);
     setModalIsOpen(true);
   }
