@@ -385,9 +385,9 @@ export const Sushi = () => {
   ];
 
   const itemsList: Record<string, SushiItemProps[]> = {
-    // "Compose ton roll": [],
     "Signatures": signaturesItems,
     "Plateaux": plateauxItems,
+    // "Compose ton roll": [],
     "Poké": pokeItems,
     "Yakitori": yakitoriItems,
     "Formules": formulesItem,
@@ -402,51 +402,51 @@ export const Sushi = () => {
     {
       name: "Base",
       items: [
-        { name: "Maki", price: "4.90" },
-        { name: "Ice roll", price: "5.90" },
-        { name: "Egg roll", price: "5.90" },
-        { name: "Crispy roll", price: "6.50" },
-        { name: "Saumon roll", price: "7.50" },
-        { name: "Dinde roll", price: "7.50" },
-        { name: "Pané roll", price: "8.90" },
-        { name: "California", price: "6.90" },
-        { name: "Spring roll", price: "6.90" },
-        { name: "Avocado roll", price: "7.90" }
+        { name: "Maki", price: "4.90", imageURL: "maki.png" },
+        { name: "Ice roll", price: "5.90", imageURL: "maki.png" },
+        { name: "Egg roll", price: "5.90", imageURL: "egg_roll.jpg" },
+        { name: "Crispy roll", price: "6.50", imageURL: "crispy.png" },
+        { name: "Saumon roll", price: "7.50", imageURL: "saumon_roll.jpg" },
+        { name: "Dinde roll", price: "7.50", imageURL: "maki.png" },
+        { name: "Pané roll", price: "8.90", imageURL: "maki.png" },
+        { name: "California", price: "6.90", imageURL: "maki.png" },
+        { name: "Spring roll", price: "6.90", imageURL: "maki.png" },
+        { name: "Avocado roll", price: "7.90", imageURL: "avocado_roll.png" }
       ]
     },
     {
       name: "Protéine",
       items: [
-        { name: "poulet mayo" },
-        { name: "thon mayo"  },
-        { name: "poulet pané"  },
-        { name: "saumon"  },
-        { name: "saumon fumé"  },
-        { name: "surimi"  },
-        { name: "crevette"  },
-        { name: "crevette tempura" }
+        { name: "poulet mayo", imageURL: "coming-soon.jpg" },
+        { name: "thon mayo", imageURL: "coming-soon.jpg" },
+        { name: "poulet pané", imageURL: "coming-soon.jpg" },
+        { name: "saumon", imageURL: "coming-soon.jpg" },
+        { name: "saumon fumé", imageURL: "coming-soon.jpg" },
+        { name: "surimi", imageURL: "coming-soon.jpg" },
+        { name: "crevette", imageURL: "coming-soon.jpg" },
+        { name: "crevette tempura", imageURL: "coming-soon.jpg" }
       ],
     },
     {
       name: "Végétaux",
       items: [
-          { name: "avocat" },
-          { name: "concombre" },
-          { name: "salade" },
-          { name: "tomate cerise" },
-          { name: "carotte" },
-          { name: "poivron" },
-          { name: "ciboulette" },
-          { name: "coriandre" },
-          { name: "ananas" },
-          { name: "mangue" }
+          { name: "avocat", imageURL: "coming-soon.jpg" },
+          { name: "concombre", imageURL: "coming-soon.jpg" },
+          { name: "salade", imageURL: "coming-soon.jpg" },
+          { name: "tomate cerise", imageURL: "coming-soon.jpg" },
+          { name: "carotte", imageURL: "coming-soon.jpg" },
+          { name: "poivron", imageURL: "coming-soon.jpg" },
+          { name: "ciboulette", imageURL: "coming-soon.jpg" },
+          { name: "coriandre", imageURL: "coming-soon.jpg" },
+          { name: "ananas", imageURL: "coming-soon.jpg" },
+          { name: "mangue", imageURL: "coming-soon.jpg" }
       ]
   },
   {
       name: "Fromage",
       items: [
-          { name: "boursin" },
-          { name: "cheese" }
+          { name: "boursin", imageURL: "coming-soon.jpg" },
+          { name: "cheese", imageURL: "coming-soon.jpg" }
       ]
   }
   ];
@@ -475,7 +475,7 @@ export const Sushi = () => {
       <Sidebar titles={submenus.titles} activeTitle={submenus.activeTitle} onTitleClick={handleTitleClick}/>
       <div className="menu-items">
         { activeTitle === "Compose ton roll" && <div className="compose-details">
-          <h1>Compose ton roll!</h1>
+          <h1>Compose ton roll ! </h1>
         </div>}
 
         {activeTitle === "Compose ton roll" ?
