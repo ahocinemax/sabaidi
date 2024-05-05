@@ -5,6 +5,7 @@ import Sidebar from '../Sidebar/Sidebar';
 import { SidebarProps } from '../interfaces';
 import { useSidebar } from '../Context/SidebarContext';
 import desserts from '../data/desserts.json';
+import { useCart } from '../Context/CartContext';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Fade from '@mui/material/Fade';
@@ -24,6 +25,7 @@ const style = {
 export const Dessert = () => {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
   const [selectedImage, setSelectedImage] = React.useState("");
+  const { addToCart } = useCart();
 
   const openModal = (image: string) => {
     if (image === "coming-soon.jpg") return;
@@ -78,6 +80,9 @@ export const Dessert = () => {
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
                   <p>{item.price}€</p>
+              </div>
+              <div className="add-container" onClick={() => addToCart(item)}>
+                <img className="add-cart" src="Logo-plus.png" />
               </div>
           </div>
         ))}
