@@ -37,6 +37,7 @@ interface ThaiItemProps {
 const ThaiItem: React.FC<ThaiItemProps> = ({ title, price, description, imageUrl, customize, openModal }) => {
   const { addToCart } = useCart();
   const meat: string= "Personnalisez votre viande: choix en bas de page";
+  const item: SushiItemProps = { title, price, description, imageUrl };
 
   return (
     <div className="menu-item">
@@ -53,9 +54,9 @@ const ThaiItem: React.FC<ThaiItemProps> = ({ title, price, description, imageUrl
           <Tooltip id="my-tooltip" className="infobulle"/></> : null}
         </div>
       </div>
-      {/* <div className="add-container" onClick={() => addToCart(item)}>
+      <div className="add-container" onClick={() => addToCart(item)}>
         <img className="add-cart" src="Logo-plus.png" />
-      </div> */}
+      </div>
     </div>
   );
 };
