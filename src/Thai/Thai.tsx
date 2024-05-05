@@ -1,5 +1,5 @@
 // Thai.tsx
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import "./Thai.css";
 import { SushiItemProps, SidebarProps } from "../interfaces";
 import "../styles/fonts.css";
@@ -8,15 +8,39 @@ import { useSidebar } from "../Context/SidebarContext";
 import { useCart } from "../Context/CartContext";
 import { Helmet } from "react-helmet";
 import { Tooltip } from "react-tooltip";
+import thai from '../data/thai.json';
+import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
+import Fade from '@mui/material/Fade';
 
-const ThaiItem: React.FC<SushiItemProps> = ({ title, price, description, imageUrl, customize }) => {
+const style = {
+  border: '0px',
+  padding: '0px',
+  margin: 'auto',
+  opacity: '1',
+  transition: 'opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+  display: 'flex',
+  justifyContent: 'center',
+  height: '100dvh',
+  alignItems: 'center',
+};
+
+interface ThaiItemProps {
+  imageUrl: string;
+  title: string;
+  description: string;
+  price: string;
+  customize?: boolean;
+  openModal: (image: string) => void;
+}
+
+const ThaiItem: React.FC<ThaiItemProps> = ({ title, price, description, imageUrl, customize, openModal }) => {
   const { addToCart } = useCart();
   const meat: string= "Personnalisez votre viande: choix en bas de page";
-  const item = { title, price, description, imageUrl };
 
   return (
     <div className="menu-item">
-      <img className="ItemImage" src={imageUrl} alt={title} />
+      <img className="ItemImage" src={imageUrl} alt={title} onClick={() => openModal(imageUrl)} />
       <div className="ItemDetails">
         <h3>{title}</h3>
         <p>{description}</p>
@@ -36,111 +60,23 @@ const ThaiItem: React.FC<SushiItemProps> = ({ title, price, description, imageUr
   );
 };
 
-export const Thai: React.FC = () => {
+export const Thai: React.FC  = () => {
   const { activeTitle, setActiveTitle } = useSidebar();
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState("");
 
-  const rizItems: SushiItemProps[] = [
-    {
-      title: "KHAO PRAT",
-      description: "Riz sauté au légume.",
-      imageUrl: "Thai/khao-prat.jpg",
-      price: "12.90",
-      customize: true,
-    },
-    {
-      title: "LOKLAK",
-      description: "Riz rouge sauté à l'ail et son boeuf assaisonné façon cambodgienne.",
-      imageUrl: "Thai/loc lac.jpg",
-      price: "14.90",
-    },
-    {
-      title: "POULET CURRY KATSU",
-      description: "Curry japonnais, pomme de terre et carotte parsemé d'emmental rapé et son poulet croustillant.",
-      imageUrl: "Thai/poulet curry katsu.jpg",
-      price: "12.90",
-    },
-    {
-      title: "CREVETTES DYNAMITE",
-      description: "Crevette croustillante sauce spicy maison accompagné de son riz rouge à l'ail.",
-      imageUrl: "Thai/crevette-dynamite-1.jpg",
-      price: "13.90",
-    },
-    {
-      title: "CHICKEN DYNAMITE",
-      description: "Poulet croustillant sauce spicy maison accompagné de son riz rouge à l'ail.",
-      imageUrl: "Thai/chicken-dynamite-1.jpg",
-      price: "13.90",
-    },
-    {
-      title: "BASILIC RICE",
-      description: "Riz blanc et ses légumes sautés au basilic.",
-      imageUrl: "Thai/basilic-rice-1.jpg",
-      price: "14.90",
-      customize: true,
-    },
-    {
-      title: "RIZ CANTONAIS",
-      description: "Riz blanc parfumé, oeuf, petits pois morceaux de jambon accompagné d'une viande au choix.",
-      imageUrl: "Thai/riz-cantonais-1.jpg",
-      price: "12.90",
-      customize: true,
-    },
-    {
-      title: "KENG KIEW WAN",
-      description: "Riz blanc recouvert d'une sauce curry vert au lait de coco.",
-      imageUrl: "Thai/keng-kiew-wan-1.jpg",
-      price: "12.90",
-      customize: true,
-    },
-    {
-      title: "MASSAMAN",
-      description: "Riz blanc recouvert d'une sauce lait de coco curry jaune, pomme de terre carotte.",
-      imageUrl: "Thai/massaman-1.jpg",
-      price: "13.90",
-      customize: true,
-    },
-    {
-      title: "TIGRE QUI PLEURE",
-      description: "Viande assaisonnée coupé en lamelles avec sa sauce thaï piquante.",
-      imageUrl: "Thai/tigre-qui-pleure-1.jpg",
-      price: "14.90",
-    },
-  ];
+  const openModal = (image: string) => {
+    setSelectedImage(image);
+    setModalIsOpen(true);
+  }
 
-  const nouillesItems: SushiItemProps[] = [
-    {
-      title: "PAD THAÏ",
-      description: "Nouilles de riz sauté à la thaïlandaise.",
-      imageUrl: "Thai/pad-thai-1.jpg",
-      price: "12.90",
-      customize: true,
-    },
-    {
-      title: "UDON",
-      description: "Nouilles de riz sautées à la japonaise et ses légumes.",
-      imageUrl: "Thai/udon-1.jpg",
-      price: "12.90",
-      customize: true,
-    },
-    {
-      title: "MI PRAT",
-      description: "Nouilles de blé fine sautées aux légumes.",
-      imageUrl: "Thai/mi-prat-1.jpg",
-      price: "12.90",
-      customize: true,
-    },
-    {
-      title: "BOBUN",
-      description: "Vermicelle, salade mélangé, concombre, tomate cerise, oignon rouge oignon frit, cacahuètes, nems crevettes ou poulet.",
-      imageUrl: "Thai/bobun2.jpg",
-      price: "11.90",
-      customize: false,
-    },
-  ];
+  const closeModal = () => {
+    setModalIsOpen(false);
+  }
 
   const itemsList: Record<string, SushiItemProps[]> = {
-    "Riz": rizItems,
-    "Nouilles": nouillesItems,
+    "Riz": thai.riz,
+    "Nouilles": thai.nouilles,
   };
 
   const keys = Object.keys(itemsList);
@@ -167,9 +103,40 @@ export const Thai: React.FC = () => {
       <Sidebar titles={submenus.titles} activeTitle={submenus.activeTitle} onTitleClick={handleTitleClick}/>
       <div className="thai-items">
         {activeSubmenu?.map((item, index) => (
-          <ThaiItem key={index} {...item} />
+          <ThaiItem key={index} {...item} openModal={openModal}/>
         ))}
       </div>
+      <Modal
+        open={modalIsOpen}
+        onClose={closeModal}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+        sx={{
+          '& .MuiBackdrop-root': {
+            backdropFilter: 'blur(10px)',
+            border: '0px',
+            padding: '0px',
+          }
+        }}
+      >
+        <Fade in={modalIsOpen}>
+          <Box sx={style} >
+            <img src={selectedImage} alt="Enlarged view" style={{ maxWidth: "95%", maxHeight: "95%", borderRadius: '11px'}} />
+            <span className="close-cart" onClick={closeModal}>
+              <img 
+                style={{
+                  height: "3.5rem",
+                  position: "fixed",
+                  right: "45px",
+                  top: "45px"
+                }}
+                src="cross.png"
+                alt="close cross"
+              />
+            </span>
+          </Box>
+        </Fade>
+      </Modal>
       <div className="meat-list">
         <p><strong>Viande au choix : (option Wok disponible)</strong></p>
 
@@ -178,4 +145,3 @@ export const Thai: React.FC = () => {
     </div>
   );
 };
-
