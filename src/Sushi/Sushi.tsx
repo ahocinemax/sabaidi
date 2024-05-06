@@ -99,7 +99,7 @@ export const Sushi = () => {
             <div className="menu-item" key={index}>
               <div className="image-part">
                 <img className="item-image" src={item.imageUrl} alt="Sushi" onClick={() => openModal(item.imageUrl)} />
-                <div className="add-container" onClick={() => addToCart(item)}>
+                <div className="add-container" onClick={() => addToCart({...item, category: "jap"})}>
                   <img className="add-cart" src="Logo-plus.png" />
                 </div>
               </div>

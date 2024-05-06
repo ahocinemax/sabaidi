@@ -72,7 +72,7 @@ export const Starter = () => {
             <div className='image-part' >
               <div
                 className="add-container"
-                onClick={() => addToCart(item)}
+                onClick={() => addToCart({...item, category: "starters"})}
               >
                 <img className="add-cart" src="Logo-plus.png" />
               </div>

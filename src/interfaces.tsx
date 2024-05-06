@@ -13,6 +13,15 @@ export interface SushiItemProps {
     customize?: boolean;
 }
 
+export interface CartItemProps {
+    imageUrl: string;
+    title: string;
+    description: string;
+    price: string;
+    customize?: boolean;
+    category: string;
+}
+
 export interface ComposeItemProps {
     name: string;
     items: { name: string, price?: string; imageURL?: string }[];

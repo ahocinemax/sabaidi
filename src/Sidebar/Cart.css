@@ -12,6 +12,8 @@
     flex-direction: column;
     column-gap: 3px;
     align-items: center;
+    overflow-y: scroll;
+    max-height: 82dvh;
 }
 
 .close-cart {
@@ -21,6 +23,11 @@
     cursor: pointer;
     font-size: 2rem;
     color: #d60b76;
+}
+
+.cart-sub-title {
+    font-size: 1.5rem;
+    margin: 10px;
 }
 
 .teext {

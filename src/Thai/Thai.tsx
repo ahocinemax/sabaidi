@@ -43,7 +43,7 @@ const ThaiItem: React.FC<ThaiItemProps> = ({ title, price, description, imageUrl
     <div className="menu-item">
       <div className="image-part">
         <img className="ItemImage" src={imageUrl} alt={title} onClick={() => openModal(imageUrl)} />
-        <div className="add-container" onClick={() => addToCart(item)}>
+        <div className="add-container" onClick={() => addToCart({...item, category: "thai"})}>
           <img className="add-cart" src="Logo-plus.png" />
         </div>
       </div>
