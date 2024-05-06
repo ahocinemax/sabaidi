@@ -3,7 +3,6 @@ import "./Cart.css"
 
 export const Cart = () => {
     const { cart, setShowCart, removeFromCart } = useCart();
-    console.log("cart:", cart);
 
     return (
         <div className="cart-container">
