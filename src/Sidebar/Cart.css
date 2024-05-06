@@ -27,7 +27,7 @@
 
 .cart-sub-title {
     font-size: 1.5rem;
-    margin: 10px;
+    margin: 25px;
 }
 
 .teext {
@@ -55,8 +55,8 @@
 .add-container {
     cursor: pointer;
     position: absolute;
-    bottom: 2dvh;
-    left: 2dvw;
+    bottom: 8%;
+    left: 5%;
 }
 
 .item-details {

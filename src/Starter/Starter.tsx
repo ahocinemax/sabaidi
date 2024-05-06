@@ -70,18 +70,18 @@ export const Starter = () => {
         activeSubmenu?.map((item, index) => (
           <div key={index} className="menu-item">
             <div className='image-part' >
+            <img
+                className="ItemImage"
+                src={item.imageUrl}
+                alt={item.title}
+                onClick={() => openModal(item.imageUrl)}
+              />
               <div
                 className="add-container"
                 onClick={() => addToCart({...item, category: "starters"})}
               >
                 <img className="add-cart" src="Logo-plus.png" />
               </div>
-              <img
-                className="ItemImage"
-                src={item.imageUrl}
-                alt={item.title}
-                onClick={() => openModal(item.imageUrl)}
-              />
             </div>
             <div className="ItemDetails">
               <h3>{item.title}</h3>
