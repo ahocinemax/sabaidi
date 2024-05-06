@@ -97,14 +97,16 @@ export const Sushi = () => {
             : 
           ( activeSubmenu?.map((item, index) => (
             <div className="menu-item" key={index}>
-              <img className="item-image" src={item.imageUrl} alt="Sushi" onClick={() => openModal(item.imageUrl)} />
+              <div className="image-part">
+                <img className="item-image" src={item.imageUrl} alt="Sushi" onClick={() => openModal(item.imageUrl)} />
+                <div className="add-container" onClick={() => addToCart(item)}>
+                  <img className="add-cart" src="Logo-plus.png" />
+                </div>
+              </div>
               <div className="menu-item-content">
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
                 <p>{item.price}€</p>
-              </div>
-              <div className="add-container" onClick={() => addToCart(item)}>
-                <img className="add-cart" src="Logo-plus.png" />
               </div>
             </div>
           )))

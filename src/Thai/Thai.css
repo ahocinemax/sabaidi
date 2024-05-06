@@ -42,9 +42,12 @@
     height: 50%; */
 }
 
+.image-part {
+    position: relative;
+}
 
 .ItemImage {
-    width: 60%;
+    /* width: 60%; */
     max-height: 227px;
     border-radius: 8px;
 }

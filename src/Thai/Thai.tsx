@@ -41,21 +41,25 @@ const ThaiItem: React.FC<ThaiItemProps> = ({ title, price, description, imageUrl
 
   return (
     <div className="menu-item">
-      <img className="ItemImage" src={imageUrl} alt={title} onClick={() => openModal(imageUrl)} />
+      <div className="image-part">
+        <img className="ItemImage" src={imageUrl} alt={title} onClick={() => openModal(imageUrl)} />
+        <div className="add-container" onClick={() => addToCart(item)}>
+          <img className="add-cart" src="Logo-plus.png" />
+        </div>
+      </div>
       <div className="ItemDetails">
         <h3>{title}</h3>
         <p>{description}</p>
         <div className="meal-info">
           <p className="itemPrice">{price}€</p>
-          {customize === true ?
-          <><span className="info-meat" data-tooltip-id="my-tooltip" data-tooltip-content={meat} data-tooltip-place="bottom">
-            <img src="infobull.png" alt="Personnalisez votre viande" />
-          </span>
-          <Tooltip id="my-tooltip" className="infobulle"/></> : null}
+          { customize === true ?
+          <>
+            <span className="info-meat" data-tooltip-id="my-tooltip" data-tooltip-content={meat} data-tooltip-place="bottom">
+              <img src="infobull.png" alt="Personnalisez votre viande" />
+            </span>
+            <Tooltip id="my-tooltip" className="infobulle"/>
+          </> : null }
         </div>
-      </div>
-      <div className="add-container" onClick={() => addToCart(item)}>
-        <img className="add-cart" src="Logo-plus.png" />
       </div>
     </div>
   );

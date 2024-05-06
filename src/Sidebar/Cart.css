@@ -38,6 +38,20 @@
     /* border-bottom: 1px solid #d60b76; */
 }
 
+.add-cart {
+    width: 2.3rem;
+    position: relative;
+    right: 0;
+    top: 0;
+}
+
+.add-container {
+    cursor: pointer;
+    position: absolute;
+    bottom: 2dvh;
+    left: 2dvw;
+}
+
 .item-details {
     margin-left: 15px;
 }
@@ -47,7 +61,7 @@
     margin-bottom: 8px;
 }
 
-.item-image {
+.item-image.cart-image {
     width: 45%;
 }
 

@@ -71,19 +71,21 @@ export const Dessert = () => {
       <div className='thai-items'>
         {activeSubmenu?.map((item, index) => (
           <div key={index} className="menu-item">
-            <img
+            <div className='image-part'>
+              <img
               className="ItemImage"
               src={item.imageUrl}
               alt={item.title}
               onClick={() => openModal(item.imageUrl)}/>
-              <div className="ItemDetails">
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                  <p>{item.price}€</p>
-              </div>
               <div className="add-container" onClick={() => addToCart(item)}>
                 <img className="add-cart" src="Logo-plus.png" />
               </div>
+            </div>
+            <div className="ItemDetails">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <p>{item.price}€</p>
+            </div>
           </div>
         ))}
         <Modal

@@ -8,10 +8,18 @@ export const Cart = () => {
     return (
         <div className="cart-container">
             <p>Panier</p>
-            <span className="close-cart" onClick={() => setShowCart(false)}><img style={{ height: "1.5rem" }} src="cross.png" alt="close cross" /></span>
+            <span
+                className="close-cart"
+                onClick={() => setShowCart(false)}
+            >
+                <img
+                style={{ height: "1.5rem" }}
+                src="cross.png"
+                alt="close cross" />
+            </span>
             { cart?.length ? cart.map((item, index) => (
                 <div key={index} className="cart-item">
-                    <img className="item-image" src={item.imageUrl} alt={item.title} />
+                    <img className="item-image cart-image" src={item.imageUrl} alt={item.title} />
                     <div className="item-details">
                         <h3>{item.title}</h3>
                         <p>{item.price}€</p>
