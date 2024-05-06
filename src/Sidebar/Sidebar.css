@@ -18,7 +18,7 @@
 	position: -webkit-sticky; /* Pour le support Safari */
 	position: sticky;
 	top: 0;
-	z-index: 1020; /* z-index élevé pour rester au-dessus des autres éléments, ajustez selon votre besoin */
+	z-index: 120; /* z-index élevé pour rester au-dessus des autres éléments, ajustez selon votre besoin */
 }
   
 .sidebar::-webkit-scrollbar {
