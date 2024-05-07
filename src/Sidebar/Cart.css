@@ -16,6 +16,20 @@
     max-height: 82dvh;
 }
 
+.cart-button {
+	width: 12%;
+    min-width: 44px;
+	background-color: #233748;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.cart-button img {
+	height: 32px;
+}
+
 .close-cart {
     position: absolute;
     top: 10px;

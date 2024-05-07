@@ -63,19 +63,6 @@
 	padding-left: 3dvw;
 }
 
-.cart-button {
-	width: 12%;
-	background-color: #233748;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-}
-
-.cart-button img {
-	height: 32px;
-}
-
 .sidebar-container {
 	display: flex;
 	flex-direction: row;
