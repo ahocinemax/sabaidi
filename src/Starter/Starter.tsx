@@ -76,12 +76,12 @@ export const Starter = () => {
                 alt={item.title}
                 onClick={() => openModal(item.imageUrl)}
               />
-              <div
+              {/* <div
                 className="add-container"
                 onClick={() => addToCart({...item, category: "starters"})}
               >
                 <img className="add-cart" src="Logo-plus.png" />
-              </div>
+              </div> */}
             </div>
             <div className="ItemDetails">
               <h3>{item.title}</h3>

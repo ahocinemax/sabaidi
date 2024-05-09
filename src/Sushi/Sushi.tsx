@@ -41,7 +41,7 @@ export const Sushi = () => {
   const itemsList: Record<string, SushiItemProps[]> = {
     "Signatures": MenuItem.signatures,
     "Plateaux": MenuItem.plateaux,
-    "Compose ton roll": [],
+    // "Compose ton roll": [],
     "Poké": MenuItem.poke,
     "Yakitori": MenuItem.yakitori,
     "Formules": MenuItem.formules,
@@ -99,9 +99,9 @@ export const Sushi = () => {
             <div className="menu-item" key={index}>
               <div className="image-part">
                 <img className="item-image" src={item.imageUrl} alt="Sushi" onClick={() => openModal(item.imageUrl)} />
-                <div className="add-container" onClick={() => addToCart({...item, category: "jap"})}>
+                {/* <div className="add-container" onClick={() => addToCart({...item, category: "jap"})}>
                   <img className="add-cart" src="Logo-plus.png" />
-                </div>
+                </div> */}
               </div>
               <div className="menu-item-content">
                 <h3>{item.title}</h3>
