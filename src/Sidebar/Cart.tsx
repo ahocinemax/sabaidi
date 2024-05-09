@@ -34,7 +34,7 @@ export const Cart = () => {
             {
                 Object.keys(categorizedItems).length > 0 ?
                 Object.keys(categorizedItems).map((category, index) => (
-                    <div key={category}>
+                    <div key={category} className="category-cart">
                         <h3 className="cart-sub-title">{category}</h3>
                         {categorizedItems[category].map((item, index) => (
                             <div key={index} className="cart-item">
