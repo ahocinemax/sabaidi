@@ -220,25 +220,25 @@
 	"tacos": [
 		{
 			"imageUrl": "Jap/sushi-tacos.jpg",
-			"title": "SUSHI TACOS SAUMON SPICY AVOCAT",
+			"title": "SAUMON SPICY AVOCAT",
 			"description": "Coupe de riz pané garnie au saumon épicé et à l'avocat.",
 			"price": "8.90"
 		},
 		{
 			"imageUrl": "Jap/sushi-tacos.jpg",
-			"title": "SUSHI TACOS POULET CROUSTILLANT CHEESE AVOCAT",
+			"title": "POULET CROUSTILLANT CHEESE AVOCAT",
 			"description": "Coupe de riz pané garnie de poulet croustillant, de fromage et d'avocat.",
 			"price": "8.90"
 		},
 		{
 			"imageUrl": "Jap/sushi-tacos.jpg",
-			"title": "SUSHI TACOS CRABE SPICY AVOCAT",
+			"title": "CRABE SPICY AVOCAT",
 			"description": "Coupe de riz pané garnie de chair de crabe épicée, d'avocat et de fromage.",
 			"price": "8.90"
 		},
 		{
 			"imageUrl": "Jap/sushi-tacos.jpg",
-			"title": "SUSHI TACOS CREVETTE SPICY AVOCAT",
+			"title": "CREVETTE SPICY AVOCAT",
 			"description": "Coupe de riz pané garnie de crevettes épicée, d'avocat et de fromage.",
 			"price": "8.90"
 		}
@@ -270,21 +270,21 @@
 		},
 		{
 			"imageUrl": "Jap/P6-2.jpg",
-			"title": "P6. CRISPY DREAM",
+			"title": "P5. CRISPY DREAM",
 			"description": "6 Crispy roll saumon avocat 6 Crispy roll thon mayo avocat 6 Crispy roll poulet mayo avocat",
 			"price": "16.50"
 		},
 		{
-			"imageUrl": "Jap/P5-2.jpg",
-			"title": "P5. FULL MIX",
-			"description": "6 Avocado tempura cheese 6 Spring saumon avocat 6 Crispy Roll poulet mayo avocat 6 Egg Roll crevette avocat",
-			"price": "21.90"
-		},
-		{
 			"imageUrl": "Jap/P7-2.jpg",
-			"title": "P7. CALIFORNIA DEAM",
+			"title": "P6. CALIFORNIA DEAM",
 			"description": "6 California saumon avocat 6 California thon mayo avocat 6 California poulet mayo avocat",
 			"price": "17.90"
+		},
+		{
+			"imageUrl": "Jap/P9-2.jpg",
+			"title": "P7. PP",
+			"description": "6 Pané roll saumon cheese spicy 6 Pané roll tempura cheese spicy 6 Pané roll poulet mayo avocat spicy",
+			"price": "19.90"
 		},
 		{
 			"imageUrl": "Jap/P8-2.jpg",
@@ -293,10 +293,10 @@
 			"price": "21.90"
 		},
 		{
-			"imageUrl": "Jap/P9-2.jpg",
-			"title": "P9. PP",
-			"description": "6 Pané roll saumon cheese spicy 6 Pané roll tempura cheese spicy 6 Pané roll poulet mayo avocat spicy",
-			"price": "19.90"
+			"imageUrl": "Jap/P5-2.jpg",
+			"title": "P9. FULL MIX",
+			"description": "6 Avocado tempura cheese 6 Spring saumon avocat 6 Crispy Roll poulet mayo avocat 6 Egg Roll crevette avocat",
+			"price": "21.90"
 		}
 	],
 	"signatures": [
