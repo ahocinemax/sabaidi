@@ -9,7 +9,7 @@
     background-color: #d60b76;
     border-radius: 10px;
     margin-bottom: 8px;
-    height: 16dvh;
+    height: auto;
 }
 
 .topbar img {
@@ -90,9 +90,6 @@
         flex-direction: column;
     }
 
-    .topbar {
-        height: auto;
-    }
     .right {
         display: flex;
         flex-direction: column;

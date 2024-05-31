@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 import 'react-tooltip/dist/react-tooltip.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
+  <>
     <Helmet>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <link rel='preload' as='Monserrat' href='static/Roman-Morrissey-DEMO.ttf.woff' type='font/woff' crossOrigin='anonymous'/>
@@ -17,5 +17,5 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>
+  </>
 );
