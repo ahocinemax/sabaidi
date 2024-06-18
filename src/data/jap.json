@@ -42,7 +42,7 @@
 			"imageUrl": "Jap/poulet caramel.jpg",
 			"title": "POULET CARAMÉLISÉ",
 			"description": "2 brochettes de poulet haché caramélisées.",
-			"price": "4.50"
+			"price": "5.50"
 		},
 		{
 			"imageUrl": "Jap/poulet_pane.jpg",
@@ -54,7 +54,7 @@
 			"imageUrl": "Jap/brochette_saumon.jpg",
 			"title": "SAUMON",
 			"description": "2 brochettes de saumon grillé.",
-			"price": "5.20"
+			"price": "6.20"
 		}
 	],
 	"tartare": [
@@ -86,7 +86,7 @@
 			"imageUrl": "Jap/tartare-ceviche.jpg",
 			"title": "THON CUIT MAYO AVOCAT",
 			"description": "Tartare de thon cuit à la mayonnaise et avocat.",
-			"price": "12.90"
+			"price": "9.90"
 		}
 	],
 	"poke": [
@@ -136,7 +136,7 @@
 		},
 		{
 			"imageUrl": "Jap/shirachi saumon avocat.jpg",
-			"title": "SAUMON AVOCAT",
+			"title": "SAUMON AVOCAT CHEESE",
 			"description": "Chirashi classique de saumon et d'avocat, accompagné de riz vinaigré.",
 			"price": "15.90"
 		},
@@ -245,16 +245,16 @@
 	],
 	"plateaux": [
 		{
-			"imageUrl": "Jap/P2-2.jpg",
-			"title": "P1. HAVANA LOVE",
-			"description": "6 Sushi saumon 6 California saumon avocat",
-			"price": "10.90"
-		},
-		{
 			"imageUrl": "Jap/P1-2.jpg",
-			"title": "P2. SUSHI TIME",
+			"title": "P1. SUSHI TIME",
 			"description": "6 Sushi saumon 6 Sushi saumon snacké",
 			"price": "11.90"
+		},
+		{
+			"imageUrl": "Jap/P2-2.jpg",
+			"title": "P2. HAVANA LOVE",
+			"description": "6 Sushi saumon 6 California saumon avocat",
+			"price": "10.90"
 		},
 		{
 			"imageUrl": "Jap/P3-2.jpg",
@@ -270,21 +270,21 @@
 		},
 		{
 			"imageUrl": "Jap/P6-2.jpg",
-			"title": "P5. CRISPY DREAM",
+			"title": "P6. CRISPY DREAM",
 			"description": "6 Crispy roll saumon avocat 6 Crispy roll thon mayo avocat 6 Crispy roll poulet mayo avocat",
 			"price": "16.50"
 		},
 		{
-			"imageUrl": "Jap/P7-2.jpg",
-			"title": "P6. CALIFORNIA DEAM",
-			"description": "6 California saumon avocat 6 California thon mayo avocat 6 California poulet mayo avocat",
-			"price": "17.90"
+			"imageUrl": "Jap/P5-2.jpg",
+			"title": "P5. FULL MIX",
+			"description": "6 Avocado tempura cheese 6 Spring saumon avocat 6 Crispy Roll poulet mayo avocat 6 Egg Roll crevette avocat",
+			"price": "21.90"
 		},
 		{
-			"imageUrl": "Jap/P9-2.jpg",
-			"title": "P7. PP",
-			"description": "6 Pané roll saumon cheese spicy 6 Pané roll tempura cheese spicy 6 Pané roll poulet mayo avocat spicy",
-			"price": "19.90"
+			"imageUrl": "Jap/P7-2.jpg",
+			"title": "P7. CALIFORNIA DEAM",
+			"description": "6 California saumon avocat 6 California thon mayo avocat 6 California poulet mayo avocat",
+			"price": "17.90"
 		},
 		{
 			"imageUrl": "Jap/P8-2.jpg",
@@ -293,10 +293,10 @@
 			"price": "21.90"
 		},
 		{
-			"imageUrl": "Jap/P5-2.jpg",
-			"title": "P9. FULL MIX",
-			"description": "6 Avocado tempura cheese 6 Spring saumon avocat 6 Crispy Roll poulet mayo avocat 6 Egg Roll crevette avocat",
-			"price": "21.90"
+			"imageUrl": "Jap/P9-2.jpg",
+			"title": "P7. PP",
+			"description": "6 Pané roll saumon cheese spicy 6 Pané roll tempura cheese spicy 6 Pané roll poulet mayo avocat spicy",
+			"price": "19.90"
 		}
 	],
 	"signatures": [
@@ -356,8 +356,8 @@
 		},
 		{
 			"imageUrl": "Jap/sumo-kung-2.jpg",
-			"title": "SUMO KUNG",
-			"description": "Crevette, avocat, cheese, tempura, surimi.",
+			"title": "PANÉ KUNG",
+			"description": "Crevette, avocat, cheese, tempura.",
 			"price": "14.90"
 		}
 	]

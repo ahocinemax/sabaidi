@@ -4,25 +4,25 @@
       "imageUrl": "coming-soon.jpg",
       "title": "MANGUE SUR RIZ COCO",
       "description": "Un dessert exotique et gourmand, à base de riz gluant, de lait de coco et de mangue fraîche.",
-      "price": "6.50"
+      "price": "6.90"
     },
     {
       "imageUrl": "coming-soon.jpg",
       "title": "MOCHIS GLACÉS",
       "description": "Des petits gâteaux japonais moelleux et glacés, aux parfums variés.",
-      "price": "4.90"
+      "price": "4.50"
     },
     {
       "imageUrl": "coming-soon.jpg",
       "title": "NEMS CHOCO BANANE",
       "description": "Des nems revisités, à la banane et au chocolat, pour un dessert original.",
-      "price": "5.50"
+      "price": "3.90"
     },
     {
       "imageUrl": "coming-soon.jpg",
       "title": "NEMS CHOCO MANGUE",
       "description": "Des nems revisités, à la mangue et au chocolat, pour un dessert exotique.",
-      "price": "5.50"
+      "price": "3.90"
     }
   ],
   "fruits": [
@@ -30,13 +30,13 @@
       "imageUrl": "coming-soon.jpg",
       "title": "ANANAS FRAIS",
       "description": "Un ananas frais et juteux, idéal pour se rafraîchir.",
-      "price": "4.50"
+      "price": "4.20"
     },
     {
       "imageUrl": "coming-soon.jpg",
       "title": "MANGUE FRAÎCHE",
       "description": "Une mangue fraîche et parfumée, un vrai délice.",
-      "price": "4.50"
+      "price": "5.50"
     },
     {
       "imageUrl": "coming-soon.jpg",
@@ -50,19 +50,19 @@
       "imageUrl": "coming-soon.jpg",
       "title": "TIRAMISU MAISON",
       "description": "Un classique italien revisité, avec une crème onctueuse et un café corsé.",
-      "price": "6.90"
+      "price": "4.90"
     },
     {
       "imageUrl": "coming-soon.jpg",
       "title": "TARTE AU DAIM",
       "description": "Une pâte sablée garnie d'une crème onctueuse et d'une couche de biscuits Daim.",
-      "price": "5.90"
+      "price": "3.90"
     },
     {
       "imageUrl": "coming-soon.jpg",
       "title": "FONDANT CHOCOLAT",
       "description": "Un gâteau moelleux au chocolat avec un cœur coulant.",
-      "price": "5.50"
+      "price": "4.50"
     }
   ],
   "boissons": [
