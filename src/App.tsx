@@ -1,5 +1,5 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { Sushi } from './Sushi/Sushi';
 import { Dessert } from './Dessert/Dessert';
 import { Thai } from './Thai/Thai';
@@ -9,14 +9,23 @@ import { Topbar } from './Topbar/Topbar';
 import { SidebarProvider } from './Context/SidebarContext';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
-import { CartProvider, useCart } from './Context/CartContext';
+import { CartProvider } from './Context/CartContext';
+import './App.css';
 
-export const App = () =>
-{
+export const App: React.FC = () => {
+    const location = useLocation();
+    const [showCallButton, setShowCallButton] = useState(false);
+    
+    // const [showCallButton, setShowCallButton] = useState(window.location.pathname !== '/');
+    // useEffect(() => {
+    //     const active = location.pathname !== '/';
+    //     setShowCallButton(active);
+    // }, [location]);
+
     return (
         <div className="app">
-            <Analytics/>
-            <SpeedInsights/>
+            <Analytics />
+            <SpeedInsights />
             <CartProvider>
                 <SidebarProvider>
                     <Topbar />
@@ -29,6 +38,21 @@ export const App = () =>
                     </Routes>
                 </SidebarProvider>
             </CartProvider>
+            {showCallButton ? (
+                <a
+                    href="tel:+33140360932"
+                    className="contact-call"
+                    style={{
+                    }}
+                >
+                    <img
+                        src="tel.svg"
+                        alt="contactez appelez Sabaidi"
+                        className="tel-logo"
+                    />
+                    <span className="call-text">Appelez-nous !</span>
+                </a>
+            ) : null}
         </div>
-    )
-}
+    );
+};

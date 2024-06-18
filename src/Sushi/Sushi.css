@@ -29,11 +29,13 @@
 
 .menu-item {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 20px;
     width: 45%;
+    min-width: 450px;
     padding: 15px;
     background-color: #fff;
     border-radius: 8px;
@@ -83,6 +85,7 @@
     .menu-item {
         width: 90%;
         flex-direction: column;
+        min-width: auto;
     }
 
     .menu-item:nth-child(even) {

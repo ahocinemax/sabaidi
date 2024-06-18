@@ -1,0 +1,44 @@
+.contact-call {
+    cursor: pointer;
+    padding: 10px 19px;
+    font-size: 2rem;
+    border-radius: 12px;
+    background-color: #d60b76;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    transition: width 0.3s ease, background-color 0.3s ease;
+    width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 45px;
+    right: 70px;
+}
+
+.contact-call:hover {
+    background-color: #edb8da;
+    width: 260px; /* Width when hovered */
+}
+
+.call-text {
+    opacity: 0; /* Start with hidden text */
+    transform: translateX(-100%); /* Start with text out of view */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    margin-left: 10px; /* Add some space between icon and text */
+}
+
+.contact-call:hover .call-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.tel-logo {
+    height: 5dvw;
+    transition: transform 0.3s ease;
+    /* transform: translateX(150px); */
+    z-index: 100;
+}
