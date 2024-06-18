@@ -86,6 +86,16 @@ body {
     height: 95%;
 }
 
+.menu-link-pdf {
+    font-size: 1.2rem;
+    color: #e70b96;
+    text-decoration: none;
+}
+
+.menu-pdf {
+    font-size: 1rem;
+}
+
 .scrollbar {
     width: 100%;
     display: flex;
