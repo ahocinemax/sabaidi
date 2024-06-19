@@ -245,16 +245,16 @@
 	],
 	"plateaux": [
 		{
-			"imageUrl": "Jap/P1-2.jpg",
-			"title": "P1. SUSHI TIME",
-			"description": "6 Sushi saumon 6 Sushi saumon snacké",
-			"price": "11.90"
-		},
-		{
 			"imageUrl": "Jap/P2-2.jpg",
-			"title": "P2. HAVANA LOVE",
+			"title": "P1. HAVANA LOVE",
 			"description": "6 Sushi saumon 6 California saumon avocat",
 			"price": "10.90"
+		},
+		{
+			"imageUrl": "Jap/P1-2.jpg",
+			"title": "P2. SUSHI TIME",
+			"description": "6 Sushi saumon 6 Sushi saumon snacké",
+			"price": "11.90"
 		},
 		{
 			"imageUrl": "Jap/P3-2.jpg",
