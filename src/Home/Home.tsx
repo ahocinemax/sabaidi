@@ -85,7 +85,7 @@ export const Home: React.FC = () => {
             />
           ))}
           </div>
-          <div className="menu-pdf">Voir aussi notre carte <a target='blank' href='ASIAN PLACE ❤️.pdf' className='menu-link-pdf'>au format PDF</a> !</div>
+          <div className="menu-pdf">Voir notre carte <a target='blank' href='ASIAN PLACE ❤️.pdf' className='menu-link-pdf'> au format PDF</a> !</div>
           <div className="contact-us">
             <a className='contact-button' href="tel:+33140360932">Appelez-nous !</a>
           </div>
