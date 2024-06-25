@@ -25,7 +25,7 @@ const submenu: MenuItemProps[] = [
     description: 'Vos plat thailandais préférés: Pad Thai, Loc lac, Tigre qui pleure et bien d\'autres',
   },
   {
-    imageUrl: 'dessrt.png',
+    imageUrl: 'dessert.png',
     linkTo: '/Desserts',
     title: 'Desserts',
     description: 'Boissons, cocktails et desserts pour agrémenter vos repas',

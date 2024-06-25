@@ -46,9 +46,15 @@
 		},
 		{
 			"imageUrl": "Jap/poulet_pane.jpg",
-			"title": "POULET MARINÉ",
-			"description": "2 brochettes de poulet mariné.",
+			"title": "POULET PANÉ",
+			"description": "2 brochettes de poulet pané.",
 			"price": "5.20"
+		},
+		{
+			"imageUrl": "Jap/poulet_pane.jpg",
+			"title": "BOULETTE DE POULET",
+			"description": "2 brochettes de boulettes de poulet sauce yakitori.",
+			"price": "5.50"
 		},
 		{
 			"imageUrl": "Jap/brochette_saumon.jpg",
