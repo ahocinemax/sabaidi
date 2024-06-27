@@ -1,10 +1,16 @@
 {
 	"formules": [
 		{
-			"imageUrl": "coming-soon.jpg",
+			"imageUrl": "Jap/5 yakitoris.jpg",
 			"title": "BOEUF FROMAGE (X5)",
 			"description": "5 brochettes de boeuf et fromage. Servi avec du riz.",
 			"price": "11.90"
+		},
+		{
+			"imageUrl": "Jap/10 yakitori.jpg",
+			"title": "BOEUF FROMAGE (X10)",
+			"description": "10 brochettes de boeuf et fromage. Servi avec du riz.",
+			"price": "20.90"
 		},
 		{
 			"imageUrl": "coming-soon.jpg",
@@ -51,7 +57,7 @@
 			"price": "5.20"
 		},
 		{
-			"imageUrl": "Jap/poulet_pane.jpg",
+			"imageUrl": "Jap/boulettes poulet-2.jpg",
 			"title": "BOULETTE DE POULET",
 			"description": "2 brochettes de boulettes de poulet sauce yakitori.",
 			"price": "5.50"
@@ -135,7 +141,7 @@
 	],
 	"chirachi": [
 		{
-			"imageUrl": "coming-soon.jpg",
+			"imageUrl": "Jap/chirachi saumon-1.jpg",
 			"title": "SAUMON",
 			"description": "Chirashi de saumon cru, accompagné de riz vinaigré.",
 			"price": "14.90"
