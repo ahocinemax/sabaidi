@@ -1,25 +1,25 @@
 {
   "asiat": [
     {
-      "imageUrl": "coming-soon.jpg",
+      "imageUrl": "Desserts/mangue-riz-coco.jpg",
       "title": "MANGUE SUR RIZ COCO",
       "description": "Un dessert exotique et gourmand, à base de riz gluant, de lait de coco et de mangue fraîche.",
       "price": "6.90"
     },
     {
-      "imageUrl": "coming-soon.jpg",
+      "imageUrl": "Desserts/mochis.jpg",
       "title": "MOCHIS GLACÉS",
       "description": "Des petits gâteaux japonais moelleux et glacés, aux parfums variés.",
       "price": "4.50"
     },
     {
-      "imageUrl": "coming-soon.jpg",
+      "imageUrl": "Desserts/nems choco 2.jpg",
       "title": "NEMS CHOCO BANANE",
       "description": "Des nems revisités, à la banane et au chocolat, pour un dessert original.",
       "price": "3.90"
     },
     {
-      "imageUrl": "coming-soon.jpg",
+      "imageUrl": "Desserts/nems choco 2.jpg",
       "title": "NEMS CHOCO MANGUE",
       "description": "Des nems revisités, à la mangue et au chocolat, pour un dessert exotique.",
       "price": "3.90"
@@ -39,7 +39,7 @@
       "price": "5.50"
     },
     {
-      "imageUrl": "coming-soon.jpg",
+      "imageUrl": "Desserts/salade fruits.jpg",
       "title": "SALADE DE FRUITS MAISON",
       "description": "Une salade de fruits frais et variés, accompagnée d'un sirop maison.",
       "price": "5.90"
@@ -47,19 +47,19 @@
   ],
   "classiques": [
     {
-      "imageUrl": "coming-soon.jpg",
+      "imageUrl": "Desserts/tiramisus.jpg",
       "title": "TIRAMISU MAISON",
-      "description": "Un classique italien revisité, avec une crème onctueuse et un café corsé.",
+      "description": "Un classique italien revisité, avec parfum au choix : classique, Oreo®️ & Nutella®️, Cookie, fraise & pistache.",
       "price": "4.90"
     },
     {
-      "imageUrl": "coming-soon.jpg",
+      "imageUrl": "Desserts/tarte au daim.jpg",
       "title": "TARTE AU DAIM",
       "description": "Une pâte sablée garnie d'une crème onctueuse et d'une couche de biscuits Daim.",
       "price": "3.90"
     },
     {
-      "imageUrl": "coming-soon.jpg",
+      "imageUrl": "Desserts/fondant.jpg",
       "title": "FONDANT CHOCOLAT",
       "description": "Un gâteau moelleux au chocolat avec un cœur coulant.",
       "price": "4.50"
@@ -73,9 +73,9 @@
       "price": "3.50"
     },
     {
-      "imageUrl": "coming-soon.jpg",
+      "imageUrl": "Boissons/_sodas.jpg",
       "title": "SODA",
-      "description": "Dr peper, fuzetea, icetea/pastèque/ framboise, orangina, caraibos, oasis tropical/fraise/cassis, perrier, 7up, schweppes agrumes",
+      "description": "Dada Cola, fuzetea, icetea framboise/pêche, orangina, Caraïbos, Oasis, Perrier, 7up, Scheweppes agrumes, et bien d'autres",
       "price": "2.00"
     },
     {
@@ -85,10 +85,22 @@
       "price": "1.50"
     },
     {
-      "imageUrl": "coming-soon.jpg",
+      "imageUrl": "Boissons/_jus.jpg",
       "title": "JUS DE FRUITS",
-      "description": "Un jus de fruits frais et vitaminé, pour faire le plein d'énergie. litchi, mangue, passion au choix",
+      "description": "Un jus de fruits frais et vitaminé, pour faire le plein d'énergie. litchi, mangue, passion au choix. Jus de coco (35cl +1€).",
       "price": "2.50"
+    },
+    {
+      "imageUrl": "Boissons/_aloevera.jpg",
+      "title": "ChinChin®️ AloeVera",
+      "description": "Elixir d'aloe vera fruité. 3 parfums : original, mangue, litchi.",
+      "price": "3.00"
+    },
+    {
+      "imageUrl": "Boissons/_hata.jpg",
+      "title": "HATA®️",
+      "description": "Boisson asiatique importée, aux parfums Melon, fraise ou orange.",
+      "price": "3.90"
     },
     {
       "imageUrl": "coming-soon.jpg",

@@ -2,16 +2,9 @@
 	"formules": [
 		{
 			"imageUrl": "Jap/5 yakitoris.jpg",
-			"imageUrl": "Jap/5 yakitoris.jpg",
 			"title": "BOEUF FROMAGE (X5)",
 			"description": "5 brochettes de boeuf et fromage. Servi avec du riz.",
 			"price": "11.90"
-		},
-		{
-			"imageUrl": "Jap/10 yakitori.jpg",
-			"title": "BOEUF FROMAGE (X10)",
-			"description": "10 brochettes de boeuf et fromage. Servi avec du riz.",
-			"price": "20.90"
 		},
 		{
 			"imageUrl": "Jap/10 yakitori.jpg",
@@ -155,13 +148,19 @@
 			"price": "14.90"
 		},
 		{
+			"imageUrl": "Jap/chirachi tataki-2.jpg",
+			"title": "SAUMON TATAKI BRAISÉ",
+			"description": "Chirashi de saumon snacké, accompagné de riz vinaigré.",
+			"price": "15.20"
+		},
+		{
 			"imageUrl": "Jap/chirachi saumon avocat-2.jpg",
 			"title": "SAUMON AVOCAT CHEESE",
 			"description": "Chirashi classique de saumon et d'avocat, accompagné de riz vinaigré.",
 			"price": "15.90"
 		},
 		{
-			"imageUrl": "Jap/chirachi tataki-2.jpg",
+			"imageUrl": "Jap/chirachi tataki avocat-2.jpg",
 			"title": "SAUMON SNACKÉ AVOCAT",
 			"description": "Chirashi de saumon snacké et d'avocat, accompagné de riz vinaigré.",
 			"price": "16.20"
