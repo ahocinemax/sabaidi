@@ -144,7 +144,7 @@ export const Thai: React.FC  = () => {
         </Fade>
       </Modal>
       <div className="meat-list">
-        <p><strong>Viande au choix : (option Wok disponible)</strong></p>
+        <p><strong>VIANDE AU CHOIX : (OPTION WOK DISPONIBLE)</strong></p>
 
         <p>Poulet Mariné   -   Poulet crispy   -   Crevette   -   Crevette crispy   -   Boeuf   -   Veggie   -   Saumon crispy (supplément +1€)</p>
       </div>
