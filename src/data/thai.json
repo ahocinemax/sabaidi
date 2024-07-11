@@ -46,6 +46,13 @@
       "customize": true
     },
     {
+      "title": "SALADE THAÏ",
+      "description": "Généreuse salade thaï avocat soja tomate oignons rouges et crispy, avec boeuf, poulet ou crevette caramélisé et sa pointe de cheese",
+      "imageUrl": "Thai/salade thai2.jpg",
+      "price": "10.90",
+      "customize": false
+    },
+    {
       "title": "KENG KIEW WAN",
       "description": "Riz blanc recouvert d'une sauce curry vert au lait de coco.",
       "imageUrl": "Thai/keng-kiew-wan-1.jpg",
