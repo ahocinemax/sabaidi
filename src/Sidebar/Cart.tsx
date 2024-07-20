@@ -1,39 +1,42 @@
 import { useCart } from "../Context/CartContext";
 import { CartItemProps } from "../interfaces";
-import "./Cart.css"
+import "./Cart.css";
 
 export const Cart = () => {
     const { cart, setShowCart, removeFromCart } = useCart();
+
     interface CategorizedItems {
-        [category: string]: CartItemProps[];
+        [category: string]: (CartItemProps & { quantity: number })[];
     }
-    const groupItemsByCategory = (items: CartItemProps[]) => {
+
+    // Fonction pour regrouper les articles par catégorie et titre, puis calculer la quantité
+    const groupItemsByCategoryAndTitle = (items: CartItemProps[]) => {
         return items.reduce<CategorizedItems>((acc, item) => {
-            const category: string = item.category;
+            const category = item.category;
             if (!acc[category]) {
                 acc[category] = [];
             }
-            acc[category].push(item);
+            const existingItem = acc[category].find(accItem => accItem.title === item.title);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                acc[category].push({ ...item, quantity: 1 });
+            }
             return acc;
         }, {});
     };
-    const categorizedItems = groupItemsByCategory(cart);
-    console.log("🚀 ~ Cart ~ categorizedItems:", categorizedItems)
+
+    const categorizedItems = groupItemsByCategoryAndTitle(cart);
+
     return (
         <div className="cart-container">
             <p>Panier</p>
-            <span
-                className="close-cart"
-                onClick={() => setShowCart(false)}
-            >
-                <img
-                style={{ height: "1.5rem" }}
-                src="cross.png"
-                alt="close cross" />
+            <span className="close-cart" onClick={() => setShowCart(false)}>
+                <img style={{ height: "1.5rem" }} src="cross.png" alt="close cross" />
             </span>
             {
-                Object.keys(categorizedItems).length > 0 ?
-                Object.keys(categorizedItems).map((category, index) => (
+                Object.keys(categorizedItems).length > 0 ? 
+                Object.keys(categorizedItems).map(category => (
                     <div key={category} className="category-cart">
                         <h3 className="cart-sub-title">{category}</h3>
                         {categorizedItems[category].map((item, index) => (
@@ -44,7 +47,8 @@ export const Cart = () => {
                                     <p>{item.price}€</p>
                                 </div>
                                 <span className="remove-item" onClick={() => removeFromCart(item)}>
-                                    <img src="bin.png" style={{height: "2rem"}} alt="Remove" />
+                                    <span className="item-quantity-badge">{item.quantity}</span>
+                                    <img src="bin.png" style={{ height: "2rem" }} alt="Remove" />
                                 </span>
                             </div>
                         ))}
