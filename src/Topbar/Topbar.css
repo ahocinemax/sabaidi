@@ -62,6 +62,13 @@
         text-decoration: underline;
     }
 
+    .topbar img {
+        width: 80px;
+    }
+
+    .topbar {
+        height: 105px;
+    }
     .navigation-links a {
         font-size: 1.2em;
     }
