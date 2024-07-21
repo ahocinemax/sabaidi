@@ -85,7 +85,41 @@ export const Home: React.FC = () => {
             />
           ))}
           </div>
-          <div className="menu-pdf">Voir notre carte <a target='blank' href='ASIAN PLACE ❤️.pdf' className='menu-link-pdf'> au format PDF</a> !</div>
+          <div className="sub-menu">
+            <div className="delivery-section">
+              <p className='delivery'>⚠️ La livraison sera bientôt DISPONIBLE ! 💯🛵<br/>D'ici là, retrouvez-nous sur place ou chez nos partenaires :</p>
+              <div className="partners">
+                <span className="partner">
+                  <a
+                    href=''
+                    target='blank'
+                  >
+                    <img src="deliveroo.png" alt="deliveroo" />
+                  </a>
+                </span>
+                <span className="partner">
+                  <a
+                    target='blank'
+                    href='https://www.order.store/store/sabaidi-paris-9/xwxmB55cWqaAKPh7RlwnTg'
+                  >
+                    <img src="ubereats.png" alt="ubereats" />
+                  </a>
+                </span>
+                <span className="partner last">
+                  <a
+                    href=''
+                    target='blank'
+                  >
+                    <img src="justeat.png" alt="justeat" />
+                  </a>
+                </span>
+              </div>
+            </div>
+            <div className="menu-pdf">
+              Voir notre carte <a target='blank' href='ASIAN PLACE ❤️.pdf' className='menu-link-pdf'> au format PDF</a>
+            </div>
+
+          </div>
           <div className="contact-us">
             <a className='contact-button' href="tel:+33140360932">Appelez-nous !</a>
           </div>

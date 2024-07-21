@@ -33,6 +33,22 @@ body {
     margin: 10 2.6% 0 2.6%;
 }
 
+.partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.partners img {
+    width: 70px;
+}
+
+.partner.last img{
+    border-radius: 11px;
+}
+
 .contact-button:hover {
     background-color: #dd61af;
     transform: scale(1.25);
@@ -44,13 +60,40 @@ body {
     cursor: pointer;
     padding: 10 19px 10 19px;
     font-size: 2rem;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     border-radius: 12px;
     background-color: #d60b76;
     color: #fff;
 	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
     position: absolute;
     right: 50px;
+    bottom: 5px;
+}
+
+.delivery-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 43%;
+    background-color: #201a27;
+    color: #edb8da;
+    border-radius: 25px;
+    box-shadow: 0 8px 10px rgba(96, 38, 189, 0.59);
+}
+
+.delivery {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.sub-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
 }
 
 .main-container {
@@ -87,15 +130,15 @@ body {
 }
 
 .menu-link-pdf {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     color: #e70b96;
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
 .menu-pdf {
-    font-size: 1rem;
+    font-size: 2rem;
     display: flex;
-    width: 100%;
+    width: 45%;
     justify-content: center;
     align-items: center;
     gap: 5px;
@@ -115,6 +158,23 @@ body {
 }
 
 @media screen and (max-width: 568px) {
+    .sub-menu {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .menu-pdf {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .menu-link-pdf {
+        font-size: 1.4rem;
+    }
+
+    .delivery-section {
+        width: 100%;
+    }
     .main-container {
         height: 71vh;
         min-height: 79.5%;
@@ -133,6 +193,12 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .partner img {
+        flex-wrap: wrap;
+        width: 3rem;
+        justify-content: space-evenly;
     }
     
 }
