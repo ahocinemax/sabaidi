@@ -105,7 +105,8 @@
         font-size: 1.2em;
     }
 
-    /* .MenuContainer {
-        height: 100%;
-    } */
+    .MenuContainer {
+        row-gap: 0;
+        margin-top: 0px;
+    }
 }

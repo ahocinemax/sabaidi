@@ -42,3 +42,10 @@
     /* transform: translateX(150px); */
     z-index: 100;
 }
+
+@media screen and (max-width: 568px) {
+    .root {
+        height: 100vh;
+    }
+    
+}
