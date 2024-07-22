@@ -74,7 +74,7 @@ export const Dessert = () => {
             <div className='image-part'>
               <img
               className="ItemImage"
-              src={item.imageUrl}
+              src={item.thumbnailUrl}
               alt={item.title}
               onClick={() => openModal(item.imageUrl)}/>
               {/* <div className="add-container" onClick={() => addToCart({...item, category: "desserts"})}>
