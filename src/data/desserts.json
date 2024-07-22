@@ -75,7 +75,7 @@
   ],
   "boissons": [
     {
-      "thumbnailUrl": "",
+      "thumbnailUrl": "coming-soon.jpg",
       "imageUrl": "coming-soon.jpg",
       "title": "THÉ GLACÉ MAISON",
       "description": "Un thé glacé maison, parfumé et rafraîchissant.",
@@ -89,7 +89,7 @@
       "price": "2.00"
     },
     {
-      "thumbnail": "",
+      "thumbnail": "coming-soon.jpg",
       "imageUrl": "coming-soon.jpg",
       "title": "EAU PLATE",
       "description": "Une eau plate fraîche et désaltérante.",
@@ -117,7 +117,7 @@
       "price": "3.90"
     },
     {
-      "thumbnail": "",
+      "thumbnail": "coming-soon.jpg",
       "imageUrl": "coming-soon.jpg",
       "title": "REDBULL",
       "description": "Boisson énergisante pour un coup de boost.",

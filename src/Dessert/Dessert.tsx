@@ -49,7 +49,9 @@ export const Dessert = () => {
   const firstKey = keys.length > 0 ? keys[0] : "";
 
   const activeSubmenu: SushiItemProps[] = itemsList[activeTitle] || itemsList[firstKey];
-
+  React.useEffect(() => {
+    console.log(activeSubmenu?.map(item => item.thumbnailUrl));
+  }, [activeSubmenu]);
   const submenus: SidebarProps = {
     titles: Object.keys(itemsList),
     activeTitle: activeTitle,
