@@ -92,14 +92,12 @@ export const Home: React.FC = () => {
                 <span className="partner">
                   <a
                     href='https://deliveroo.fr/fr/menu/paris/9eme-opera/sabaidi-paris-9'
-                    // target='blank'
                   >
                     <img src="deliveroo.png" alt="deliveroo" />
                   </a>
                 </span>
                 <span className="partner">
                   <a
-                    // target='blank'
                     href='https://www.ubereats.com/store/sabaidi-paris-9/xwxmB55cWqaAKPh7RlwnTg?diningMode=DELIVERY'
                   >
                     <img src="ubereats.png" alt="ubereats" />
@@ -107,8 +105,7 @@ export const Home: React.FC = () => {
                 </span>
                 <span className="partner last">
                   <a
-                    href=''
-                    target='blank'
+                    href='https://www.just-eat.fr/menu/sab-thai'
                   >
                     <img src="justeat.png" alt="justeat" />
                   </a>
