@@ -120,12 +120,12 @@ export const Home: React.FC = () => {
             </div>
 
           </div>
-          <div className="contact-us">
-            <a className='contact-button' href="tel:+33140360932">Appelez-nous !</a>
-          </div>
           {/* <div className="scrollbar">
             <img className='down-arrow' src="down-arrow.svg" alt="down" />
-          </div> */}
+            </div> */}
+        </div>
+        <div className="contact-us">
+          <a className='contact-button' href="tel:+33140360932">Appelez-nous !</a>
         </div>
       </div>
       {/* <BestSellers items={BestSellersItems} /> */}

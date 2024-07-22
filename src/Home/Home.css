@@ -67,7 +67,7 @@ body {
 	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
     position: absolute;
     right: 50px;
-    bottom: 5px;
+    bottom: 64px;
 }
 
 .delivery-section {
@@ -97,7 +97,7 @@ body {
 }
 
 .main-container {
-    height: 78vh;
+    /* height: 78vh; */
     margin: auto;
     border-radius: 8px;
     scroll-snap-type: y mandatory;
@@ -114,7 +114,7 @@ body {
     scroll-snap-align: start;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     padding: 0 11px 0 11px;
 }
 
@@ -126,7 +126,7 @@ body {
     background-color: #edb8da;
     border-radius: 15px;
     flex-direction: column;
-    height: 95%;
+    /* height: 95%; */
 }
 
 .menu-link-pdf {
@@ -157,31 +157,45 @@ body {
     height: 50px;
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 1000px) {
+
+    .contact-button {
+        bottom: 28px;
+    }
+
     .sub-menu {
         flex-wrap: wrap;
         flex-direction: column;
     }
 
-    .menu-pdf {
+    .menu-h1 {
+        font-size: 2.5em;
         width: 100%;
-        font-size: 1.2rem;
+    }
+
+    .MenuTitle {
+        font-size: 2.5em;
+        gap: 5%;
+    }
+
+    .menu-pdf {
+        font-size: 1rem;
     }
 
     .menu-link-pdf {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .delivery-section {
         width: 100%;
     }
-    .main-container {
-        height: 71vh;
-        min-height: 79.5%;
-    }
 
     .section {
         height: 67vh;
+    }
+
+    .section.home {
+        height: 85%;
     }
 
     .contact-button {
@@ -199,6 +213,62 @@ body {
         flex-wrap: wrap;
         width: 3rem;
         justify-content: space-evenly;
+    }
+    
+}
+
+@media screen and (max-width: 568px) {
+    .sub-menu {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .delivery {
+        font-size: 1.13rem;
+        margin-bottom: 5px;
+    }
+    
+    .menu-pdf {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .menu-link-pdf {
+        font-size: 1.4rem;
+    }
+
+    .delivery-section {
+        width: 100%;
+    }
+
+    .section {
+        height: 67vh;
+    }
+
+    .section.home {
+        height: 81dvh;
+    }
+
+    .contact-button {
+        right: auto;
+        font-size: 1.5rem;
+        bottom: 20px;
+    }
+
+    .contact-us {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .partner img {
+        flex-wrap: wrap;
+        width: 3rem;
+        justify-content: space-evenly;
+    }
+
+    .partners {
+        gap: 30px;
     }
     
 }

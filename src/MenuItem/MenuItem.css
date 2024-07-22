@@ -73,11 +73,30 @@
     justify-content: center;
 }
 
+@media screen and (max-width: 1000px) {
+    /* .menu-list>* {
+        flex: 0 0 40%;
+    } */
+
+    .MenuContainer {
+        justify-content: flex-start;
+        row-gap: 45px;
+    }
+
+    .sub-menu {
+        gap: 35px;
+    }
+    
+}
+
 @media (max-width: 568px) {
+    .sub-menu {
+        gap: 25px;
+    }
     .menu-list {
       flex-wrap: wrap;
       justify-content: space-evenly;
-      gap: 10px;
+      gap: 0px;
     }
   
     .MenuItem {
@@ -106,7 +125,8 @@
     }
 
     .MenuContainer {
-        row-gap: 0;
-        margin-top: 0px;
+        row-gap: 0px;
+        justify-content: flex-start;
     }
 }
+
