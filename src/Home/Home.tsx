@@ -91,16 +91,16 @@ export const Home: React.FC = () => {
               <div className="partners">
                 <span className="partner">
                   <a
-                    href=''
-                    target='blank'
+                    href='https://deliveroo.fr/fr/menu/paris/9eme-opera/sabaidi-paris-9'
+                    // target='blank'
                   >
                     <img src="deliveroo.png" alt="deliveroo" />
                   </a>
                 </span>
                 <span className="partner">
                   <a
-                    target='blank'
-                    href='https://www.order.store/store/sabaidi-paris-9/xwxmB55cWqaAKPh7RlwnTg'
+                    // target='blank'
+                    href='https://www.ubereats.com/store/sabaidi-paris-9/xwxmB55cWqaAKPh7RlwnTg?diningMode=DELIVERY'
                   >
                     <img src="ubereats.png" alt="ubereats" />
                   </a>
