@@ -126,7 +126,7 @@
 
     .MenuContainer {
         row-gap: 0px;
-        justify-content: flex-start;
+        /* justify-content: flex-start; */
     }
 }
 
