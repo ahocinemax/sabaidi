@@ -190,6 +190,7 @@ font-weight: bold;
     .menu-item {
         width: 90%;
         flex-direction: column;
+        flex-wrap: nowrap;
     }
 
     .ItemDetails {
