@@ -31,12 +31,14 @@
   ],
   "fruits": [
     {
+      "thumbnailUrl": "coming-soon.jpg",
       "imageUrl": "coming-soon.jpg",
       "title": "ANANAS FRAIS",
       "description": "Un ananas frais et juteux, idéal pour se rafraîchir.",
       "price": "4.20"
     },
     {
+      "thumbnailUrl": "coming-soon.jpg",
       "imageUrl": "coming-soon.jpg",
       "title": "MANGUE FRAÎCHE",
       "description": "Une mangue fraîche et parfumée, un vrai délice.",
@@ -82,42 +84,42 @@
       "price": "3.50"
     },
     {
-      "thumbnail": "Boissons/thumbnails/_sodas.jpg",
+      "thumbnailUrl": "Boissons/thumbnails/_sodas.jpg",
       "imageUrl": "Boissons/_sodas.jpg",
       "title": "SODA",
       "description": "Dada Cola, fuzetea, icetea framboise/pêche, orangina, Caraïbos, Oasis, Perrier, 7up, Scheweppes agrumes, et bien d'autres",
       "price": "2.00"
     },
     {
-      "thumbnail": "coming-soon.jpg",
+      "thumbnailUrl": "coming-soon.jpg",
       "imageUrl": "coming-soon.jpg",
       "title": "EAU PLATE",
       "description": "Une eau plate fraîche et désaltérante.",
       "price": "1.50"
     },
     {
-      "thumbnail": "Boissons/thumbnails/_jus.jpg",
+      "thumbnailUrl": "Boissons/thumbnails/_jus.jpg",
       "imageUrl": "Boissons/_jus.jpg",
       "title": "JUS DE FRUITS",
       "description": "Un jus de fruits frais et vitaminé, pour faire le plein d'énergie. litchi, mangue, passion au choix. Jus de coco (35cl +1€).",
       "price": "2.50"
     },
     {
-      "thumbnail": "Boissons/thumbnails/_aloevera.jpg",
+      "thumbnailUrl": "Boissons/thumbnails/_aloevera.jpg",
       "imageUrl": "Boissons/_aloevera.jpg",
       "title": "ChinChin®️ AloeVera",
       "description": "Elixir d'aloe vera fruité. 3 parfums : original, mangue, litchi.",
       "price": "3.00"
     },
     {
-      "thumbnail": "Boissons/thumbnails/_hata.jpg",
+      "thumbnailUrl": "Boissons/thumbnails/_hata.jpg",
       "imageUrl": "Boissons/_hata.jpg",
       "title": "HATA®️",
       "description": "Boisson asiatique importée, aux parfums Melon, fraise ou orange.",
       "price": "3.90"
     },
     {
-      "thumbnail": "coming-soon.jpg",
+      "thumbnailUrl": "coming-soon.jpg",
       "imageUrl": "coming-soon.jpg",
       "title": "REDBULL",
       "description": "Boisson énergisante pour un coup de boost.",
