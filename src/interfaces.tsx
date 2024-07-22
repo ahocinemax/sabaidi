@@ -6,6 +6,7 @@ export interface MenuItemProps {
 }
 
 export interface SushiItemProps {
+    thumbnailUrl?: string;
     imageUrl: string;
     title: string;
     description: string;

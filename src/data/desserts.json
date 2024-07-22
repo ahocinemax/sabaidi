@@ -1,24 +1,28 @@
 {
   "asiat": [
     {
+      "thumbnailUrl": "Desserts/thumbnails/mangue-riz-coco.jpg",
       "imageUrl": "Desserts/mangue-riz-coco.jpg",
       "title": "MANGUE SUR RIZ COCO",
       "description": "Un dessert exotique et gourmand, à base de riz gluant, de lait de coco et de mangue fraîche. Disponible également avec banane.",
       "price": "6.90"
     },
     {
+      "thumbnailUrl": "Desserts/thumbnails/mochis.jpg",
       "imageUrl": "Desserts/mochis.jpg",
       "title": "MOCHIS GLACÉS",
       "description": "Des petits gâteaux japonais moelleux et glacés, aux parfums variés. Parfums : . Servis par paire (x2).",
       "price": "4.50"
     },
     {
+      "thumbnailUrl": "Desserts/thumbnails/nems choco 2.jpg",
       "imageUrl": "Desserts/nems choco 2.jpg",
       "title": "NEMS CHOCO BANANE",
       "description": "Des nems revisités, à la banane et au chocolat, pour un dessert original.",
       "price": "3.90"
     },
     {
+      "thumbnailUrl": "Desserts/thumbnails/nems choco 2.jpg",
       "imageUrl": "Desserts/nems choco 2.jpg",
       "title": "NEMS CHOCO MANGUE",
       "description": "Des nems revisités, à la mangue et au chocolat, pour un dessert exotique.",
@@ -39,6 +43,7 @@
       "price": "5.50"
     },
     {
+      "thumbnailUrl": "Desserts/thumbnails/salade fruits.jpg",
       "imageUrl": "Desserts/salade fruits.jpg",
       "title": "SALADE DE FRUITS MAISON",
       "description": "Une salade de fruits frais et variés, accompagnée d'un sirop maison.",
@@ -47,18 +52,21 @@
   ],
   "classiques": [
     {
+      "thumbnailUrl": "Desserts/thumbnails/tiramisus.jpg",
       "imageUrl": "Desserts/tiramisus.jpg",
       "title": "TIRAMISU MAISON",
       "description": "Un classique italien revisité, avec parfum au choix : classique, Oreo®️ & Nutella®️, Cookie, fraise & pistache.",
       "price": "4.90"
     },
     {
+      "thumbnailUrl": "Desserts/thumbnails/tarte au daim.jpg",
       "imageUrl": "Desserts/tarte au daim.jpg",
       "title": "TARTE AU DAIM",
       "description": "Une pâte sablée garnie d'une crème onctueuse et d'une couche de biscuits Daim.",
       "price": "3.90"
     },
     {
+      "thumbnailUrl": "Desserts/thumbnails/fondant.jpg",
       "imageUrl": "Desserts/fondant.jpg",
       "title": "FONDANT CHOCOLAT",
       "description": "Un gâteau moelleux au chocolat avec un cœur coulant.",
@@ -67,42 +75,49 @@
   ],
   "boissons": [
     {
+      "thumbnailUrl": "",
       "imageUrl": "coming-soon.jpg",
       "title": "THÉ GLACÉ MAISON",
       "description": "Un thé glacé maison, parfumé et rafraîchissant.",
       "price": "3.50"
     },
     {
+      "thumbnail": "Boissons/thumbnails/_sodas.jpg",
       "imageUrl": "Boissons/_sodas.jpg",
       "title": "SODA",
       "description": "Dada Cola, fuzetea, icetea framboise/pêche, orangina, Caraïbos, Oasis, Perrier, 7up, Scheweppes agrumes, et bien d'autres",
       "price": "2.00"
     },
     {
+      "thumbnail": "",
       "imageUrl": "coming-soon.jpg",
       "title": "EAU PLATE",
       "description": "Une eau plate fraîche et désaltérante.",
       "price": "1.50"
     },
     {
+      "thumbnail": "Boissons/thumbnails/_jus.jpg",
       "imageUrl": "Boissons/_jus.jpg",
       "title": "JUS DE FRUITS",
       "description": "Un jus de fruits frais et vitaminé, pour faire le plein d'énergie. litchi, mangue, passion au choix. Jus de coco (35cl +1€).",
       "price": "2.50"
     },
     {
+      "thumbnail": "Boissons/thumbnails/_aloevera.jpg",
       "imageUrl": "Boissons/_aloevera.jpg",
       "title": "ChinChin®️ AloeVera",
       "description": "Elixir d'aloe vera fruité. 3 parfums : original, mangue, litchi.",
       "price": "3.00"
     },
     {
+      "thumbnail": "Boissons/thumbnails/_hata.jpg",
       "imageUrl": "Boissons/_hata.jpg",
       "title": "HATA®️",
       "description": "Boisson asiatique importée, aux parfums Melon, fraise ou orange.",
       "price": "3.90"
     },
     {
+      "thumbnail": "",
       "imageUrl": "coming-soon.jpg",
       "title": "REDBULL",
       "description": "Boisson énergisante pour un coup de boost.",
