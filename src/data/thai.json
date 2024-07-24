@@ -50,7 +50,7 @@
       "description": "Généreuse salade thaï avocat soja tomate oignons rouges et crispy, avec boeuf, poulet ou crevette caramélisé et sa pointe de cheese",
       "imageUrl": "Thai/salade thai2.jpg",
       "price": "10.90",
-      "customize": false
+      "customize": true
     },
     {
       "title": "KENG KIEW WAN",
