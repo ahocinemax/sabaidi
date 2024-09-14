@@ -10,6 +10,7 @@ import { SidebarProvider } from './Context/SidebarContext';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { CartProvider } from './Context/CartContext';
+import { CartComponent } from './Cart/cart-module';
 import './App.css';
 
 export const App: React.FC = () => {
@@ -35,6 +36,7 @@ export const App: React.FC = () => {
                         <Route path="/Desserts" element={<Dessert />} />
                         <Route path="/Thai" element={<Thai />} />
                         <Route path="/Starters" element={<Starter />} />
+                        <Route path="/Cart" element={<CartComponent />} />
                     </Routes>
                 </SidebarProvider>
             </CartProvider>

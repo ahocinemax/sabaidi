@@ -1,6 +1,7 @@
 import { useCart } from "../Context/CartContext";
 import { CartItemProps } from "../interfaces";
 import "./Cart.css";
+import { Link, useLocation } from 'react-router-dom';
 
 export const Cart = () => {
     const { cart, setShowCart, removeFromCart } = useCart();
@@ -30,7 +31,7 @@ export const Cart = () => {
 
     return (
         <div className="cart-container">
-            <p>Panier</p>
+            <Link to="/Cart">Panier</Link>
             <span className="close-cart" onClick={() => setShowCart(false)}>
                 <img style={{ height: "1.5rem" }} src="cross.png" alt="close cross" />
             </span>
@@ -54,7 +55,7 @@ export const Cart = () => {
                         ))}
                     </div>
                 )) : 
-                <div className="teext">
+                <div className="empty-cart">
                     <p>Votre panier est vide</p>
                 </div>
             }
@@ -63,4 +64,5 @@ export const Cart = () => {
             </div>
         </div>
     );
+
 };
