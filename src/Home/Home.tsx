@@ -75,7 +75,7 @@ export const Home: React.FC = () => {
 
       <div className="section home">
         <div className='MenuContainer'>
-          <div className='menu-list'>{submenu.map((item, index) => (
+          <div style={{display: 'none'}} className='menu-list'>{submenu.map((item, index) => (
             <MenuItem
               key={index}
               imageUrl={item.imageUrl}
