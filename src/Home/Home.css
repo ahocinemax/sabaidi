@@ -113,8 +113,6 @@ body {
 .section {
     scroll-snap-align: start;
     display: flex;
-    justify-content: center;
-    /* align-items: center; */
     padding: 0 11px 0 11px;
 }
 
@@ -122,11 +120,43 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: rgb(76, 86, 86);
     font-size: 1vw;
-    margin: auto;
+    margin: auto auto auto auto;
     background-size: contain;
     border-radius: 15px;
     flex-direction: column;
     height: 195%;
+}
+
+.deco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.deco-img {
+    width: 8%;
+    margin: 100px 0;
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    /* background-color: #dd61af; */
+    align-items: center;
+    font-size: 2rem;
+    padding: 0;
+    color: #e1e1e1;
+    font-weight: 700;
+    margin-top: 200px;
+    margin-bottom: 15px;
+    /* width: 100%; */
+}
+
+.text {
+    background-color: #dd61b074;
+    padding: 0 10px;
+    backdrop-filter: blur(3px);
 }
 
 .section.home::before {
@@ -147,30 +177,39 @@ body {
 @keyframes slideshow {
     0% {
         background-image: url("/public/Jap/P1-1.jpg");
+        background-size: 100%;
     }
     24.99% {
         background-image: url("/public/Jap/P1-1.jpg");
+        background-size: 110%;
     }
     25% {
         background-image: url("/public/Jap/P6-1.jpg");
+        background-size: 100%;
     }
     49.99% {
         background-image: url("/public/Jap/P6-1.jpg");
+        background-size: 110%;
     }
     50% {
         background-image: url("/public/Thai/mi-prat-1.jpg");
+        background-size: 100%;
     }
     74.99% {
         background-image: url("/public/Thai/mi-prat-1.jpg");
+        background-size: 110%;
     }
     75% {
         background-image: url("/public/Thai/chicken-dynamite-2.jpg");
+        background-size: 100%;
     }
     99.99% {
         background-image: url("/public/Thai/chicken-dynamite-2.jpg");
+        background-size: 110%;
     }
     100% {
         background-image: url("/public/Starters/tempuras.jpg");
+        background-size: 100%;
     }
 }
 

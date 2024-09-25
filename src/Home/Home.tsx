@@ -36,29 +36,29 @@ const BestSellersItems: BestSellerItem[] = [
   {
     title: "Poké poulet",
     description: "Tendres morceaux de poulet, accompagnés de leur sauce dynamite.",
-    imageURL: "best-seller.png",
+    imageURL: "test.png",
     price: "7.50",
   },
   {
     title: "Crevette dynamite",
     description: "Nouilles sautées au wok avec des crevettes, du tofu, des arachides et de la lime.",
-    imageURL: "best-seller.png",
+    imageURL: "test.png",
     price: "13.90",
   },
   {
     title: "Mi prat",
     description: "Soupe épicée aux crevettes avec des champignons, de la citronnelle et des épices.",
-    imageURL: "best-seller.png",
+    imageURL: "test.png",
     price: "12.90",
   },
   {
-    imageURL: "best-seller.png",
+    imageURL: "test.png",
     title: "Plateau Sabaidi love",
     description: "Sushi au saumon et à l'avocat.",
     price: "10.90",
   },
   {
-    imageURL: "best-seller.png",
+    imageURL: "test.png",
     title: "Saumon mango ciboulette spicy",
     description: "Sushi au saumon et à l'avocat.",
     price: "10.90",
@@ -74,8 +74,17 @@ export const Home: React.FC = () => {
       </Helmet>
 
       <div className="section home">
+        <p className='welcome'><span className='text'>SABAIDI PARIS 9 - Jap & Thaï</span></p>
+        <div className="deco">
+          <img src="deco.svg" className='deco-img' />
+        </div>
+        {/* <div className="phrase-container">
+          <h1 className='impact-phrase'>Voyagez vers l'Asie à chaque bouchée<br/>Tout ça depuis Barbès</h1>
+        </div> */}
+        <BestSellers items={BestSellersItems} />
+
         <div className='MenuContainer'>
-          <div style={{display: 'none'}} className='menu-list'>{submenu.map((item, index) => (
+          <div className='menu-list'>{submenu.map((item, index) => (
             <MenuItem
               key={index}
               imageUrl={item.imageUrl}
@@ -125,7 +134,6 @@ export const Home: React.FC = () => {
           <a className='contact-button' href="tel:+33140360932">Appelez-nous !</a>
         </div>
       </div>
-      {/* <BestSellers items={BestSellersItems} /> */}
       {/* <About /> */}
     </div>
   );

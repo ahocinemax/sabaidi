@@ -20,7 +20,7 @@
 
 .MenuLink {
     position:relative;
-    display: flex;
+    display: none;
     text-decoration: none;
 }
 
