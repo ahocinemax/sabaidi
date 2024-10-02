@@ -7,24 +7,28 @@ import { Helmet } from 'react-helmet';
 
 const submenu: MenuItemProps[] = [
   {
+    index: 0,
     imageUrl: 'starter.png',
     linkTo: '/Starters',
     title: 'Entrées',
     description: 'Vous trouverez ici nos entrées chaudes et froides, ainsi que nos soupes et salades',
   },
   {
+    index: 0,
     imageUrl: 'jap.png',
     linkTo: '/Jap',
     title: 'Jap\'',
     description: 'Découvrez nos sushis, makis, sashimis et autres spécialités. Signatures et compositions originales vous attendent',
   },
   {
+    index: 0,
     imageUrl: 'thai.png',
     linkTo: '/Thai',
     title: 'Thaï',
     description: 'Vos plat thailandais préférés: Pad Thai, Loc lac, Tigre qui pleure et bien d\'autres',
   },
   {
+    index: 0,
     imageUrl: 'dessert.png',
     linkTo: '/Desserts',
     title: 'Desserts',
@@ -38,18 +42,21 @@ const BestSellersItems: BestSellerItem[] = [
     description: "Tendres morceaux de poulet, accompagnés de leur sauce dynamite.",
     imageURL: "test.png",
     price: "7.50",
+    isNew: true,
   },
   {
     title: "Crevette dynamite",
     description: "Nouilles sautées au wok avec des crevettes, du tofu, des arachides et de la lime.",
     imageURL: "test.png",
     price: "13.90",
+    isNew: true,
   },
   {
     title: "Mi prat",
     description: "Soupe épicée aux crevettes avec des champignons, de la citronnelle et des épices.",
     imageURL: "test.png",
     price: "12.90",
+    isNew: true,
   },
   {
     imageURL: "test.png",
@@ -74,26 +81,16 @@ export const Home: React.FC = () => {
       </Helmet>
 
       <div className="section home">
-        <p className='welcome'><span className='text'>SABAIDI PARIS 9 - Jap & Thaï</span></p>
+        <div className="background-container"></div>
+        <p className='welcome'><span className='text'>SABAIDI PARIS 9</span></p>
         <div className="deco">
-          <img src="deco.svg" className='deco-img' />
+          <img src="deco2.svg" className='deco-img' />
         </div>
-        {/* <div className="phrase-container">
-          <h1 className='impact-phrase'>Voyagez vers l'Asie à chaque bouchée<br/>Tout ça depuis Barbès</h1>
-        </div> */}
-        <BestSellers items={BestSellersItems} />
+        <div className="phrase-container">
+        <h1 className='impact-phrase'>REDÉCOUVREZ LES CLASSIQUES DE <br /><span style={{ color: '#e70b96', fontFamily: 'Philosopher-Regular' }}>LA CUISINE ASIATIQUE</span></h1>
 
+        </div>
         <div className='MenuContainer'>
-          <div className='menu-list'>{submenu.map((item, index) => (
-            <MenuItem
-              key={index}
-              imageUrl={item.imageUrl}
-              linkTo={item.linkTo}
-              title={item.title}
-              description={item.description}
-            />
-          ))}
-          </div>
           <div className="sub-menu">
             <div className="delivery-section">
               <p className='delivery'>⚠️ La livraison sera bientôt DISPONIBLE ! 💯🛵<br/>D'ici là, retrouvez-nous sur place ou chez nos partenaires :</p>
@@ -126,14 +123,27 @@ export const Home: React.FC = () => {
             </div>
 
           </div>
-          {/* <div className="scrollbar">
-            <img className='down-arrow' src="down-arrow.svg" alt="down" />
-            </div> */}
         </div>
-        <div className="contact-us">
+        {/* <div className="contact-us">
           <a className='contact-button' href="tel:+33140360932">Appelez-nous !</a>
-        </div>
+        </div> */}
+          <div className="scrollbar">
+            <img className='down-arrow' src="down-arrow.svg" alt="down" />
+          </div>
       </div>
+      <div className='menu-list'>
+        {submenu.map((item, index) => (
+          <MenuItem
+            key={index}
+            index={index}
+            imageUrl={item.imageUrl}
+            linkTo={item.linkTo}
+            title={item.title}
+            description={item.description}
+          />
+        ))}
+      </div>
+      <BestSellers items={BestSellersItems} />
       {/* <About /> */}
     </div>
   );

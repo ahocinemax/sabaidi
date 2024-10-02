@@ -26,6 +26,9 @@ const BestSellers: React.FC<BestSellersProps> = ({ items }) => {
 					<div key={index} className="best-sellers-item">
 						<div className="image-container">
 							<img className="best-seller-img" src={item.imageURL} alt={item.altText} />
+							{item.isNew ? 
+								<img className='new-best' src={"new.png"} alt='nouveauté' /> : null
+							}
 						</div>
 						<div className="text-box">
 							<h3>{item.title}</h3>

@@ -3,7 +3,7 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    width: 13%;
+    width: 23%;
     justify-content: space-between;
     font-family: "Roman Morrissey DEMO";
     position: relative;
@@ -15,14 +15,11 @@
 }
 
 .best-sellers {
-    position: relative;
     display: flex;
-    flex-direction: column;
+    position: relative;
     align-items: center;
     margin-top: 20;
-    /* background-color: #FFEFCD; */
     border-radius: 15px;
-    width: 98.4%;
     justify-content: space-evenly;
 }
 
@@ -54,19 +51,29 @@
 .best-sellers-items {
     display: flex;
     justify-content: space-around;
-    height: 100%;
     row-gap: 35px;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin: 0px 20%;
 }
 
 .image-container {
     position: relative;
-    top: -31;
+    animation: translate(-31px) ease-in;
     scale: 1.2;
+    padding: 0 0 50px 0;
 }
 
 .best-seller-img {
     width: 100%;
     border-radius: 8px;
+}
+
+.new-best {
+    width: 80%;
+    position: absolute;
+    right: -50px;
+    transform: rotate(21deg);
 }
 
 .text-box {
@@ -80,6 +87,9 @@
 .text-box p {
     color: #ffffff81;
     /* margin: 0; */
+    font-family: 'ShadowsIntoLight-Regular';
+    font-size: 1.2rem;
+    /* height:11dvh; */
 }
 
 .text-box h1 {
@@ -94,8 +104,7 @@
 .like-button .heart-icon {
     height: 100px;
     width: 100px;
-    background: url("../../public/heart.png");
-    background-position: left;
+    background: url("../../public/heart.png") left;
     cursor: pointer;
     position: absolute;
 }
@@ -135,4 +144,23 @@
     color: #fff;
     font-weight: 900;
     margin-left: 6px;
+}
+
+@media screen and (max-width: 1200px) {
+    .best-sellers-items {
+        margin: 0px 10%;
+    }
+
+    .best-sellers h2 {
+        font-size: 2.5em;
+    }
+
+    .best-sellers h3 {
+        font-size: 1em;
+    }
+
+    .best-sellers-item {
+        width: 75%;
+    }
+    
 }

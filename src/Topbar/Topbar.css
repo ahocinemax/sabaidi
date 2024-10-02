@@ -5,13 +5,12 @@
     align-items: center;
     width: 100%;
     padding: 10px;
-    /* background: rgba(255, 255, 255, 0.9); /* Arrière-plan transparent */
     box-shadow: 0 1px rgba(255, 255, 255, 0.24); /* Léger effet d'ombre */
-    /* position: sticky; */
     backdrop-filter: blur(5px); /* Flou de l'arrière-plan */
     top: 0;
     left: 0;
     z-index: 99;
+    position: sticky;
 }
 
 .menu-deroulant {
@@ -20,21 +19,6 @@
     z-index: 99;
     right: 25px;
     position:sticky;
-}
-
-.phrase-container {
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-    margin-top: 35px;
-}
-
-.impact-phrase {
-    width: 75%;
-    background-color: #e70b96;
-    margin: auto;
-    display: flex;
-    justify-content: center;
 }
 
 .logo img {
@@ -128,6 +112,7 @@
 @media screen and (max-width: 600px) {
     .topbar {
         height: 80px;
+        justify-content: space-between;
     }
 
     .navigation-links {

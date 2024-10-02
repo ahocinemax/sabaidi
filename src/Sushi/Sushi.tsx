@@ -41,7 +41,7 @@ export const Sushi = () => {
   const itemsList: Record<string, SushiItemProps[]> = {
     "Signatures": MenuItem.signatures,
     "Plateaux": MenuItem.plateaux,
-    // "Compose ton roll": [],
+    "Compose ton roll": [],
     "Poké": MenuItem.poke,
     "Yakitori": MenuItem.yakitori,
     "Formules": MenuItem.formules,

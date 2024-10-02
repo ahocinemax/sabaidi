@@ -2,8 +2,6 @@
 
 body {
     background-color: #000000c2;
-    /* background-image: url("/public/emeraude.webp"); */
-    background-position: center;
 }
 
 .menu-h1 {
@@ -89,7 +87,8 @@ body {
 }
 
 .sub-menu {
-    display: flex;
+    /* display: flex; */
+    display: none;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -97,7 +96,6 @@ body {
 }
 
 .main-container {
-    /* height: 78vh; */
     margin: auto;
     border-radius: 8px;
     scroll-snap-type: y mandatory;
@@ -112,19 +110,79 @@ body {
 
 .section {
     scroll-snap-align: start;
-    display: flex;
-    padding: 0 11px 0 11px;
+    padding: 0 11px;
 }
 
 .section.home {
     font-family: 'Montserrat', sans-serif;
     color: rgb(76, 86, 86);
     font-size: 1vw;
-    margin: auto auto auto auto;
-    background-size: contain;
+    margin: auto;
     border-radius: 15px;
     flex-direction: column;
-    height: 195%;
+    height: 100%; /* Assure que la section prend 100% de la hauteur de l'écran */
+    /* position: relative; Pour que l'élément ::before fonctionne correctement */
+    overflow: hidden;
+}
+
+.section.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    opacity: 0.6;
+    z-index: -1;
+    animation: slideshow 60s infinite;
+}
+
+@keyframes slideshow {
+    0% {
+        background-image: url("/public/Jap/P1-1.jpg");
+        transform: scale(1);
+
+    }
+    24.99% {
+        background-image: url("/public/Jap/P1-1.jpg");
+        transform: scale(1.3);
+    }
+    25% {
+        background-image: url("/public/Jap/P6-1.jpg");
+        transform: scale(1);
+
+    }
+    49.99% {
+        background-image: url("/public/Jap/P6-1.jpg");
+        transform: scale(1.3);
+    }
+    50% {
+        background-image: url("/public/Thai/mi-prat-1.jpg");
+        transform: scale(1);
+
+    }
+    74.99% {
+        background-image: url("/public/Thai/mi-prat-1.jpg");
+        transform: scale(1.3);
+    }
+    75% {
+        background-image: url("/public/Thai/chicken-dynamite-2.jpg");
+        transform: scale(1);
+
+    }
+    99.99% {
+        background-image: url("/public/Thai/chicken-dynamite-2.jpg");
+        transform: scale(1.3);
+    }
+    100% {
+        background-image: url("/public/Starters/tempuras.jpg");
+        transform: scale(1);
+
+    }
 }
 
 .deco {
@@ -135,84 +193,74 @@ body {
 }
 
 .deco-img {
-    width: 8%;
-    margin: 100px 0;
+    width: 10%;
+    margin: 0 0 200px 0;
+    filter: drop-shadow(0 4px 9px rgba(61, 32, 204, 0.5));
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(35px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.phrase-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    margin: 45px 0;
+    text-align: center;
+}
+
+.impact-phrase {
+    letter-spacing: 3px;
+    font-family: 'Montserrat';
+    width: 75%;
+    backdrop-filter: blur(3px);
+    background-color: #2626287b;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    line-height: 1.2;
+    font-size: 3.5rem;
+}
+
+.slider {
+    opacity: 0; /* Masquer l'élément par défaut */
+    transition: opacity 0.5s ease; /* Transition pour l'apparition */
+}
+
+.slider.visible {
+    opacity: 1; /* Rendre visible quand la classe 'visible' est ajoutée */
+    animation: slide-up 0.5s ease forwards; /* Jouer l'animation */
 }
 
 .welcome {
     display: flex;
     justify-content: center;
-    /* background-color: #dd61af; */
     align-items: center;
     font-size: 2rem;
     padding: 0;
     color: #e1e1e1;
     font-weight: 700;
-    margin-top: 200px;
-    margin-bottom: 15px;
-    /* width: 100%; */
+    margin-top: 140px;
+    margin-bottom: 0;
 }
 
 .text {
-    background-color: #dd61b074;
+    /* background-color: #dd61b074; */
     padding: 0 10px;
     backdrop-filter: blur(3px);
+    letter-spacing: 5px;
 }
-
-.section.home::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.6; /* Réglage de l'opacité */
-    z-index: -1; /* Place l'image derrière le contenu */
-    animation: slideshow 60s infinite; /* Animation infinie avec durée de 20 secondes */
-}
-
-/* Animation pour le défilement des images */
-@keyframes slideshow {
-    0% {
-        background-image: url("/public/Jap/P1-1.jpg");
-        background-size: 100%;
-    }
-    24.99% {
-        background-image: url("/public/Jap/P1-1.jpg");
-        background-size: 110%;
-    }
-    25% {
-        background-image: url("/public/Jap/P6-1.jpg");
-        background-size: 100%;
-    }
-    49.99% {
-        background-image: url("/public/Jap/P6-1.jpg");
-        background-size: 110%;
-    }
-    50% {
-        background-image: url("/public/Thai/mi-prat-1.jpg");
-        background-size: 100%;
-    }
-    74.99% {
-        background-image: url("/public/Thai/mi-prat-1.jpg");
-        background-size: 110%;
-    }
-    75% {
-        background-image: url("/public/Thai/chicken-dynamite-2.jpg");
-        background-size: 100%;
-    }
-    99.99% {
-        background-image: url("/public/Thai/chicken-dynamite-2.jpg");
-        background-size: 110%;
-    }
-    100% {
-        background-image: url("/public/Starters/tempuras.jpg");
-        background-size: 100%;
-    }
-}
-
 
 .menu-link-pdf {
     font-size: 2.2rem;
@@ -236,10 +284,20 @@ body {
     justify-content: center;
     position: absolute;
     bottom: 15px;
+    animation: bounce 1s infinite; /* Ajout de l'animation */
 }
 
 .down-arrow {
-    height: 50px;
+    height: 105px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Position initiale */
+    }
+    50% {
+        transform: translateY(10px); /* Déplacement vers le bas */
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -275,14 +333,6 @@ body {
         width: 100%;
     }
 
-    .section {
-        height: 67vh;
-    }
-
-    .section.home {
-        height: 85%;
-    }
-
     .contact-button {
         right: auto;
         font-size: 1.5rem;
@@ -300,6 +350,9 @@ body {
         justify-content: space-evenly;
     }
     
+    .impact-phrase {
+        font-size: 2rem;
+    }
 }
 
 @media screen and (max-width: 568px) {
@@ -312,7 +365,24 @@ body {
         font-size: 1.13rem;
         margin-bottom: 5px;
     }
+
+    .section.home {
+        justify-content: center;
+    }
+
+    .impact-phrase {
+        font-size: 1.52rem;
+    }
     
+    .welcome {
+        font-size: 1rem;
+    }
+
+    .deco-img {
+        width: 20%;
+        margin: 0 0 100px 0;
+    }
+
     .menu-pdf {
         width: 100%;
         font-size: 1.2rem;
@@ -324,14 +394,6 @@ body {
 
     .delivery-section {
         width: 100%;
-    }
-
-    .section {
-        height: 67vh;
-    }
-
-    .section.home {
-        height: 81dvh;
     }
 
     .contact-button {
@@ -355,5 +417,4 @@ body {
     .partners {
         gap: 30px;
     }
-    
 }

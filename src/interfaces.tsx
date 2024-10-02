@@ -1,4 +1,5 @@
 export interface MenuItemProps {
+    index: number;
     imageUrl: string;
     linkTo: string;
     title: string;
@@ -48,6 +49,7 @@ export interface BestSellerItem {
     altText?: string;
     price: string
     likes?: number;
+    isNew?: boolean;
 }
 
 export interface BestSellersProps {
