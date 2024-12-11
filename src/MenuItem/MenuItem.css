@@ -11,6 +11,8 @@
     display: flex;
     text-decoration: none;
     width: 80%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #6145e0;
     margin-bottom: 20px; /* Ajoute un espacement entre les éléments */
 }
 
@@ -18,11 +20,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between; /* Assure que l'image et le texte se placent de chaque côté */
-    padding: 0 100px;
     overflow: hidden;
     border-radius: 8px;
-    cursor: pointer;
     transition: all 0.3s ease-in-out;
+    flex-wrap: wrap;
 }
 
 .MenuItem.left {
@@ -34,9 +35,23 @@
 }
 
 .MenuItemImage {
-    width: 51%;
+    width: 41%;
     object-fit: cover;
+    cursor: pointer;
     border-radius: 8px;
+    scale: 0.7;
+}
+
+.MenuItemDescription {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.MenuExempleImage {
+    width: 50%;
+    object-fit: cover;
 }
 
 .MenuItemText {
@@ -75,36 +90,11 @@
     font-weight: 600;
 }
 
-.MenuContainer {
-    position: relative;
-    justify-content: space-evenly;
-    /* height: 77vh; */
-    display: flex;
-    flex-direction: column;
-    row-gap: 12px;
-}
-
 .menu-list {
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
     justify-content: center;
-}
-
-@media screen and (max-width: 1000px) {
-    /* .menu-list>* {
-        flex: 0 0 40%;
-    } */
-
-    .MenuContainer {
-        justify-content: flex-start;
-        row-gap: 45px;
-    }
-
-    .sub-menu {
-        gap: 35px;
-    }
-    
 }
 
 @media screen and (max-width: 768px) {
@@ -119,9 +109,6 @@
 }
 
 @media (max-width: 568px) {
-    .sub-menu {
-        gap: 25px;
-    }
     .menu-list {
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -151,11 +138,6 @@
 
     .TextOverlay p:last-child {
         font-size: 1.2em;
-    }
-
-    .MenuContainer {
-        row-gap: 0px;
-        /* justify-content: flex-start; */
     }
 }
 

@@ -30,8 +30,6 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
         const newCart = [...cart, item];
         newCart.sort((a, b) => categoryOrder.indexOf(a.category) - categoryOrder.indexOf(b.category));
         setCart(newCart);
-    
-        console.log("Item added to cart:", item);
     };
     
 

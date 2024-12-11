@@ -38,7 +38,7 @@ const Sidebar: React.FC<SidebarProps> = ({ titles, activeTitle, onTitleClick }) 
   const scrollHandler = (dir: number) => {
     if (sidebarRef.current) {
       // Calcule la distance de défilement en fonction de la largeur visible du conteneur
-      const scrollDistance = sidebarRef.current.offsetWidth * 0.25;
+      const scrollDistance = sidebarRef.current.offsetWidth * 0.39;
       // Déplace la barre latérale en fonction de la direction (gauche ou droite)
       sidebarRef.current.scrollBy({
         left: scrollDistance * dir,
@@ -52,7 +52,6 @@ const Sidebar: React.FC<SidebarProps> = ({ titles, activeTitle, onTitleClick }) 
 
   const handleCartButton = () => {
     setShowCart(true);
-    console.log("Cart button pressed");
   }
 
   return (
@@ -70,13 +69,13 @@ const Sidebar: React.FC<SidebarProps> = ({ titles, activeTitle, onTitleClick }) 
       {showArrows && (
         <button className='right-arrow' onClick={() => scrollHandler(1)}>&gt;</button>
       )}
-      {/* <div className="cart-button" onClick={handleCartButton}>
+      <div className="cart-button" onClick={handleCartButton}>
         <span className="cart">
           <img src="cart.svg" alt="cart" />
         </span>
         {cart?.length ? <div className='cart-nb-items'>{cart.length}</div> : null}
       </div>
-      {showCart && <Cart />} */}
+      {showCart && <Cart />}
     </div>
   );
 };

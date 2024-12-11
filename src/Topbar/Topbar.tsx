@@ -1,28 +1,65 @@
-/* Topbar.tsx */
-import React from 'react';
-import './Topbar.css';
-import { Link } from 'react-router-dom';
-// import { Tooltip } from 'react-tooltip';
-
+import React, { useState } from "react";
+import "./Topbar.css";
+import { Link } from "react-router-dom";
 
 export const Topbar: React.FC = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
     return (
-        <div className={`topbar active`}>
-            <Link to={'/'} className='logo' data-tooltip-id="my-tooltip" data-tooltip-content="Retour à l'accueil" data-tooltip-place="bottom">
-                <img src="sabaidi.jpg" alt="Logo Sabaidi" />
-            </Link>
-            {/* <Tooltip id="my-tooltip" /> */}
+        <>
+            <div className={`topbar active`}>
+                <Link
+                    to="/"
+                    className="logo"
+                    data-tooltip-id="my-tooltip"
+                    data-tooltip-content="Retour à l'accueil"
+                    data-tooltip-place="bottom"
+                >
+                    <img src="logo_couleur_texte.png" alt="Logo Sabaidi" />
+                </Link>
 
-            <div className="navigation-links">
-                <Link to="/Starters">ENTRÉES</Link>
-                <Link to="/Jap">JAP'</Link>
-                <Link to="/Thai">THAÏ</Link>
-                <Link to="/Desserts">DESSERTS</Link>
+                <div className="navigation-links">
+                    <Link to="/Starters">ENTRÉES</Link>
+                    <Link to="/Jap">JAP'</Link>
+                    <Link to="/Thai">THAÏ</Link>
+                    <Link to="/Desserts">DESSERTS</Link>
+                </div>
+
+                <div className="order-button">COMMANDER</div>
+
+                {/* Bouton pour ouvrir le menu */}
+                <div className="menu-deroulant" onClick={toggleMenu}>
+                    <img src="menu-deroulant.svg" alt="Déplier le menu" />
+                </div>
             </div>
 
-            <div className="order-button">COMMANDER</div>
-            <div className="menu-deroulant"><img src="menu-deroulant.svg" alt="deplier le menu" /></div>
-        </div>
+            {/* Div du menu déroulant */}
+            {isMenuOpen && (
+                <div className="menu-box">
+                    <button className="close-button" onClick={toggleMenu}>
+                        ✕
+                    </button>
+                    <div className="logo-menu"><img src="logo_couleur_texte.png" alt="logo restaurant japonais paris" /></div>
+                    <div className="menu-links">
+                        <Link to="/Starters" onClick={toggleMenu}>
+                            ENTRÉES
+                        </Link>
+                        <Link to="/Jap" onClick={toggleMenu}>
+                            JAP'
+                        </Link>
+                        <Link to="/Thai" onClick={toggleMenu}>
+                            THAÏ
+                        </Link>
+                        <Link to="/Desserts" onClick={toggleMenu}>
+                            DESSERTS
+                        </Link>
+                    </div>
+                </div>
+            )}
+        </>
     );
 };

@@ -109,7 +109,7 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
       <div className='compose-sub'>
         {actual?.items.map((item: any, index: number) => (
           <div key={index} className={`compose-item ${actual && isSelected(actual.name, item) ? 'selected' : ''}`} onClick={(e) => handleCheckboxClick(e, actual?.name, item)}>
-            <img className='compose-image-base' src={item.imageURL} alt={item.name} />
+            {/* <img className='compose-image-base' src={item.imageURL} alt={item.name} /> */}
             <div className='compose-details'>
               <h3>{item.name}</h3>
               {item.price ? <p>{item.price}€</p> : null}

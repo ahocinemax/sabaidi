@@ -18,6 +18,11 @@
 }
 
 @font-face {
+    font-family: "Nunito-Black";
+    src: url('/public/static/Nunito-Regular.ttf') format('truetype');
+}
+
+@font-face {
     src:url('/public/static/osaka-re.ttf') format('truetype');
     font-family: 'osaka re';
     font-weight: normal;
