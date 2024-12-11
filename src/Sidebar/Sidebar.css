@@ -48,6 +48,11 @@
 	letter-spacing: 0.0892857143em;
 	font-size: 1.2rem;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	text-align: center;
 }
 
 .nav-link.active {
@@ -73,7 +78,6 @@
 }
 
 .left-arrow, .right-arrow {
-	height: 50px;
 	width: 50px;
 	display: flex;
 	align-items: center;

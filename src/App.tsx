@@ -22,7 +22,10 @@ export const App: React.FC = () => {
     //     const active = location.pathname !== '/';
     //     setShowCallButton(active);
     // }, [location]);
-
+    useEffect(() => {
+        // Ajouter le style au body
+        document.body.style.margin = '0';
+    }, []);
     return (
         <div className="app">
             <Analytics />
