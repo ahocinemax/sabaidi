@@ -339,6 +339,10 @@ body {
         margin-bottom: 5px;
     }
 
+    .content {
+        padding-top: 0;
+    }
+
     .section.home {
         justify-content: center;
         height: calc(100% - 80px);
@@ -355,6 +359,7 @@ body {
     .deco-img {
         width: 20%;
         margin: 0 0 100px 0;
+        min-width: 180px;
     }
 
     .menu-pdf {
