@@ -81,7 +81,7 @@
     width: 40%;
 }
 
-@media screen and (max-width: 528px) {
+@media screen and (max-width: 600px) {
     .menu-item {
         width: 90%;
         flex-direction: column;

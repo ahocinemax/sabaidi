@@ -19,6 +19,7 @@ const style = {
   justifyContent: 'center',
   height: '100dvh',
   alignItems: 'center',
+  position: 'relative',
 };
 
 export const Starter = () => {
@@ -111,7 +112,7 @@ export const Starter = () => {
                 <img 
                   style={{
                     height: "3.5rem",
-                    position: "fixed",
+                    position: "absolute",
                     right: "45px",
                     top: "45px"
                   }}

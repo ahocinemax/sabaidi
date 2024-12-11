@@ -173,7 +173,7 @@ font-weight: bold;
     width: 100%;
 }
 
-@media screen and (max-width: 528px) {
+@media screen and (max-width: 600px) {
     .container-thai h2 {
         font-size: 1.5rem;
     }
