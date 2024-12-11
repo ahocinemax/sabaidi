@@ -3,6 +3,7 @@
 body {
     background-color: #000000c2;
     font-family: "Nunito-Black";
+    margin: 0;
 }
 
 .menu-h1 {
@@ -49,7 +50,6 @@ body {
 .section.home {
     font-family: 'Montserrat', sans-serif;
     margin: auto;
-    flex-direction: column;
     height: calc(100% - 110px);
     min-height: 550px;
     position: relative;
@@ -127,6 +127,7 @@ body {
 }
 
 .deco-img {
+    min-width: 150px;
     width: 10%;
     margin: 0 0 200px 0;
     filter: drop-shadow(0 4px 9px rgba(61, 32, 204, 0.5));
@@ -332,7 +333,7 @@ body {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .sub-menu {
         flex-wrap: wrap;
         flex-direction: column;

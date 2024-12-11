@@ -24,7 +24,7 @@ export const App: React.FC = () => {
     // }, [location]);
     useEffect(() => {
         // Ajouter le style au body
-        document.body.style.margin = '0';
+        // document.body.style.margin = '0';
     }, []);
     return (
         <div className="app">
