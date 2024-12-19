@@ -11,7 +11,7 @@ export const Topbar: React.FC = () => {
 
     return (
         <>
-            <div className={`topbar active`}>
+            <div className={`topbar active ${isMenuOpen ? "isOpen" : ""}`}>
                 <Link
                     to="/"
                     className="logo"
