@@ -6,6 +6,10 @@ body {
     margin: 0;
 }
 
+.main-container.no-scroll {
+    overflow: none;
+}
+
 .menu-h1 {
     font-size: 3em;
     text-align: center;
@@ -127,7 +131,7 @@ body {
 }
 
 .deco-img {
-    min-width: 150px;
+    min-width: 180px;
     width: 10%;
     margin: 0 0 200px 0;
     filter: drop-shadow(0 4px 9px rgba(61, 32, 204, 0.5));
@@ -222,7 +226,7 @@ body {
     background-size: 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: wave 5s linear infinite alternate;
+    animation: wave 3s infinite alternate;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,10 +235,10 @@ body {
 
 @keyframes wave {
     0% {
-        background-position: 0% 50%;
+        background-position: 0% 100%;
     }
     100% {
-        background-position: 100% 50%;
+        background-position: 100% 0%;
     }
 }
 
@@ -275,6 +279,12 @@ body {
     }
     50% {
         transform: translateY(10px); /* Déplacement vers le bas */
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .deco-img {
+        margin:  0 0 50px 0;
     }
 }
 
@@ -340,6 +350,7 @@ body {
     }
 
     .delivery {
+
         font-size: 1.13rem;
         margin-bottom: 5px;
     }
@@ -368,8 +379,6 @@ body {
 
     .deco-img {
         width: 20%;
-        margin: 0 0 100px 0;
-        min-width: 180px;
     }
 
     .menu-pdf {

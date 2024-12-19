@@ -39,7 +39,7 @@ export const Topbar: React.FC = () => {
 
             {/* Div du menu déroulant */}
             {isMenuOpen && (
-                <div className="menu-box">
+                <div className={`menu-box ${isMenuOpen ? "menu-box-open" : ""}`}>
                     <button className="close-button" onClick={toggleMenu}>
                         ✕
                     </button>
