@@ -51,7 +51,7 @@ const Sidebar: React.FC<SidebarProps> = ({ titles, activeTitle, onTitleClick }) 
   };
 
   const handleCartButton = () => {
-    setShowCart(true);
+    setShowCart(!showCart);
   }
 
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Topbar.css";
 import { Link } from "react-router-dom";
 
@@ -8,6 +8,11 @@ export const Topbar: React.FC = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    useEffect(() => {
+        // Ajouter une classe au body
+        document.body.classList.toggle("no-scroll", isMenuOpen);
+    }, [isMenuOpen]);
 
     return (
         <>

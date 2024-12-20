@@ -26,6 +26,7 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
     switch (key) {
       case "Base":
         setSelectedBase(ingredient.name !== selectedBase?.name ? { ...ingredient, checked: true } : undefined);
+        setStep((prevStep) => prevStep + 1);
         break;
       case "Protéine":
       case "Végétaux":

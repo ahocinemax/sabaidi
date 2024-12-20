@@ -4,7 +4,7 @@
     background-color: #f5f5f5;
     border-radius: 8px;
     margin: auto;
-    height: 84%;
+    height: calc(100vh - 110px);
     box-shadow: -6px 8px 13px 1px rgba(0, 0, 0, 0.1);
     overflow-y: scroll;
 }
@@ -81,6 +81,18 @@
     width: 40%;
 }
 
+.menu-text {
+    text-align: center;
+    /* width: 75%; */
+}
+
+@media screen and (max-width: 1000px) {
+    .menu-text {
+        width: 75%;
+    }
+    
+}
+
 @media screen and (max-width: 600px) {
     .menu-item {
         width: 90%;
@@ -94,6 +106,10 @@
 
     .menu-item-content {
         width: 100%;
+    }
+
+    .menu-section {
+        height: calc(100vh - 80px);
     }
 
     .menu-section h2 {
