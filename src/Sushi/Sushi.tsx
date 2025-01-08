@@ -88,10 +88,12 @@ export const Sushi = () => {
       <h2>Menu Japonais</h2>
       <Sidebar titles={submenus.titles} activeTitle={submenus.activeTitle} onTitleClick={handleTitleClick}/>
       <div className="menu-items">
-        { activeTitle === "Compose ton roll" && <div className="compose-details">
-          <h1>Compose ton roll ! </h1>
-          <p className="menu-text">Choissisez une base, puis ajouter jusqu'à 2 ingrédients (en suppléments au delà)</p>
-        </div>}
+        {activeTitle === "Compose ton roll" && 
+          <div className="compose-details">
+            <h1>Compose ton roll ! </h1>
+            <p className="menu-text">Choissisez une base, puis ajouter jusqu'à 2 ingrédients (en suppléments au delà)</p>
+          </div>
+        }
 
         {activeTitle === "Compose ton roll" ?
           <DynamicContainer className="compose-ton-roll-container" props={composeProps}/>
@@ -100,9 +102,9 @@ export const Sushi = () => {
             <div className="menu-item" key={index}>
               <div className="image-part">
                 <img className="item-image" src={item.imageUrl} alt="Sushi" onClick={() => openModal(item.imageUrl)} />
-                {/* <div className="add-container" onClick={() => addToCart({...item, category: "jap"})}>
+                <div className="add-container" onClick={() => addToCart({...item, category: "jap"})}>
                   <img className="add-cart" src="Logo-plus.png" />
-                </div> */}
+                </div>  
               </div>
               <div className="menu-item-content">
                 <h3>{item.title}</h3>

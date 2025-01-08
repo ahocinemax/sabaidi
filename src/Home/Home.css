@@ -75,7 +75,7 @@ body.no-scroll {
     object-fit: cover;
     opacity: 0.8;
     z-index: -1;
-    animation: slideshow 60s infinite;
+    animation: slideshow 30s infinite;
 }
 
 .content {
@@ -169,7 +169,7 @@ body.no-scroll {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     line-height: 1.2;
-    font-size: 3.5rem;
+    font-size: 3rem;
 
     /* Animation */
     opacity: 0; /* Start invisible */
@@ -243,8 +243,6 @@ body.no-scroll {
     }
 }
 
-
-
 .menu-link-pdf {
     font-size: 2.2rem;
     color: #e70b96;
@@ -274,6 +272,10 @@ body.no-scroll {
     height: 105px;
 }
 
+img {
+    cursor: pointer;
+}
+
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0); /* Position initiale */
@@ -290,7 +292,6 @@ body.no-scroll {
 }
 
 @media screen and (max-width: 1000px) {
-
     .contact-button {
         bottom: 28px;
     }
@@ -367,7 +368,6 @@ body.no-scroll {
     .section.home {
         justify-content: center;
         height: calc(100% - 80px);
-        /* margin-bottom: 0; */
     }
 
     .impact-phrase {

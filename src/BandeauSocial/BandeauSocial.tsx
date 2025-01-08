@@ -7,26 +7,22 @@ export const BandeauSocial = () => {
     <div className="social-proof">
         <Link className="proof-link" to="" target="_blank" rel="noreferrer">
             <div className="proof-item">
-                <img src="couverts.jpg" alt="Facebook"/>
-                <p>FRAÎCHEUR GARANTIE</p>
+                <img src="starter.png" alt="Facebook"/>
             </div>
         </Link>
         <Link className="proof-link" to="" target="_blank" rel="noreferrer">
             <div className="proof-item">
-                <img src="couverts.jpg" alt="Facebook"/>
-                <p>LIVRAISON GRATUITE*</p>
+                <img src="jap.png" alt="Facebook"/>
             </div>
         </Link>
         <Link className="proof-link" to="" target="_blank" rel="noreferrer">
             <div className="proof-item">
-                <img src="couverts.jpg" alt="Facebook"/>
-                <p>PAIEMENT 100% SÉCURISÉ</p>
+                <img src="thai.png" alt="Facebook"/>
             </div>
         </Link>
         <Link className="proof-link" to="" target="_blank" rel="noreferrer">
             <div className="proof-item">
-                <img src="couverts.jpg" alt="Facebook"/>
-                <p>OUVERT JUSQU'À 01H</p>
+                <img src="dessert.png" alt="Facebook"/>
             </div>
         </Link>
     </div>

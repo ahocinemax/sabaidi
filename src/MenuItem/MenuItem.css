@@ -8,11 +8,10 @@
 
 .MenuLink {
     position: relative;
-    display: flex;
+    display: grid;
     text-decoration: none;
     width: 80%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #6145e0;
     margin-bottom: 20px; /* Ajoute un espacement entre les éléments */
 }
 
@@ -35,7 +34,6 @@
 }
 
 .MenuItemImage {
-    width: 41%;
     object-fit: cover;
     cursor: pointer;
     border-radius: 8px;
@@ -52,6 +50,7 @@
 .MenuExempleImage {
     width: 50%;
     object-fit: cover;
+    border: 1px solid #d60b76;
 }
 
 .MenuItemText {
@@ -94,6 +93,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
+    width: 100%;
     justify-content: center;
 }
 

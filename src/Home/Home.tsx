@@ -11,8 +11,15 @@ const submenu: MenuItemProps[] = [
     index: 0,
     imageUrl: 'starter.png',
     linkTo: '/Starters',
-    title: 'Entrées',
+    title: 'Starters',
     description: 'Vous trouverez ici nos entrées chaudes et froides, ainsi que nos soupes et salades',
+  },
+  {
+    index: 0,
+    imageUrl: 'poke.png',
+    linkTo: '/Poke',
+    title: 'Poké',
+    description: 'Composez votre poké bowl à partir de nos bases, protéines, légumes et sauces',
   },
   {
     index: 0,
@@ -75,6 +82,10 @@ const BestSellersItems: BestSellerItem[] = [
 
 export const Home: React.FC = () => {
 
+  const handleScroll = () => {
+    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+  };
+
   return (
     <div className="main-container">
       <Helmet>
@@ -94,7 +105,7 @@ export const Home: React.FC = () => {
           </div>
         </div>
         <div className="scrollbar">
-          <img className='down-arrow' src="down-arrow.svg" alt="down" />
+          <img onClick={() => handleScroll()} className='down-arrow' src="down-arrow.svg" alt="down" />
         </div>
       </div>
       {/* <BandeauSocial /> */}
@@ -110,7 +121,7 @@ export const Home: React.FC = () => {
           />
         ))}
       </div>
-      <BestSellers items={BestSellersItems} />
+      {/* <BestSellers items={BestSellersItems} /> */}
       {/* <About /> */}
     </div>
   );

@@ -6,12 +6,12 @@
       { "name": "Ice roll", "price": "5.90", "imageURL": "maki.png" },
       { "name": "Egg roll", "price": "5.90", "imageURL": "egg_roll.jpg" },
       { "name": "Crispy roll", "price": "6.50", "imageURL": "crispy.png" },
-      { "name": "Saumon roll", "price": "7.50", "imageURL": "saumon_roll.jpg" },
-      { "name": "Dinde roll", "price": "7.50", "imageURL": "maki.png" },
-      { "name": "Pané roll", "price": "8.90", "imageURL": "maki.png" },
       { "name": "California", "price": "6.90", "imageURL": "maki.png" },
       { "name": "Spring roll", "price": "6.90", "imageURL": "maki.png" },
-      { "name": "Avocado roll", "price": "7.90", "imageURL": "avocado_roll.png" }
+      { "name": "Saumon roll", "price": "7.50", "imageURL": "ComposeTonRoll/saumon_roll.png" },
+      { "name": "Dinde roll", "price": "7.50", "imageURL": "maki.png" },
+      { "name": "Avocado roll", "price": "7.90", "imageURL": "avocado_roll.png" },
+      { "name": "Pané roll", "price": "8.90", "imageURL": "maki.png" }
     ]
   },
   {
@@ -45,8 +45,8 @@
   {
     "name": "Fromage",
     "items": [
-      { "name": "boursin", "imageURL": "coming-soon.jpg" },
-      { "name": "cheese", "imageURL": "coming-soon.jpg" }
+      { "name": "cheese", "imageURL": "coming-soon.jpg" },
+      { "name": "boursin", "imageURL": "coming-soon.jpg" }
     ]
   }
 ]
