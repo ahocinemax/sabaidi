@@ -1,8 +1,9 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { CartItemProps } from '../interfaces';
 
 interface CartContextProps {
     cart: CartItemProps[];
+    categorizedItems: { [category: string]: (CartItemProps & { quantity: number })[] };
     addToCart: (item: CartItemProps) => void;
     removeFromCart: (item: CartItemProps) => void;
     setShowCart: (showCart: boolean) => void;
@@ -15,37 +16,88 @@ interface CartProviderProps {
 
 const CartContext = createContext<CartContextProps>({
     cart: [],
+    categorizedItems: {},
     addToCart: () => {},
     removeFromCart: () => {},
     setShowCart: () => {},
     showCart: false,
 });
 
+export interface CategorizedItems {
+    [category: string]: (CartItemProps & { quantity: number })[];
+}
+
+// Fonction pour regrouper les articles par catégorie et titre, puis calculer la quantité
+const groupItemsByCategoryAndTitle = (items: CartItemProps[]) => {
+    const categoryOrder = ["starters", "Jap'", "Thaï", "Desserts"];
+
+    const categorized = items.reduce<CategorizedItems>((acc, item) => {
+        const category = item.category;
+        if (!acc[category]) {
+            acc[category] = [];
+        }
+        const existingItem = acc[category].find(accItem => accItem.title === item.title);
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            acc[category].push({ ...item, quantity: 1 });
+        }
+        return acc;
+    }, {});
+
+    // Trier les catégories selon l'ordre défini
+    const sortedCategorized: CategorizedItems = {};
+    categoryOrder.forEach(category => {
+        if (categorized[category]) {
+            sortedCategorized[category] = categorized[category];
+        }
+    });
+
+    return sortedCategorized;
+};
+
 export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
-    const [cart, setCart] = useState<CartItemProps[]>([]);
+    const [cart, setCart] = useState<CartItemProps[]>(() => {
+        const savedCart = localStorage.getItem("cart");
+        return savedCart ? JSON.parse(savedCart) : [];
+    });
     const [ showCart, setShowCart ] = useState<boolean>(false);
+    const [ categorizedItems, setCatgorizedItems] = useState<CategorizedItems>({});
     const categoryOrder = ["starters", "jap", "thai", "desserts"];
+    
+    useEffect(() => {
+        setCatgorizedItems(groupItemsByCategoryAndTitle(cart));
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }, [cart]);
 
     const addToCart = (item: CartItemProps) => {
-        const newCart = [...cart, item];
-        newCart.sort((a, b) => categoryOrder.indexOf(a.category) - categoryOrder.indexOf(b.category));
-        setCart(newCart);
+        const existingItem = cart.find(cartItem => cartItem.title === item.title);
+        if (existingItem) {
+            existingItem.quantity += 1;
+            setCart([...cart]);
+        } else {
+            const newItem = { ...item, quantity: 1 };
+            const newCart = [...cart, newItem];
+            newCart.sort((a, b) => categoryOrder.indexOf(a.category) - categoryOrder.indexOf(b.category));
+            setCart(newCart);
+        }
     };
     
 
     const removeFromCart = (item: CartItemProps) => {
-        var tmp = cart;
-        for (var i = 0; i < tmp.length; i++) {
-            if (tmp[i].title === item.title) {
-                tmp.splice(i, 1);
-                break;
+        const existingItem = cart.find(cartItem => cartItem.title === item.title);
+        if (existingItem) {
+            if (existingItem.quantity > 1) {
+                existingItem.quantity -= 1;
+                setCart([...cart]);
+            } else if (existingItem.quantity === 1) {
+                setCart(cart.filter(cartItem => cartItem.title !== item.title));
             }
         }
-        setCart([...tmp]);
     };
 
     return (
-        <CartContext.Provider value={{ cart, showCart, addToCart, removeFromCart, setShowCart }}>
+        <CartContext.Provider value={{ cart, categorizedItems, showCart, addToCart, removeFromCart, setShowCart }}>
             {children}
         </CartContext.Provider>
     );

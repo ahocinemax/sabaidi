@@ -29,7 +29,7 @@
     padding-bottom: 14px;
     margin: auto;
     overflow-y: scroll;
-    height: 84%;
+    height: calc(100vh - 130px);
 }
 
 .thai-items {
@@ -58,7 +58,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -104,7 +104,7 @@ font-weight: bold;
     padding: 15px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .ItemDetails h3 {
@@ -169,8 +169,14 @@ font-weight: bold;
     overflow: hidden;
     position: relative;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .container-thai {
+        height: calc(100vh - 80px);
+    }
 }
 
 @media screen and (max-width: 600px) {

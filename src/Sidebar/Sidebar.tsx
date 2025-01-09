@@ -4,17 +4,36 @@ import { SidebarProps } from '../interfaces';
 import { useSidebar } from '../Context/SidebarContext';
 import { useCart } from '../Context/CartContext';
 import { Cart } from './Cart';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Sidebar: React.FC<SidebarProps> = ({ titles, activeTitle, onTitleClick }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const sidebarRef = useRef<HTMLDivElement | null>(null);
   const { setActiveTitle } = useSidebar();
   const [showArrows, setShowArrows] = useState(false);
   const { cart, setShowCart, showCart } = useCart();
 
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const categoryFromUrl = params.get('category');
+
+    console.log("active:", activeTitle);
+    if (categoryFromUrl && titles.includes(categoryFromUrl)) {
+      setActiveTitle(categoryFromUrl);
+      onTitleClick(categoryFromUrl);
+    }
+    console.log("params:", categoryFromUrl);
+  }, [location.search, titles, setActiveTitle, onTitleClick]);
+
   const switchSection = (title: string) => {
     if (activeTitle !== title) {
       setActiveTitle(title);
       onTitleClick(title);
+      // Met à jour l'URL avec la catégorie active
+      const currentParams = new URLSearchParams(location.search);
+      currentParams.set('category', title);
+      navigate(`?${currentParams.toString()}`);
     }
   };
 

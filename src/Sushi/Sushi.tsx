@@ -36,7 +36,7 @@ const style = {
 
 export const Sushi = () => {
   const { activeTitle, setActiveTitle } = useSidebar();
-  const { addToCart } = useCart();
+  const { addToCart, removeFromCart, cart } = useCart();
 
   const itemsList: Record<string, SushiItemProps[]> = {
     "Signatures": MenuItem.signatures,
@@ -102,9 +102,30 @@ export const Sushi = () => {
             <div className="menu-item" key={index}>
               <div className="image-part">
                 <img className="item-image" src={item.imageUrl} alt="Sushi" onClick={() => openModal(item.imageUrl)} />
-                <div className="add-container" onClick={() => addToCart({...item, category: "jap"})}>
+                <div className="add-container">
+              {cart.find(cartItem => cartItem.title === item.title)?.quantity! > 0 ? (
+                <div className="quantity-control">
+                  <img 
+                    className="add-cart" 
+                    src="Logo-moins.png" 
+                    alt="decrement" 
+                    onClick={() => removeFromCart({...item, category: 'Jap\'', quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity || 0})}
+                  />
+                  <span className="quantity">{cart.find(cartItem => cartItem.title === item.title)?.quantity!}</span>
+                  <img 
+                    className="add-cart" 
+                    src="Logo-plun.png" 
+                    alt="increment" 
+                    onClick={() => addToCart({...item, category: "Jap\'", quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity!})}
+                  />
+                </div>
+              ) : (
+                <div onClick={() => addToCart({...item, category: "Jap\'", quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity!})}
+                >
                   <img className="add-cart" src="Logo-plus.png" />
-                </div>  
+                </div>
+              )}
+            </div>
               </div>
               <div className="menu-item-content">
                 <h3>{item.title}</h3>

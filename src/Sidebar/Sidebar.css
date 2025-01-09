@@ -1,13 +1,12 @@
 .sidebar {
 	position: relative;
-	top: -1.2px;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
 	box-sizing: content-box;
 	gap: 7%;
 	min-height: 50px;
-	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+	/* box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4); */
 	-webkit-overflow-scrolling: touch;
 	overflow-x: auto;
 	scroll-behavior: smooth;

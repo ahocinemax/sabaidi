@@ -35,7 +35,7 @@ interface ThaiItemProps {
 }
 
 const ThaiItem: React.FC<ThaiItemProps> = ({ title, price, description, imageUrl, customize, openModal }) => {
-  const { addToCart } = useCart();
+  const { addToCart, removeFromCart, cart } = useCart();
   const meat: string= "Personnalisez votre viande: choix en bas de page";
   const item: SushiItemProps = { title, price, description, imageUrl };
 
@@ -43,9 +43,30 @@ const ThaiItem: React.FC<ThaiItemProps> = ({ title, price, description, imageUrl
     <div className="menu-item">
       <div className="image-part">
         <img className="ItemImage" src={imageUrl} alt={title} onClick={() => openModal(imageUrl)} />
-        <div className="add-container" onClick={() => addToCart({...item, category: "thai"})}>
-          <img className="add-cart" src="Logo-plus.png" />
-        </div>
+        <div className="add-container">
+              {cart.find(cartItem => cartItem.title === item.title)?.quantity! > 0 ? (
+                <div className="quantity-control">
+                  <img 
+                    className="add-cart" 
+                    src="Logo-moins.png" 
+                    alt="decrement" 
+                    onClick={() => removeFromCart({...item, category: 'Thaï', quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity || 0})}
+                  />
+                  <span className="quantity">{cart.find(cartItem => cartItem.title === item.title)?.quantity!}</span>
+                  <img 
+                    className="add-cart" 
+                    src="Logo-plun.png" 
+                    alt="increment" 
+                    onClick={() => addToCart({...item, category: "Thaï", quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity!})}
+                  />
+                </div>
+              ) : (
+                <div onClick={() => addToCart({...item, category: "Thaï", quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity!})}
+                >
+                  <img className="add-cart" src="Logo-plus.png" />
+                </div>
+              )}
+            </div>
       </div>
       <div className="ItemDetails">
         <h3>{title}</h3>

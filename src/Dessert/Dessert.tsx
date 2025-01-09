@@ -9,7 +9,7 @@ import { useCart } from '../Context/CartContext';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Fade from '@mui/material/Fade';
-// import {CartContainer} from '../Cart/CartContainer';
+
 const style = {
   border: '0px',
   padding: '0px',
@@ -25,7 +25,7 @@ const style = {
 export const Dessert = () => {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
   const [selectedImage, setSelectedImage] = React.useState("");
-  const { addToCart } = useCart();
+  const { addToCart, removeFromCart, cart } = useCart();
 
   const openModal = (image: string) => {
     if (image === "coming-soon.jpg") return;
@@ -76,6 +76,30 @@ export const Dessert = () => {
               src={item.thumbnailUrl}
               alt={item.title}
               onClick={() => openModal(item.imageUrl)}/>
+            <div className="add-container">
+              {cart.find(cartItem => cartItem.title === item.title)?.quantity! > 0 ? (
+                <div className="quantity-control">
+                  <img 
+                    className="add-cart" 
+                    src="Logo-moins.png" 
+                    alt="decrement" 
+                    onClick={() => removeFromCart({...item, category: 'Desserts', quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity || 0})}
+                  />
+                  <span className="quantity">{cart.find(cartItem => cartItem.title === item.title)?.quantity!}</span>
+                  <img 
+                    className="add-cart" 
+                    src="Logo-plun.png" 
+                    alt="increment" 
+                    onClick={() => addToCart({...item, category: "Desserts", quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity!})}
+                  />
+                </div>
+              ) : (
+                <div onClick={() => addToCart({...item, category: "Desserts", quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity!})}
+                >
+                  <img className="add-cart" src="Logo-plus.png" />
+                </div>
+              )}
+            </div>
             </div>
             <div className="ItemDetails">
                 <h3>{item.title}</h3>

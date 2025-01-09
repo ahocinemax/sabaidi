@@ -26,7 +26,7 @@ export const Starter = () => {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
   const [selectedImage, setSelectedImage] = React.useState("");
   const { activeTitle, setActiveTitle } = useSidebar();
-  const { addToCart } = useCart();
+  const { addToCart, removeFromCart, cart } = useCart();
 
   const openModal = (image: string) => {
     if (image === "coming-soon.jpg") return;
@@ -70,26 +70,45 @@ export const Starter = () => {
       <div className='thai-items'> {
         activeSubmenu?.map((item, index) => (
           <div key={index} className="menu-item">
-            <div className='image-part' >
+          <div className='image-part'>
             <img
-                className="ItemImage"
-                src={item.imageUrl}
-                alt={item.title}
-                onClick={() => openModal(item.imageUrl)}
-              />
-              <div
-                className="add-container"
-                onClick={() => addToCart({...item, category: "starters"})}
-              >
-                <img className="add-cart" src="Logo-plus.png" />
-              </div>
-            </div>
-            <div className="ItemDetails">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              <p>{item.price}€</p>
+              className="ItemImage"
+              src={item.imageUrl}
+              alt={item.title}
+              onClick={() => openModal(item.imageUrl)}
+            />
+            <div className="add-container">
+              {cart.find(cartItem => cartItem.title === item.title)?.quantity! > 0 ? (
+                <div className="quantity-control">
+                  <img 
+                    className="add-cart" 
+                    src="Logo-moins.png" 
+                    alt="decrement" 
+                    onClick={() => removeFromCart({...item, category: 'starters', quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity || 0})}
+                  />
+                  <span className="quantity">{cart.find(cartItem => cartItem.title === item.title)?.quantity!}</span>
+                  <img 
+                    className="add-cart" 
+                    src="Logo-plun.png" 
+                    alt="increment" 
+                    onClick={() => addToCart({...item, category: "starters", quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity!})}
+                  />
+                </div>
+              ) : (
+                <div onClick={() => addToCart({...item, category: "starters", quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity!})}
+                >
+                  <img className="add-cart" src="Logo-plus.png" />
+                </div>
+              )}
             </div>
           </div>
+          <div className="ItemDetails">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+            <p>{item.price}€</p>
+          </div>
+        </div>
+  
         ))
       } </div>
       <Modal

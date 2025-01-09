@@ -22,6 +22,7 @@ export interface CartItemProps {
     price: string;
     customize?: boolean;
     category: string;
+    quantity: number;
 }
 
 export interface ComposeItemProps {

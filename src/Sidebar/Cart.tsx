@@ -1,37 +1,15 @@
 import { useCart } from "../Context/CartContext";
-import { CartItemProps } from "../interfaces";
 import "./Cart.css";
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const Cart = () => {
-    const { cart, setShowCart, removeFromCart } = useCart();
-
-    interface CategorizedItems {
-        [category: string]: (CartItemProps & { quantity: number })[];
-    }
-
-    // Fonction pour regrouper les articles par catégorie et titre, puis calculer la quantité
-    const groupItemsByCategoryAndTitle = (items: CartItemProps[]) => {
-        return items.reduce<CategorizedItems>((acc, item) => {
-            const category = item.category;
-            if (!acc[category]) {
-                acc[category] = [];
-            }
-            const existingItem = acc[category].find(accItem => accItem.title === item.title);
-            if (existingItem) {
-                existingItem.quantity += 1;
-            } else {
-                acc[category].push({ ...item, quantity: 1 });
-            }
-            return acc;
-        }, {});
-    };
-
-    const categorizedItems = groupItemsByCategoryAndTitle(cart);
+    const { cart, categorizedItems, setShowCart, removeFromCart } = useCart();
 
     return (
         <div className="cart-container">
-            <Link to="/Cart">Panier</Link>
+            <div className="link-to-cart">
+                <Link to="/Cart" onClick={() => setShowCart(false)}>Aller au panier</Link>
+            </div>
             <span className="close-cart" onClick={() => setShowCart(false)}>
                 <img style={{ height: "1.5rem" }} src="cross.png" alt="close cross" />
             </span>
@@ -45,12 +23,14 @@ export const Cart = () => {
                                 <img className="item-image cart-image" src={item.imageUrl} alt={item.title} />
                                 <div className="item-details">
                                     <h3>{item.title}</h3>
-                                    <p>{item.price}€</p>
+                                    <div className="content-cart-details">
+                                        <p>{item.price}€</p>
+                                        <span className="remove-item" onClick={() => removeFromCart(item)}>
+                                            <span className="item-quantity-badge">{item.quantity}</span>
+                                            <img src="bin.png" style={{ height: "2rem" }} alt="Remove" />
+                                        </span>
+                                    </div>
                                 </div>
-                                <span className="remove-item" onClick={() => removeFromCart(item)}>
-                                    <span className="item-quantity-badge">{item.quantity}</span>
-                                    <img src="bin.png" style={{ height: "2rem" }} alt="Remove" />
-                                </span>
                             </div>
                         ))}
                     </div>
