@@ -26,7 +26,9 @@ export const Cart = () => {
                                     <div className="content-cart-details">
                                         <p>{item.price}€</p>
                                         <span className="remove-item" onClick={() => removeFromCart(item)}>
-                                            <span className="item-quantity-badge">{item.quantity}</span>
+                                            <span className="item-quantity-badge">
+                                                {cart.find(cartItem => cartItem.title === item.title)?.quantity || 0}
+                                            </span>
                                             <img src="bin.png" style={{ height: "2rem" }} alt="Remove" />
                                         </span>
                                     </div>
@@ -40,7 +42,7 @@ export const Cart = () => {
                 </div>
             }
             <div className="cart-total">
-                <p className="cart-price">Total: {cart.reduce((acc, item) => acc + parseFloat(item.price), 0).toFixed(2)}€</p>
+                <p className="cart-price">Total: {cart.reduce((acc, item) => acc + parseFloat(item.price) * cart.find(cartItem => cartItem.title === item.title)?.quantity!, 0).toFixed(2)}€</p>
             </div>
         </div>
     );

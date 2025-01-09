@@ -78,6 +78,10 @@
     /* border-bottom: 1px solid #d60b76; */
 }
 
+.content-cart-details {
+    display: flex;
+}
+
 .add-cart {
     width: 2.3rem;
     position: relative;
