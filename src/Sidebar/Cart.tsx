@@ -6,7 +6,7 @@ export const Cart = () => {
     const { cart, categorizedItems, setShowCart, removeFromCart } = useCart();
 
     return (
-        <div className="cart-container">
+        <div className="cart-popup-container">
             <div className="link-to-cart">
                 <Link to="/Cart" onClick={() => setShowCart(false)}>Aller au panier</Link>
             </div>
@@ -24,7 +24,7 @@ export const Cart = () => {
                                 <div className="item-details">
                                     <h3>{item.title}</h3>
                                     <div className="content-cart-details">
-                                        <p>{item.price}€</p>
+                                        <p className="item-price-popup">{item.price}€</p>
                                         <span className="remove-item" onClick={() => removeFromCart(item)}>
                                             <span className="item-quantity-badge">
                                                 {cart.find(cartItem => cartItem.title === item.title)?.quantity || 0}

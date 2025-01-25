@@ -28,36 +28,39 @@ export const App: React.FC = () => {
     }, []);
     return (
         <div className="app">
-            <Analytics />
-            <SpeedInsights />
-            <CartProvider>
-                <SidebarProvider>
-                    <Topbar />
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/Jap" element={<Sushi />} />
-                        <Route path="/Desserts" element={<Dessert />} />
-                        <Route path="/Thai" element={<Thai />} />
-                        <Route path="/Starters" element={<Starter />} />
-                        <Route path="/Cart" element={<CartContainer />} />
-                    </Routes>
-                </SidebarProvider>
-            </CartProvider>
-            {showCallButton ? (
-                <a
-                    href="tel:+33140360932"
-                    className="contact-call"
-                    style={{
-                    }}
-                >
-                    <img
-                        src="tel.svg"
-                        alt="contactez appelez Sabaidi"
-                        className="tel-logo"
-                    />
-                    <span className="call-text">Appelez-nous !</span>
-                </a>
-            ) : null}
+            <div className="background"></div>
+            <div className="full-content">
+                <Analytics />
+                <SpeedInsights />
+                <CartProvider>
+                    <SidebarProvider>
+                        <Topbar />
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/Jap" element={<Sushi />} />
+                            <Route path="/Desserts" element={<Dessert />} />
+                            <Route path="/Thai" element={<Thai />} />
+                            <Route path="/Starters" element={<Starter />} />
+                            <Route path="/Cart" element={<CartContainer />} />
+                        </Routes>
+                    </SidebarProvider>
+                </CartProvider>
+                {showCallButton ? (
+                    <a
+                        href="tel:+33140360932"
+                        className="contact-call"
+                        style={{
+                        }}
+                    >
+                        <img
+                            src="tel.svg"
+                            alt="contactez appelez Sabaidi"
+                            className="tel-logo"
+                        />
+                        <span className="call-text">Appelez-nous !</span>
+                    </a>
+                ) : null}
+            </div>
         </div>
     );
 };

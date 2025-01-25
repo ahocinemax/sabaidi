@@ -13,7 +13,7 @@ export const CartContainer = () => {
         <div className="cart-page">
             <h1 className="cart-title">Votre Panier</h1>
             {Object.keys(categorizedItems).length > 0 ? (
-                <div className="cart-mod-items">
+                <div className="cart-container">
                     {Object.entries(categorizedItems).map(([category, items]) => (
                         <div key={category} className="cart-category">
                             <h2 className="cart-category-title">{category}</h2>

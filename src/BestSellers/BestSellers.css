@@ -51,21 +51,21 @@
 .best-sellers-items {
     display: flex;
     justify-content: space-around;
-    row-gap: 35px;
     gap: 50px;
-    flex-wrap: wrap;
     margin: 0px 20%;
+    width: 90%;
+    overflow: scroll hidden;
 }
 
 .image-container {
     position: relative;
     animation: translate(-31px) ease-in;
-    scale: 1.2;
+    /* scale: 1.2; */
     padding: 0 0 50px 0;
 }
 
 .best-seller-img {
-    width: 100%;
+    /* width: 100%; */
     border-radius: 8px;
 }
 
@@ -87,7 +87,7 @@
 .text-box p {
     color: #ffffff81;
     /* margin: 0; */
-    font-family: 'ShadowsIntoLight-Regular';
+    /* font-family: 'ShadowsIntoLight-Regular'; */
     font-size: 1.2rem;
     /* height:11dvh; */
 }

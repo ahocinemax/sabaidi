@@ -4,6 +4,8 @@ export interface MenuItemProps {
     linkTo: string;
     title: string;
     description: string;
+    size: "large-box" | "small-box";
+    className: string;
 }
 
 export interface SushiItemProps {

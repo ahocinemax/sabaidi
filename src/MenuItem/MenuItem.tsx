@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import './MenuItem.css';
 import { MenuItemProps } from '../interfaces';
 
-const MenuItem: React.FC<MenuItemProps> = ({ index, imageUrl, linkTo, title, description }) => {
-  
+const MenuItem: React.FC<MenuItemProps> = ({ index, imageUrl, className, linkTo, title, description, size }) => {
+
   // const startersItems = [
   //   {
   //     "imageUrl": "Starters/nems-crevette.jpg",
@@ -34,10 +34,10 @@ const MenuItem: React.FC<MenuItemProps> = ({ index, imageUrl, linkTo, title, des
   // ]
 
   return (
-    <div className="MenuLink">
-      <img className="MenuItemImage" src={imageUrl} alt="Submenu item" />
-      <div className={`MenuItem`}>
-      </div>
+    <div className={`MenuLink ${className}`}>
+      <Link to={linkTo}>
+        <img className="MenuItemImage" src={imageUrl} alt="Submenu item" />
+      </Link>
     </div>
   );
 };

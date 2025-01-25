@@ -1,3 +1,16 @@
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/public/saumon_roll.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px); /* Ajoute un flou au fond */
+    z-index: -1; /* Place le fond derrière le contenu */
+}
+
 .contact-call {
     cursor: pointer;
     padding: 10px 19px;

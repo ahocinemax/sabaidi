@@ -6,31 +6,96 @@
     color: #fff;
 }
 
-.MenuLink {
-    position: relative;
+/* Conteneur principal */
+.parent {
     display: grid;
-    text-decoration: none;
-    width: 80%;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-    margin-bottom: 20px; /* Ajoute un espacement entre les éléments */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 75%;
+    height: 75%;
+    margin: auto;
+}
+
+.MenuLink {
+    margin: 10px;
+}
+
+/* Grille des zones */
+.div1 {
+    grid-area: 1 / 1 / 3 / 3;
+}
+
+.div2 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.div3 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.div4 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.div5 {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.div6 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.div7 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.div8 {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.div9 {
+    grid-area: 3 / 4 / 4 / 5;
+}
+
+.MenuLink img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .MenuItem {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Assure que l'image et le texte se placent de chaque côté */
+    justify-content: space-between;
+    /* Assure que l'image et le texte se placent de chaque côté */
     overflow: hidden;
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
     flex-wrap: wrap;
 }
 
+/* 
+    align-items: center;
+    background-color: #f3dbea;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #0000001a;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+     */
+
 .MenuItem.left {
-    flex-direction: row; /* Image à gauche, texte à droite */
+    flex-direction: row;
+    /* Image à gauche, texte à droite */
 }
 
 .MenuItem.right {
-    flex-direction: row-reverse; /* Image à droite, texte à gauche */
+    flex-direction: row-reverse;
+    /* Image à droite, texte à gauche */
 }
 
 .MenuItemImage {
@@ -38,6 +103,7 @@
     cursor: pointer;
     border-radius: 8px;
     scale: 0.7;
+    width: 100%;
 }
 
 .MenuItemDescription {
@@ -89,30 +155,24 @@
     font-weight: 600;
 }
 
-.menu-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-    width: 100%;
-    justify-content: center;
-}
-
 @media screen and (max-width: 768px) {
     .MenuItem.left {
-        flex-direction: column; /* Image à gauche, texte à droite */
+        flex-direction: column;
+        /* Image à gauche, texte à droite */
     }
-    
+
     .MenuItem.right {
-        flex-direction: column; /* Image à droite, texte à gauche */
+        flex-direction: column;
+        /* Image à droite, texte à gauche */
     }
-    
+
 }
 
 @media (max-width: 568px) {
-    .menu-list {
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 0px;
+    .parent {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 0px;
     }
 
     .MenuItem {
@@ -120,12 +180,8 @@
         padding: 0;
     }
 
-    .menu-list>* {
-        flex: 0 0 40%;
-    }
-
     .MenuItemImage {
-        width:75%;
+        width: 75%;
     }
 
     .title {
@@ -140,4 +196,3 @@
         font-size: 1.2em;
     }
 }
-

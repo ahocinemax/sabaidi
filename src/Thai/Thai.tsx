@@ -42,7 +42,7 @@ const ThaiItem: React.FC<ThaiItemProps> = ({ title, price, description, imageUrl
   return (
     <div className="menu-item">
       <div className="image-part">
-        <img className="ItemImage" src={imageUrl} alt={title} onClick={() => openModal(imageUrl)} />
+        <img className="item-image" src={imageUrl} alt={title} onClick={() => openModal(imageUrl)} />
         <div className="add-container">
               {cart.find(cartItem => cartItem.title === item.title)?.quantity! > 0 ? (
                 <div className="quantity-control">

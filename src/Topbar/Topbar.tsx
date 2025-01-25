@@ -34,7 +34,7 @@ export const Topbar: React.FC = () => {
                     <Link to="/Desserts">DESSERTS</Link>
                 </div>
 
-                <div className="order-button">COMMANDER</div>
+                <Link className="order-button" to="/Cart">COMMANDER</ Link>
 
                 {/* Bouton pour ouvrir le menu */}
                 <div className="menu-deroulant" onClick={toggleMenu}>

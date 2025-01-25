@@ -7,6 +7,10 @@ body {
     overflow-x: hidden;
 }
 
+.app {
+    overflow: hidden;
+}
+
 body.no-scroll {
     overflow: hidden;
 }
@@ -38,6 +42,14 @@ body.no-scroll {
     margin: 10 2.6% 0 2.6%;
 }
 
+.MenuTitle h2 {
+    color: #d60b76;
+    background: #2626287a;
+    border-radius: 8px;
+    padding: 0px 20px;
+    margin-top: 38px;
+}
+
 .main-container {
     margin: auto;
     border-radius: 8px;
@@ -50,16 +62,23 @@ body.no-scroll {
 .section {
     scroll-snap-align: start;
     padding: 0;
+    height: calc(100% - 110px);
+    min-height: 550px;
+}
+
+.section.menu {
+    padding: 0 20px 20px 20px;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
 }
 
 .section.home {
     font-family: 'Montserrat', sans-serif;
     margin: auto;
-    height: calc(100% - 110px);
-    min-height: 550px;
     position: relative;
     overflow: hidden;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
 }
 
 .background {
@@ -82,6 +101,10 @@ body.no-scroll {
     position: relative;
     z-index: 1;
     padding-top: 60px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 @keyframes slideshow {
@@ -161,9 +184,9 @@ body.no-scroll {
 .impact-phrase {
     letter-spacing: 3px;
     font-family: 'Nunito-Black';
-    width: 75%;
+    width: 50%;
     backdrop-filter: blur(3px);
-    background-color: rgba(38, 38, 40, 0.48);
+    background-color: #2626287a;
     margin: auto;
     padding: 20px;
     border-radius: 10px;
@@ -233,7 +256,9 @@ body.no-scroll {
     align-items: center;
     text-align: center;
 }
-
+.flag-svg {
+    height: 3rem;
+}
 @keyframes wave {
     0% {
         background-position: 0% 100%;
@@ -343,6 +368,9 @@ img {
     .impact-phrase {
         font-size: 2rem;
     }
+    .flag-svg {
+        height: 2rem;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -365,13 +393,19 @@ img {
         padding-top: 0;
     }
 
+    .section {
+        height: calc(100% - 80px);
+    }
+
     .section.home {
         justify-content: center;
-        height: calc(100% - 80px);
     }
 
     .impact-phrase {
         font-size: 1.52rem;
+    }
+    .flag-svg {
+        height: 1.5rem;
     }
     
     .welcome {

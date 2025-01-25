@@ -23,7 +23,6 @@
 }
 
 .container-thai {
-    background-color: #f5f5f5;
     border-radius: 8px;
     position: relative;
     padding-bottom: 14px;
@@ -73,6 +72,7 @@
     margin-left: 20px;
     margin-right: 20px;
     width: 40%;
+    font-size: 1.5rem;
 }
 
 .ItemDetails .itemPrice{
@@ -102,7 +102,7 @@ font-weight: bold;
     align-items: center;
     margin-bottom: 20px;
     padding: 15px;
-    background-color: #fff;
+    background-color: #ffffff75;
     border-radius: 8px;
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }

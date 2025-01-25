@@ -29,7 +29,7 @@ export interface CategorizedItems {
 
 // Fonction pour regrouper les articles par catégorie et titre, puis calculer la quantité
 const groupItemsByCategoryAndTitle = (items: CartItemProps[]) => {
-    const categoryOrder = ["starters", "Jap'", "Thaï", "Desserts"];
+    const categoryOrder = ["Starters", "Jap'", "Thaï", "Desserts"];
 
     const categorized = items.reduce<CategorizedItems>((acc, item) => {
         const category = item.category;
@@ -63,7 +63,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     });
     const [ showCart, setShowCart ] = useState<boolean>(false);
     const [ categorizedItems, setCatgorizedItems] = useState<CategorizedItems>({});
-    const categoryOrder = ["starters", "jap", "thai", "desserts"];
+    const categoryOrder = ["Starters", "Jap", "Thai", "Desserts"];
     
     useEffect(() => {
         setCatgorizedItems(groupItemsByCategoryAndTitle(cart));
