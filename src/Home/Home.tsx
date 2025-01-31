@@ -182,7 +182,7 @@ export const Home: React.FC = () => {
           ))}
         </div>
       </div>
-      <BestSellers items={BestSellersItems} />
+      {/* <BestSellers items={BestSellersItems} /> */}
       {/* <About /> */}
     </div>
   );
