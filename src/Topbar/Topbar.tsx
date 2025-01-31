@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Topbar.css";
 import { Link } from "react-router-dom";
+import { useCart } from "../Context/CartContext";
 
 export const Topbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { cart } = useCart(); 
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -34,7 +36,7 @@ export const Topbar: React.FC = () => {
                     <Link to="/Desserts">DESSERTS</Link>
                 </div>
 
-                <Link className="order-button" to="/Cart">COMMANDER</ Link>
+                <Link className="order-button" to="/Cart">{cart.length > 0 ? "COMMANDER" : "PANIER"}</ Link>
 
                 {/* Bouton pour ouvrir le menu */}
                 <div className="menu-deroulant" onClick={toggleMenu}>

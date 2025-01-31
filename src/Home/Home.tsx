@@ -37,6 +37,24 @@ const submenu: MenuItemProps[] = [
   },
   {
     index: 0,
+    imageUrl: 'Plateaux.png',
+    linkTo: '/Jap?category=Plateaux',
+    title: 'Plateaux',
+    description: '',
+    size: "small-box",
+    className: ""
+  },
+  {
+    index: 0,
+    imageUrl: 'thai.png',
+    linkTo: '/Thai',
+    title: 'Thaï',
+    description: 'Vos plat thailandais préférés: Pad Thai, Loc lac, Tigre qui pleure et bien d\'autres',
+    size: "small-box",
+    className: ""
+  },
+  {
+    index: 0,
     imageUrl: 'Riz Thai.png',
     linkTo: '/Thai?category=Riz',
     title: 'Thaï',
@@ -64,28 +82,10 @@ const submenu: MenuItemProps[] = [
   },
   {
     index: 0,
-    imageUrl: 'Plateaux.png',
-    linkTo: '/Jap?category=Plateaux',
-    title: 'Plateaux',
-    description: '',
-    size: "small-box",
-    className: ""
-  },
-  {
-    index: 0,
     imageUrl: 'Boissons.png',
     linkTo: '/Desserts?category=Boissons',
     title: 'Boissons\'',
     description: 'Découvrez nos sushis, makis, sashimis et autres spécialités. Signatures et compositions originales vous attendent',
-    size: "small-box",
-    className: ""
-  },
-  {
-    index: 0,
-    imageUrl: 'thai.png',
-    linkTo: '/Thai',
-    title: 'Thaï',
-    description: 'Vos plat thailandais préférés: Pad Thai, Loc lac, Tigre qui pleure et bien d\'autres',
     size: "small-box",
     className: ""
   }
@@ -130,7 +130,7 @@ const BestSellersItems: BestSellerItem[] = [
 export const Home: React.FC = () => {
 
   const handleScroll = () => {
-    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+    window.scrollTo({ top: window.innerHeight + 20, behavior: 'smooth' });
   };
 
   return (
@@ -182,7 +182,7 @@ export const Home: React.FC = () => {
           ))}
         </div>
       </div>
-      {/* <BestSellers items={BestSellersItems} /> */}
+      <BestSellers items={BestSellersItems} />
       {/* <About /> */}
     </div>
   );

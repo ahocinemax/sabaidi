@@ -64,7 +64,7 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
       'Végétaux': setSelectedVegetableCheese,
       'Fromage': setSelectedVegetableCheese // vegetables and cheese are in the same category
     }[key];
-  
+
     switch (key) {
       case 'Protéine':
         currentSelection = selectedProtein;
@@ -78,11 +78,12 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
     }
     if (!setSelectedItems) return null;
     else {
-    if (currentSelection.some(item => item.name === ingredient.name)) {
-      setSelectedItems(currentSelection.filter(item => item.name !== ingredient.name));
-    } else {
-      setSelectedItems([...currentSelection, { ...ingredient, checked: true }]);
-    }}
+      if (currentSelection.some(item => item.name === ingredient.name)) {
+        setSelectedItems(currentSelection.filter(item => item.name !== ingredient.name));
+      } else {
+        setSelectedItems([...currentSelection, { ...ingredient, checked: true }]);
+      }
+    }
   };
 
   const isSelected = (category: string, item: any) => {
@@ -112,10 +113,10 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
     let length1 = selectedProtein?.length || 0;
     let length2 = selectedVegetableCheese?.length || 0;
     let supplement = length1 + length2;
-  
+
     // Si aucun supplément, on ne fait rien
     if (!supplement) return;
-  
+
     // Si la somme des suppléments est inférieure ou égale à 2, on applique juste le prix de base
     if (supplement <= 2) {
       setTotalPrice(selectedBase?.price || 0);
@@ -130,13 +131,13 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
           proteinSupplement++;
         }
       }
-  
+
       // Calcul du prix total
       const basePrice = selectedBase?.price || 0;
       setTotalPrice(basePrice + vegetableCheeseSupplement * priceVegetableCheese + proteinSupplement * priceProtein);
     }
   }, [selectedBase, selectedProtein, selectedVegetableCheese]);
-  
+
 
   return (
     <div className={className}>
@@ -144,8 +145,8 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
       <div className='compose-sub'>
         {actual?.items.map((item: any, index: number) => (
           <div key={index} className={`compose-item ${actual && isSelected(actual.name, item) ? 'selected' : ''}`} onClick={(e) => handleCheckboxClick(e, actual?.name, item)}>
-            <img className='compose-image-base' src={item.imageURL} alt={item.name} />
-            <div className='compose-details'>
+            {/* <img className='compose-image-base' src={item.imageURL} alt={item.name} /> */}
+            <div className='compose-item-details'>
               <h3>{item.name}</h3>
               {item.price ? <p>{item.price}€</p> : null}
             </div>
@@ -153,11 +154,11 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
         ))}
       </div>
       <div className="footer-compose">
-        {step ? <button className="btn-compose" onClick={() => setStep(step - 1)}>Précédent</button> : <button className="btn-compose" style={{opacity: 0, cursor: 'auto'}}>Précédent</button> }
+        {step ? <button className="btn-compose" onClick={() => setStep(step - 1)}>Précédent</button> : <button className="btn-compose" style={{ opacity: 0, cursor: 'auto' }}>Précédent</button>}
         <h1 className="">
           {isNaN(Number(totalPrice)) ? 0.00 : Number(totalPrice).toFixed(2)}
         </h1>
-        {step < 3 ? <button className="btn-compose" onClick={() => setStep(step + 1)}>Suivant</button> : <button className="btn-compose" style={{opacity: 0, cursor: 'auto'}}/> }
+        {step < 3 ? <button className="btn-compose" onClick={() => setStep(step + 1)}>Suivant</button> : <button className="btn-compose" style={{ opacity: 0, cursor: 'auto' }} />}
         {/* <div className="add-to-cart" onClick={(e) => addToCart()}></div> */}
       </div>
     </div>

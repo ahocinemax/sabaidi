@@ -385,6 +385,14 @@ img {
         margin-bottom: 5px;
     }
 
+    .section {
+        height: auto;
+    }
+
+    .section.menu {
+        height: auto;
+    }
+
     .text {
         font-size: 1.5rem;
         letter-spacing: 8px;

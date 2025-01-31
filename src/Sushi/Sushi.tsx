@@ -13,15 +13,6 @@ import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Fade from '@mui/material/Fade';
 
-interface ModalProps {
-  imageUrl: string;
-  title: string;
-  description: string;
-  price: string;
-  customize?: boolean;
-  openModal: (image: string) => void;
-}
-
 const style = {
   border: '0px',
   padding: '0px',
@@ -109,20 +100,20 @@ export const Sushi = () => {
                     className="add-cart" 
                     src="Logo-moins.png" 
                     alt="decrement" 
-                    onClick={() => removeFromCart({...item, category: 'Jap\'', quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity || 0})}
+                    onClick={() => removeFromCart({...item, category: "Jap'", quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity || 0})}
                   />
                   <span className="quantity">{cart.find(cartItem => cartItem.title === item.title)?.quantity!}</span>
                   <img 
                     className="add-cart" 
                     src="Logo-plun.png" 
                     alt="increment" 
-                    onClick={() => addToCart({...item, category: "Jap\'", quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity!})}
+                    onClick={() => addToCart({...item, category: "Jap'", quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity!})}
                   />
                 </div>
               ) : (
-                <div onClick={() => addToCart({...item, category: "Jap\'", quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity!})}
+                <div onClick={() => addToCart({...item, category: "Jap'", quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity!})}
                 >
-                  <img className="add-cart" src="Logo-plus.png" />
+                  <img className="add-cart" src="Logo-plus.png" alt='add to cart button'/>
                 </div>
               )}
             </div>
