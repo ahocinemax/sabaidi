@@ -1,6 +1,8 @@
 import React from "react";
 import { useCart } from "../Context/CartContext";
 import "./CartContainer.css"; // Ajoutez du style pour une meilleure esthétique
+import { CartItemProps, SushiItemProps } from "../interfaces";
+import { Link } from "react-router-dom";
 
 export const CartContainer = () => {
     const { cart, categorizedItems, addToCart, removeFromCart } = useCart();
@@ -8,6 +10,28 @@ export const CartContainer = () => {
     const handleSubmit = () => {
         window.location.href = "tel:+33140360932";
     };
+
+    const phoneNumber = "336XXXXXXXX"; // Numéro en format international sans le 0
+
+    // Fonction pour générer le message WhatsApp
+    const generateWhatsAppMessage = (categorizedItems: { [category: string]: (CartItemProps & { quantity: number })[] }) => {
+        let message = "🍣 *Commande Restaurant* 🍣\n\n";
+
+        Object.entries(categorizedItems).forEach(([category, items]) => {
+            if (items.length === 0) return; // Ignore les catégories vides
+
+            message += `🔹 *${category}* 🔹\n`;
+            items.forEach(({ title, price, quantity }) => {
+                message += `- ${quantity} x ${title} (${price}€)\n`;
+            });
+            message += "\n";
+        });
+
+        message += "🛒 Merci de confirmer la commande.";
+        return encodeURIComponent(message);
+    };
+
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${generateWhatsAppMessage(categorizedItems)}`;
 
     return (
         <div className="cart-page">
@@ -61,14 +85,14 @@ export const CartContainer = () => {
                                 .toFixed(2)}€
                         </p>
                     </div>
-                    <button className="cart-submit-button" onClick={handleSubmit}>
-                        Passer commande
-                    </button>
+                    <Link to={whatsappUrl} target="_blank" rel="noopener noreferrer" className="cart-submit-button">
+                        Confirmer sur WhatsApp
+                    </Link>
                 </div>
             ) : (
                 <p className="empty-cart-message">Votre panier est vide.</p>
             )}
         </div>
     );
-    
+
 };

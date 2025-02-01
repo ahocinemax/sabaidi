@@ -62,7 +62,7 @@ export const Starter = () => {
   return (
     <div className='container-thai'>
       <Helmet>
-        <title>Menu Jap' - Sabaidi</title>
+        <title>Menu Jap' - Thaiko</title>
       </Helmet>
 
       <h2>Entrées</h2>

@@ -115,7 +115,7 @@ const BestSellersItems: BestSellerItem[] = [
   },
   {
     imageURL: "test.png",
-    title: "Plateau Sabaidi love",
+    title: "Plateau Thaiko love",
     description: "Sushi au saumon et à l'avocat.",
     price: "10.90",
   },

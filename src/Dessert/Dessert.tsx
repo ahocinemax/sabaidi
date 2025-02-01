@@ -62,7 +62,7 @@ export const Dessert = () => {
   return (
     <div className='container-thai'>
       <Helmet>
-        <title>Desserts - Sabaidi</title>
+        <title>Desserts - Thaiko</title>
       </Helmet>
 
       <h2>Desserts</h2>

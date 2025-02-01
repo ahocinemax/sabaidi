@@ -124,7 +124,7 @@ export const Thai: React.FC  = () => {
   return (
     <div className="container-thai">
       <Helmet>
-        <title>Menu Thaï - Sabaidi</title>
+        <title>Menu Thaï - Thaiko</title>
       </Helmet>
       <h2>Menu Thaïlandais</h2>
       <Sidebar titles={submenus.titles} activeTitle={submenus.activeTitle} onTitleClick={handleTitleClick}/>

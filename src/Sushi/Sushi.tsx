@@ -74,7 +74,7 @@ export const Sushi = () => {
   return (
     <div className="menu-section">
       <Helmet>
-        <title>Menu Jap' - Sabaidi</title>
+        <title>Menu Jap' - Thaiko</title>
       </Helmet>
       <h2>Menu Japonais</h2>
       <Sidebar titles={submenus.titles} activeTitle={submenus.activeTitle} onTitleClick={handleTitleClick}/>

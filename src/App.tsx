@@ -54,7 +54,7 @@ export const App: React.FC = () => {
                     >
                         <img
                             src="tel.svg"
-                            alt="contactez appelez Sabaidi"
+                            alt="contactez appelez Thaiko"
                             className="tel-logo"
                         />
                         <span className="call-text">Appelez-nous !</span>

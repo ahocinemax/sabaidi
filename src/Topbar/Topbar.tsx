@@ -26,7 +26,7 @@ export const Topbar: React.FC = () => {
                     data-tooltip-content="Retour à l'accueil"
                     data-tooltip-place="bottom"
                 >
-                    <img src="logo_couleur_texte.png" alt="Logo Sabaidi" />
+                    <img src="logo_couleur_texte.png" alt="Logo Thaiko" />
                 </Link>
 
                 <div className="navigation-links">
