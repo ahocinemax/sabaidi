@@ -15,13 +15,7 @@ import './App.css';
 
 export const App: React.FC = () => {
     const location = useLocation();
-    const [showCallButton, setShowCallButton] = useState(false);
-
-    // const [showCallButton, setShowCallButton] = useState(window.location.pathname !== '/');
-    // useEffect(() => {
-    //     const active = location.pathname !== '/';
-    //     setShowCallButton(active);
-    // }, [location]);
+    // Floute le fond sur toutes les pages, sauf la homepage
     useEffect(() => {
         if (location.pathname === "/") {
             document.body.classList.add("home");
@@ -49,21 +43,6 @@ export const App: React.FC = () => {
                         </Routes>
                     </SidebarProvider>
                 </CartProvider>
-                {showCallButton ? (
-                    <a
-                        href="tel:+33140360932"
-                        className="contact-call"
-                        style={{
-                        }}
-                    >
-                        <img
-                            src="tel.svg"
-                            alt="contactez appelez Thaiko"
-                            className="tel-logo"
-                        />
-                        <span className="call-text">Appelez-nous !</span>
-                    </a>
-                ) : null}
             </div>
         </div>
     );

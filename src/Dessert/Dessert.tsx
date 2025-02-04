@@ -72,7 +72,7 @@ export const Dessert = () => {
           <div key={index} className="menu-item">
             <div className='image-part'>
               <img
-              className="ItemImage"
+              className="item-image"
               src={item.thumbnailUrl}
               alt={item.title}
               onClick={() => openModal(item.imageUrl)}/>
@@ -101,7 +101,7 @@ export const Dessert = () => {
               )}
             </div>
             </div>
-            <div className="ItemDetails">
+            <div className="menu-item-content">
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
                 <p>{item.price}€</p>
