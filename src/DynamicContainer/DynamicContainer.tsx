@@ -13,20 +13,20 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
     checked: boolean;
   };
 
-  const priceProtein = 2;
-  const priceVegetableCheese = 1;
+  const priceProtein: number = 2;
+  const priceVegetableCheese: number = 1;
 
   const { addToCart } = useCart();
 
   const [step, setStep] = useState(0);
-  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalPrice, setTotalPrice] = useState<number>(0);
   const [selectedBase, setSelectedBase] = useState<Item>();
   const [selectedProtein, setSelectedProtein] = useState<Item[]>([]);
   const [selectedVegetableCheese, setSelectedVegetableCheese] = useState<Item[]>([]);
   let actual = props ? props[step] : undefined;
 
   const displayAlert = (message: string) => {
-    let text = message;
+    let text: string = message;
     text += " voici les ingrédients sélectionnés : ";
     if (selectedBase) text += selectedBase.name + ", ";
     selectedProtein.forEach((item) => text += item.name + ", ");
@@ -100,44 +100,26 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
     }
   };
 
-  // useEffect(() => {
-  //   console.log(selectedBase);
-  //   console.log(selectedProtein);
-  //   console.log(selectedVegetableCheese);
-  // }, [selectedBase, selectedProtein, selectedVegetableCheese]);
-
   // Calculate total price
   useEffect(() => {
-    let vegetableCheeseSupplement = 0;
-    let proteinSupplement = 0;
-    let length1 = selectedProtein?.length || 0;
-    let length2 = selectedVegetableCheese?.length || 0;
-    let supplement = length1 + length2;
+    let totalSupplements: number = selectedProtein.length + selectedVegetableCheese.length;
 
-    // Si aucun supplément, on ne fait rien
-    if (!supplement) return;
+    // Prix de base
+    let newTotalPrice: number = selectedBase?.price ? Number(selectedBase.price) : 0;
 
-    // Si la somme des suppléments est inférieure ou égale à 2, on applique juste le prix de base
-    if (supplement <= 2) {
-      setTotalPrice(selectedBase?.price || 0);
-    } else {
-      // Calcul des suppléments pour les fromages et protéines
-      while (length1 > 0 || length2 > 0) {
-        if (length2 > 0) {
-          length2--;
-          vegetableCheeseSupplement++;
-        } else if (length1 > 0) {
-          length1--;
-          proteinSupplement++;
-        }
-      }
+    // Vérification des suppléments payants (seulement à partir du 3ème)
+    if (totalSupplements > 2) {
+      let paidSupplements = totalSupplements - 2;
 
-      // Calcul du prix total
-      const basePrice = selectedBase?.price || 0;
-      setTotalPrice(basePrice + vegetableCheeseSupplement * priceVegetableCheese + proteinSupplement * priceProtein);
+      // Calcul du prix des suppléments en fonction des catégories
+      let vegetableCheeseToCharge = Math.min(paidSupplements, selectedVegetableCheese.length);
+      let proteinToCharge = paidSupplements - vegetableCheeseToCharge;
+      newTotalPrice += (proteinToCharge * priceProtein) + (vegetableCheeseToCharge * priceVegetableCheese);
     }
-  }, [selectedBase, selectedProtein, selectedVegetableCheese]);
 
+    setTotalPrice(newTotalPrice);
+    
+  }, [selectedBase, selectedProtein, selectedVegetableCheese]);
 
   return (
     <div className={className}>

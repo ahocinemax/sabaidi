@@ -11,7 +11,7 @@ export const CartContainer = () => {
         window.location.href = "tel:+33140360932";
     };
 
-    const phoneNumber = "336XXXXXXXX"; // Numéro en format international sans le 0
+    const phoneNumber = "33762921563"; // Numéro en format international sans le 0
 
     // Fonction pour générer le message WhatsApp
     const generateWhatsAppMessage = (categorizedItems: { [category: string]: (CartItemProps & { quantity: number })[] }) => {

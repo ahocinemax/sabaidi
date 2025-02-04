@@ -103,8 +103,7 @@
 }
 
 .cart-submit-button {
-    margin-top: 20px;
-    width: 100%;
+    margin: 20px auto;
     padding: 15px;
     font-size: 1.5rem;
     background-color: #d60b76;

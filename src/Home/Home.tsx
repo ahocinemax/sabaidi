@@ -6,6 +6,7 @@ import About from '../About/About';
 
 import { Helmet } from 'react-helmet';
 import { BandeauSocial } from '../BandeauSocial/BandeauSocial';
+import { Link } from 'react-router-dom';
 
 const submenu: MenuItemProps[] = [
   {
@@ -129,8 +130,14 @@ const BestSellersItems: BestSellerItem[] = [
 
 export const Home: React.FC = () => {
 
-  const handleScroll = () => {
-    window.scrollTo({ top: window.innerHeight + 20, behavior: 'smooth' });
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = 30; // Décalage de 30px vers le haut
+      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   };
 
   return (
@@ -147,24 +154,24 @@ export const Home: React.FC = () => {
             <img src="deco2.svg" className='deco-img' />
           </div>
           <div className="phrase-container">
-          <h1 className='impact-phrase'>
-            VOTRE RESTAURANT DEVIENT LE <br />
-            <span style={{ color: '#e70b96', fontFamily: 'Philosopher-Regular' }}>THAÏKO PARIS 9
-              {/* <br />
+            <h1 className='impact-phrase'>
+              VOTRE RESTAURANT DEVIENT LE <br />
+              <span style={{ color: '#e70b96', fontFamily: 'Philosopher-Regular' }}>THAÏKO PARIS 9
+                {/* <br />
               <img className="flag-svg" src='https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/1f1ef-1f1f5.svg' />
               <img className="flag-svg" src='https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/1f1f9-1f1ed.svg' /> */}
-            </span>
-          </h1>
+              </span>
+            </h1>
 
           </div>
         </div>
         <div className="scrollbar">
-          <img onClick={() => handleScroll()} className='down-arrow' src="down-arrow.svg" alt="down" />
+          <img onClick={() => handleScroll('menu')} className='down-arrow' src="down-arrow.svg" alt="down" />
         </div>
       </div>
       {/* <BandeauSocial /> */}
       <div className="section menu">
-        <div className="MenuTitle">
+        <div className="MenuTitle" id='menu'>
           <h2>Explorer notre menu</h2>
         </div>
         <div className='parent'>

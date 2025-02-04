@@ -16,16 +16,20 @@ import './App.css';
 export const App: React.FC = () => {
     const location = useLocation();
     const [showCallButton, setShowCallButton] = useState(false);
-    
+
     // const [showCallButton, setShowCallButton] = useState(window.location.pathname !== '/');
     // useEffect(() => {
     //     const active = location.pathname !== '/';
     //     setShowCallButton(active);
     // }, [location]);
     useEffect(() => {
-        // Ajouter le style au body
-        // document.body.style.margin = '0';
-    }, []);
+        if (location.pathname === "/") {
+            document.body.classList.add("home");
+        } else {
+            document.body.classList.remove("home");
+        }
+    }, [location.pathname]);
+
     return (
         <div className="app">
             <div className="background"></div>

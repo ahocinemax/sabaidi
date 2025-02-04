@@ -18,12 +18,10 @@ const Sidebar: React.FC<SidebarProps> = ({ titles, activeTitle, onTitleClick }) 
     const params = new URLSearchParams(location.search);
     const categoryFromUrl = params.get('category');
 
-    console.log("active:", activeTitle);
     if (categoryFromUrl && titles.includes(categoryFromUrl)) {
       setActiveTitle(categoryFromUrl);
       onTitleClick(categoryFromUrl);
     }
-    console.log("params:", categoryFromUrl);
   }, [location.search, titles, setActiveTitle, onTitleClick]);
 
   const switchSection = (title: string) => {
