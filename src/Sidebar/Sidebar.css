@@ -6,7 +6,7 @@
 	box-sizing: content-box;
 	gap: 7%;
 	min-height: 50px;
-	background-color: #fff;
+	background-color: #ffffff75;
 	-webkit-overflow-scrolling: touch;
 	overflow-x: auto;
 	scroll-behavior: smooth;
@@ -57,6 +57,9 @@
 .nav-link.active {
 	color: #d965c6;
 	cursor: default;
+	background-color: #ffffff75;
+	padding: 0 30px;
+	border-radius: 8px 8px 0 0;
 }
 
 .nav-link:last-child {
@@ -73,7 +76,7 @@
 	overflow-x: auto;
 	margin: auto;
 	width: 100%;
-	background-color: #233748;
+	/* background-color: #233748; */
 }
 
 .left-arrow, .right-arrow {

@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from "react";
 import "./Topbar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../Context/CartContext";
 
 export const Topbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { cart } = useCart(); 
-
+    const navigate = useNavigate();
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    const handleLogo = () => {
+        setIsMenuOpen(false);
+        navigate("/");
+    }
 
     useEffect(() => {
         // Ajouter une classe au body
@@ -30,7 +35,7 @@ export const Topbar: React.FC = () => {
                 </Link>
 
                 <div className="navigation-links">
-                    <Link to="/Starters">ENTRÉES</Link>
+                    <Link to="/Starters">STARTERS</Link>
                     <Link to="/Jap">JAP'</Link>
                     <Link to="/Thai">THAÏ</Link>
                     <Link to="/Desserts">DESSERTS</Link>
@@ -50,20 +55,15 @@ export const Topbar: React.FC = () => {
                     <button className="close-button" onClick={toggleMenu}>
                         ✕
                     </button>
-                    <div className="logo-menu"><img src="logo_couleur_texte.png" alt="logo restaurant japonais paris" /></div>
+                    <div className="logo-menu" onClick={() => handleLogo()}><img src="logo_couleur_texte.png" alt="logo restaurant japonais paris" /></div>
                     <div className="menu-links">
-                        <Link to="/Starters" onClick={toggleMenu}>
-                            ENTRÉES
-                        </Link>
-                        <Link to="/Jap" onClick={toggleMenu}>
-                            JAP'
-                        </Link>
-                        <Link to="/Thai" onClick={toggleMenu}>
-                            THAÏ
-                        </Link>
-                        <Link to="/Desserts" onClick={toggleMenu}>
-                            DESSERTS
-                        </Link>
+                        <Link to="/Starters" onClick={toggleMenu}>STARTERS</Link>
+                        <Link to="/Jap" onClick={toggleMenu}>JAP'</Link>
+                        <Link to="/Thai" onClick={toggleMenu}>THAÏ</Link>
+                        <Link to="/Desserts" onClick={toggleMenu}>DESSERTS</Link>
+                    </div>
+                    <div className="cart-redirect">
+                        <button className="cart-button-redirect">Panier</button>
                     </div>
                 </div>
             )}

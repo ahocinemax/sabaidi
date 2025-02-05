@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './DynamicContainer.css';
-import { DynamicContainerProps } from '../interfaces';
+import { CartItemProps, DynamicContainerProps } from '../interfaces';
 import { useCart } from '../Context/CartContext';
 
 export const DynamicContainer = (parent: DynamicContainerProps) => {
@@ -56,6 +56,39 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
         break;
     }
   };
+
+  const handleAddToCart = () => {
+    if (selectedBase) {
+      let description = "Recette :";
+
+      const proteinText = selectedProtein.map(p => p.name).join(', ');
+      const vegetableText = selectedVegetableCheese.map(v => v.name).join(', ');
+
+      if (proteinText) {
+        description += ` ${proteinText}`;
+      }
+
+      if (vegetableText) {
+        description += proteinText ? ` avec ${vegetableText}` : ` ${vegetableText}`;
+      }
+
+      let cartItem: CartItemProps = {
+        imageUrl: 'coming-soon.jpg',
+        title: "Rouleau " + selectedBase?.name,
+        description: description,
+        price: totalPrice.toFixed(2),
+        category: "Jap'",
+        quantity: 1
+      };
+      addToCart(cartItem);
+    }
+    // vider les variables pour reprendre à 0
+    setStep(0);
+    setTotalPrice(0);
+    setSelectedBase(undefined);
+    setSelectedProtein([]);
+    setSelectedVegetableCheese([]);
+  }
 
   const updateSelection = (key: string, ingredient: any) => {
     let currentSelection = [];
@@ -118,7 +151,7 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
     }
 
     setTotalPrice(newTotalPrice);
-    
+
   }, [selectedBase, selectedProtein, selectedVegetableCheese]);
 
   return (
@@ -140,8 +173,11 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
         <h1 className="">
           {isNaN(Number(totalPrice)) ? 0.00 : Number(totalPrice).toFixed(2)}
         </h1>
-        {step < 3 ? <button className="btn-compose" onClick={() => setStep(step + 1)}>Suivant</button> : <button className="btn-compose" style={{ opacity: 0, cursor: 'auto' }} />}
-        {/* <div className="add-to-cart" onClick={(e) => addToCart()}></div> */}
+        {step < 3 ?
+          <button className="btn-compose" onClick={() => setStep(step + 1)}>Suivant</button>
+          :
+          <button className="btn-compose" onClick={() => handleAddToCart()}>Ajouter</button>
+        }
       </div>
     </div>
   );

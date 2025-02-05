@@ -15,7 +15,7 @@
     text-align: center;
     color: #d4307a;
     font-weight: 700;
-    background-color: #233748;
+    backdrop-filter: blur(25px);
 }
 
 .menu-items {

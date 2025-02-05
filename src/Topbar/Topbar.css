@@ -40,7 +40,8 @@
 }
 
 .logo-menu img:hover {
-    transform: scale(1.2); /* Agrandir légèrement au survol */
+    transform: scale(1.2);
+    /* Agrandir légèrement au survol */
 }
 
 .menu-box {
@@ -58,12 +59,48 @@
     z-index: 100;
 }
 
+.cart-button-redirect {
+    position: relative;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 12px 4rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 117, 140, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 117, 140, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(255, 117, 140, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(255, 117, 140, 0.5);
+    }
+}
+
+.cart-button-redirect:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(255, 117, 140, 0.3);
+}
+
+
 .menu-deroulant {
     display: none;
     /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
     z-index: 99;
     right: 25px;
-    position:sticky;
+    position: sticky;
 }
 
 .logo img {
@@ -76,13 +113,14 @@
 }
 
 .logo img:hover {
-    transform: scale(1.2); /* Agrandir légèrement au survol */
+    transform: scale(1.2);
+    /* Agrandir légèrement au survol */
 }
 
 .menu-links {
     display: flex;
     gap: 5rem;
-    margin-bottom: 90px;
+    /* margin-bottom: 90px; */
 }
 
 .menu-links a {
@@ -106,11 +144,13 @@
     left: 50%;
     bottom: -5px;
     transform: translateX(-50%);
-    transform-origin: center; /* Point de départ au centre */
+    transform-origin: center;
+    /* Point de départ au centre */
 }
 
 .menu-links a:hover::after {
-    width: 100%; /* Effet de soulignement */
+    width: 100%;
+    /* Effet de soulignement */
 }
 
 .menu-links a:hover {
@@ -142,11 +182,13 @@
     left: 50%;
     bottom: -5px;
     transform: translateX(-50%);
-    transform-origin: center; /* Point de départ au centre */
+    transform-origin: center;
+    /* Point de départ au centre */
 }
 
 .menu-links a:hover::after {
-    width: 100%; /* Effet de soulignement */
+    width: 100%;
+    /* Effet de soulignement */
 }
 
 .menu-links a:hover {
@@ -178,11 +220,13 @@
     left: 50%;
     bottom: -5px;
     transform: translateX(-50%);
-    transform-origin: center; /* Point de départ au centre */
+    transform-origin: center;
+    /* Point de départ au centre */
 }
 
 .navigation-links a:hover::after {
-    width: 100%; /* Effet de soulignement */
+    width: 100%;
+    /* Effet de soulignement */
 }
 
 .navigation-links a:hover {
@@ -203,7 +247,8 @@
 
 .order-button:hover {
     background-color: #ff007f;
-    transform: scale(1.05); /* Légère expansion au survol */
+    transform: scale(1.05);
+    /* Légère expansion au survol */
 }
 
 .menu-links {
@@ -234,6 +279,7 @@
     .topbar {
         height: 105px;
     }
+
     .navigation-links a {
         font-size: 2.3dvw;
     }

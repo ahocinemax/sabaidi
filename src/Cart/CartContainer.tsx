@@ -51,6 +51,7 @@ export const CartContainer = () => {
                                     <div className="cart-item-details">
                                         <h3 className="cart-item-title">{item.title}</h3>
                                         <p className="cart-item-price">{item.price}€</p>
+                                        <p className="cart-item-descript">{item.description}</p>
                                         <div className="cart-item-controls">
                                             <button
                                                 className="checkout-button"
