@@ -4,9 +4,10 @@ import { CartItemProps } from '../interfaces';
 interface CartContextProps {
     cart: CartItemProps[];
     categorizedItems: { [category: string]: (CartItemProps & { quantity: number })[] };
-    addToCart: (item: CartItemProps) => void;
+    addToCart: (item: CartItemProps, isCustom? : boolean) => void;
     removeFromCart: (item: CartItemProps) => void;
     setShowCart: (showCart: boolean) => void;
+    emptyCart: () => void;
     showCart: boolean;
 }
 
@@ -21,6 +22,7 @@ const CartContext = createContext<CartContextProps>({
     removeFromCart: () => {},
     setShowCart: () => {},
     showCart: false,
+    emptyCart: () => {},
 });
 
 export interface CategorizedItems {
@@ -37,7 +39,7 @@ const groupItemsByCategoryAndTitle = (items: CartItemProps[]) => {
             acc[category] = [];
         }
         const existingItem = acc[category].find(accItem => accItem.title === item.title);
-        if (existingItem) {
+        if (existingItem && !existingItem.customize) {
             existingItem.quantity += 1;
         } else {
             acc[category].push({ ...item, quantity: 1 });
@@ -68,11 +70,12 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     useEffect(() => {
         setCatgorizedItems(groupItemsByCategoryAndTitle(cart));
         localStorage.setItem("cart", JSON.stringify(cart));
+        console.log("Panier: ", categorizedItems);
     }, [cart]);
 
     const addToCart = (item: CartItemProps) => {
         const existingItem = cart.find(cartItem => cartItem.title === item.title);
-        if (existingItem) {
+        if (existingItem && !item.customize) {
             existingItem.quantity += 1;
             setCart([...cart]);
         } else {
@@ -83,6 +86,9 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
         }
     };
     
+    const emptyCart = () => {
+        setCart([]);
+    }
 
     const removeFromCart = (item: CartItemProps) => {
         const existingItem = cart.find(cartItem => cartItem.title === item.title);
@@ -97,7 +103,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     };
 
     return (
-        <CartContext.Provider value={{ cart, categorizedItems, showCart, addToCart, removeFromCart, setShowCart }}>
+        <CartContext.Provider value={{ cart, categorizedItems, showCart, addToCart, removeFromCart, emptyCart, setShowCart }}>
             {children}
         </CartContext.Provider>
     );

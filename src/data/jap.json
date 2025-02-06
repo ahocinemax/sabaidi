@@ -4,31 +4,36 @@
 			"imageUrl": "Jap/5 yakitoris.jpg",
 			"title": "BOEUF FROMAGE (X5)",
 			"description": "5 brochettes de boeuf et fromage. Servi avec du riz.",
-			"price": "11.90"
+			"price": "11.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/10 yakitori.jpg",
 			"title": "BOEUF FROMAGE (X10)",
 			"description": "10 brochettes de boeuf et fromage. Servi avec du riz.",
-			"price": "20.90"
+			"price": "20.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "coming-soon.jpg",
 			"title": "POULET DÉCLINÉ (X6)",
 			"description": "6 brochettes de poulet (3x mariné et 3x nature). Servi avec du riz.",
-			"price": "14.50"
+			"price": "14.50",
+			"customize": false
 		},
 		{
 			"imageUrl": "coming-soon.jpg",
 			"title": "FULL BROCHETTE (X10)",
 			"description": "Assortiment de 10 brochettes (2 de chaque). Servi avec du riz.",
-			"price": "17.90"
+			"price": "17.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/menu midi-2.jpg",
 			"title": "FORMULE MIXTE",
 			"description": "6 california avocat, 4 sushi saumon, 2 brochettes de poulet, 2 brochette boeuf fromage, 6 sashimi saumon mangue ciboulette.",
-			"price": "21.90"
+			"price": "21.90",
+			"customize": false
 		}
 	],
 	"yakitori": [
@@ -36,38 +41,43 @@
 			"imageUrl": "Jap/boeuf fromage.jpg",
 			"title": "BOEUF FROMAGE",
 			"description": "2 brochettes de boeuf et fromage.",
-			"price": "5.50"
+			"price": "5.50",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/brochette pane.jpg",
 			"title": "BOEUF FROMAGE PANÉ",
 			"description": "2 brochettes panées de boeuf et fromage.",
-			"price": "6.20"
+			"price": "6.20",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/poulet caramel.jpg",
 			"title": "POULET CARAMÉLISÉ",
 			"description": "2 brochettes de poulet haché caramélisées.",
-			"price": "5.50"
+			"price": "5.50",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/poulet_pane.jpg",
 			"title": "POULET PANÉ",
 			"description": "2 brochettes de poulet pané.",
-			"price": "5.20"
+			"price": "5.20",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/boulettes poulet-2.jpg",
-			"imageUrl": "Jap/boulettes poulet-2.jpg",
 			"title": "BOULETTE DE POULET",
 			"description": "2 brochettes de boulettes de poulet sauce yakitori.",
-			"price": "5.50"
+			"price": "5.50",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/brochette_saumon.jpg",
 			"title": "SAUMON",
 			"description": "2 brochettes de saumon grillé.",
-			"price": "6.20"
+			"price": "6.20",
+			"customize": false
 		}
 	],
 	"tartare": [
@@ -75,31 +85,36 @@
 			"imageUrl": "Jap/tartare-ceviche.jpg",
 			"title": "SAUMON AVOCAT CEVICHE",
 			"description": "Tartare de saumon et d'avocat façon ceviche, avec mangue, oignon rouge, menthe, coriandre, ciboulette, citron et 7 épices.",
-			"price": "12.90"
+			"price": "12.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/tartare_mangue-2.jpg",
 			"title": "SAUMON MANGO CIBOULETTE SPICY",
 			"description": "Tartare de saumon à la mangue, ciboulette et épices.",
-			"price": "10.90"
+			"price": "10.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/tartare-ceviche-2.jpg",
 			"title": "SAUMON SNACKÉ AVOCAT CHEESE",
 			"description": "Tartare de saumon snacké à l'avocat et fromage.",
-			"price": "10.90"
+			"price": "10.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/tartare-ceviche-2.jpg",
 			"title": "POULET MAYO AVOCAT CHEESE",
 			"description": "Tartare de poulet à la mayonnaise, avocat et fromage.",
-			"price": "9.90"
+			"price": "9.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/tartare-ceviche.jpg",
 			"title": "THON CUIT MAYO AVOCAT",
 			"description": "Tartare de thon cuit à la mayonnaise et avocat.",
-			"price": "9.90"
+			"price": "9.90",
+			"customize": false
 		}
 	],
 	"poke": [
@@ -107,37 +122,43 @@
 			"imageUrl": "Jap/poke-chicken-2.jpg",
 			"title": "POULET",
 			"description": "Poulet croustillant, avocat, carotte, concombre, cheese, oignon frit, oignon rouge, ciboulette, tomate cerise, sauce maison mayo spicy.",
-			"price": "12.90"
+			"price": "12.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/poke thai.jpg",
 			"title": "THAÏ",
 			"description": "Poulet thaï saté, avocat, carotte, poivrons, cacahuètes, oignon frit, oignon rouge, pousse de soja, tomate cerise, sauce maison mayo spicy.",
-			"price": "13.90"
+			"price": "13.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/poke-saumon-2.jpg",
 			"title": "SAUMON",
 			"description": "Saumon frais, avocat, mangue, concombre, edamame, oignon rouge, oignon frit, ciboulette, tomate cerise, sauce teriyaki.",
-			"price": "13.90"
+			"price": "13.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/poke tataki.jpg",
 			"title": "SAUMON TATAKI",
 			"description": "Saumon tataki, avocat, mangue, concombre, edamame, oignon rouge, oignon frit, ciboulette, tomate cerise, sauce sésame, sauce teriyaki.",
-			"price": "13.90"
+			"price": "13.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/poke saumon.jpg",
 			"title": "PAVÉ DE SAUMON",
 			"description": "Pavé de saumon, avocat, mangue, concombre, edamame, oignon frit, oignon rouge, ciboulette, tomate cerise, sauce teriyaki.",
-			"price": "14.90"
+			"price": "14.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/poke-crevette.jpg",
 			"title": "CREVETTE",
 			"description": "Crevettes fraîches & tempura, avocat, iceberg, concombre, cheese, oignon frit, ciboulette, tomate cerise, sauce maison mayo spicy.",
-			"price": "14.90"
+			"price": "14.90",
+			"customize": false
 		}
 	],
 	"chirachi": [
@@ -145,37 +166,43 @@
 			"imageUrl": "Jap/chirachi saumon-2.jpg",
 			"title": "SAUMON",
 			"description": "Chirashi de saumon cru, accompagné de riz vinaigré.",
-			"price": "14.90"
+			"price": "14.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/chirachi tataki-2.jpg",
 			"title": "SAUMON TATAKI BRAISÉ",
 			"description": "Chirashi de saumon snacké, accompagné de riz vinaigré.",
-			"price": "15.20"
+			"price": "15.20",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/chirachi saumon avocat-2.jpg",
 			"title": "SAUMON AVOCAT CHEESE",
 			"description": "Chirashi classique de saumon et d'avocat, accompagné de riz vinaigré.",
-			"price": "15.90"
+			"price": "15.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/chirachi tataki avocat-2.jpg",
 			"title": "SAUMON TATAKI BRAISÉ AVOCAT",
 			"description": "Chirashi de saumon snacké et d'avocat, accompagné de riz vinaigré.",
-			"price": "16.20"
+			"price": "16.20",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/tartare thon cuit-2.jpg",
 			"title": "POULET OU THON CUIT MAYO AVOCAT",
 			"description": "Chirashi composé de poulet mariné à la mayonnaise ou de thon cuit, accompagné d'avocat et de riz vinaigré.",
-			"price": "12.90"
+			"price": "12.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/chirachi poulet crispy avocat-2.jpg",
 			"title": "POULET CROUSTILLANT AVOCAT",
 			"description": "Chirashi de poulet croustillant et d'avocat, accompagné de riz vinaigré.",
-			"price": "13.90"
+			"price": "13.90",
+			"customize": false
 		}
 	],
 	"sashimi": [
@@ -183,25 +210,29 @@
 			"imageUrl": "Jap/sashimi saumon-1.jpg",
 			"title": "SASHIMI SAUMON (X5)",
 			"description": "Sashimi de saumon cru, 5 généreuses pièces serives avec du riz.",
-			"price": "6.50"
+			"price": "6.50",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/sashimi saumon 10-1.jpg",
 			"title": "SASHIMI SAUMON (X15)",
 			"description": "Sashimi de saumon cru, 15 généreuses pièces serives avec du riz.",
-			"price": "16.50"
+			"price": "16.50",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/sashimi mangue-1.jpg",
 			"title": "SASHIMI SAUMON MANGUE CIBOULETTE",
 			"description": "Sashimi de saumon cru et de mangue, relevé à la ciboulette. Servi avec du riz.",
-			"price": "10.90"
+			"price": "10.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/sashimi tataki 10-1.jpg",
 			"title": "TATAKI SAUMON (X15)",
 			"description": "Sashimi de saumon snacké, accompagné de riz.",
-			"price": "17.20"
+			"price": "17.20",
+			"customize": false
 		}
 	],
 	"sushi": [
@@ -209,31 +240,36 @@
 			"imageUrl": "Jap/nigiris.jpg",
 			"title": "SUSHI SAUMON",
 			"description": "Nigiri de saumon cru.",
-			"price": "3.90"
+			"price": "3.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/nigiris.jpg",
 			"title": "SUSHI SAUMON CRISPY",
 			"description": "Nigiri de saumon croustillant.",
-			"price": "3.90"
+			"price": "3.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/nigiris.jpg",
 			"title": "SUSHI SAUMON CHEESE",
 			"description": "Nigiri de saumon cru garni de fromage crémeux.",
-			"price": "3.90"
+			"price": "3.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/nigiris.jpg",
 			"title": "SUSHI SAUMON BRAISÉ",
 			"description": "Nigiri de saumon braisé.",
-			"price": "3.90"
+			"price": "3.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/nigiris.jpg",
 			"title": "SUSHI CREVETTE",
 			"description": "Nigiri de crevette.",
-			"price": "4.20"
+			"price": "4.20",
+			"customize": false
 		}
 	],
 	"tacos": [
@@ -241,25 +277,29 @@
 			"imageUrl": "Jap/sushi-tacos.jpg",
 			"title": "SAUMON SPICY AVOCAT",
 			"description": "Coupe de riz pané garnie au saumon épicé et à l'avocat.",
-			"price": "8.90"
+			"price": "8.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/sushi-tacos.jpg",
 			"title": "POULET CROUSTILLANT CHEESE AVOCAT",
 			"description": "Coupe de riz pané garnie de poulet croustillant, de fromage et d'avocat.",
-			"price": "8.90"
+			"price": "8.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/sushi-tacos.jpg",
 			"title": "CRABE SPICY AVOCAT",
 			"description": "Coupe de riz pané garnie de chair de crabe épicée, d'avocat et de fromage.",
-			"price": "8.90"
+			"price": "8.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/sushi-tacos.jpg",
 			"title": "CREVETTE SPICY AVOCAT",
 			"description": "Coupe de riz pané garnie de crevettes épicée, d'avocat et de fromage.",
-			"price": "8.90"
+			"price": "8.90",
+			"customize": false
 		}
 	],
 	"plateaux": [
@@ -267,55 +307,64 @@
 			"imageUrl": "Jap/P2-2.jpg",
 			"title": "P1. HAVANA LOVE",
 			"description": "6 Sushi saumon 6 California saumon avocat",
-			"price": "10.90"
+			"price": "10.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/P1-2.jpg",
 			"title": "P2. SUSHI TIME",
 			"description": "6 Sushi saumon 6 Sushi saumon snacké",
-			"price": "11.90"
+			"price": "11.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/P3-2.jpg",
 			"title": "P3. SALMON CLASSIC",
 			"description": "10 sushi saumon",
-			"price": "13.50"
+			"price": "13.50",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/P4-2.jpg",
 			"title": "P4. SALMON LOVER",
 			"description": "6 Salmon roll cheese 6 California saumon avocat 6 Maki saumon",
-			"price": "14.50"
+			"price": "14.50",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/P6-2.jpg",
 			"title": "P5. CRISPY DREAM",
 			"description": "6 Crispy roll saumon avocat 6 Crispy roll thon mayo avocat 6 Crispy roll poulet mayo avocat",
-			"price": "16.50"
+			"price": "16.50",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/P7-2.jpg",
 			"title": "P6. CALIFORNIA DEAM",
 			"description": "6 California saumon avocat 6 California thon mayo avocat 6 California poulet mayo avocat",
-			"price": "17.90"
+			"price": "17.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/P9-2.jpg",
 			"title": "P7. PP",
 			"description": "6 Pané roll saumon cheese spicy 6 Pané roll tempura cheese spicy 6 Pané roll poulet mayo avocat spicy",
-			"price": "19.90"
+			"price": "19.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/P8-2.jpg",
 			"title": "P8. FRESH SALMON",
 			"description": "6 Salmon Roll cheese 6 Salmon Roll avocat cheese 6 Salmon Roll saumon fumé cheese 6 Salmon Roll concombre cheese",
-			"price": "21.90"
+			"price": "21.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/P5-2.jpg",
 			"title": "P9. FULL MIX",
 			"description": "6 Avocado tempura cheese 6 Spring saumon avocat 6 Crispy Roll poulet mayo avocat 6 Egg Roll crevette avocat",
-			"price": "21.90"
+			"price": "21.90",
+			"customize": false
 		}
 	],
 	"signatures": [
@@ -323,61 +372,71 @@
 			"imageUrl": "Jap/roll-mango-2.jpg",
 			"title": "MANGO ROLL",
 			"description": "California saumon, cheese, salade, recouvert de mangue et avocat, spicy sauce, ciboulette.",
-			"price": "12.90"
+			"price": "12.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/roll-tyger-2.jpg",
 			"title": "TYGER ROLL",
 			"description": "Tempura, cheese, concombre, recouvert de saumon snacké avocado spicy sauce.",
-			"price": "12.90"
+			"price": "12.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/rock'n'roll-2.jpg",
 			"title": "ROCK'N'ROLL",
 			"description": "Saumon, thon, salade, avocat, chips, piment et ciboulette.",
-			"price": "14.90"
+			"price": "14.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/roll-chicken-dynamite-2.jpg",
 			"title": "DYNAMITE CHICKEN \"R\"",
 			"description": "California poulet mayo, avocat, concombre, recouvert de poulet dynamite, spicy sauce.",
-			"price": "10.90"
+			"price": "10.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/roll-saumon-crevette-2.jpg",
 			"title": "SALMON SHRIMP ROLL",
 			"description": "Tempura, salade, avocat, boursin, crevette, recouvert de saumon.",
-			"price": "11.90"
+			"price": "11.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/roll-nachos-2.jpg",
 			"title": "MEXICAN ROLL",
 			"description": "Boeuf assaisonné, avocat, poivrons, spicy sauce, saumon braisé on the top.",
-			"price": "13.90"
+			"price": "13.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/sumo-pane-thai-2.jpg",
 			"title": "SA THAÏ",
 			"description": "Avocat, cheese, concombre, poulet saté, recouvert de cacahuètes.",
-			"price": "11.90"
+			"price": "11.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/sumo-kung-2.jpg",
 			"title": "PANÉ KAI",
 			"description": "Poulet mayo, avocat, poulet pané, cheese.",
-			"price": "13.90"
+			"price": "13.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/sumo-kung-2.jpg",
 			"title": "PANÉ SAUMON",
 			"description": "Avocat, saumon cheese, saumon fumé.",
-			"price": "13.90"
+			"price": "13.90",
+			"customize": false
 		},
 		{
 			"imageUrl": "Jap/sumo-kung-2.jpg",
 			"title": "PANÉ KUNG",
 			"description": "Crevette, avocat, cheese, tempura.",
-			"price": "14.90"
+			"price": "14.90",
+			"customize": false
 		}
 	]
 }

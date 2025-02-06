@@ -40,7 +40,7 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
       // Check if the ingredient is already selected
       if ((selectedProtein.some(item => item.name === ingredient.name) || selectedVegetableCheese.some(item => item.name === ingredient.name)) && key) {
         updateSelection(key, ingredient);
-      } else return displayAlert("Vous avez déjà sélectionné 4 suppléments.");
+      } else return displayAlert("Vous avez déjà sélectionné 4 ingrédients. Y a plus de place...\nOn en reprend un autre ?");
     }
     switch (key) {
       case "Base":
@@ -74,11 +74,12 @@ export const DynamicContainer = (parent: DynamicContainerProps) => {
 
       let cartItem: CartItemProps = {
         imageUrl: 'coming-soon.jpg',
-        title: "Rouleau " + selectedBase?.name,
+        title: selectedBase?.name,
         description: description,
         price: totalPrice.toFixed(2),
         category: "Jap'",
-        quantity: 1
+        quantity: 1,
+        customize: true,
       };
       addToCart(cartItem);
     }

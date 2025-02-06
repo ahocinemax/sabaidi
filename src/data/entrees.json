@@ -4,25 +4,29 @@
       "imageUrl": "Starters/soupe.jpg",
       "title": "SOUPE MISO CLASSIQUE",
       "description": "Bouillon à base de miso et de Dashi, champignons et algues.",
-      "price": "3.00"
+      "price": "3.00",
+      "customize": false
     },
     {
       "imageUrl": "Starters/soupe.jpg",
       "title": "SOUPE MISO SAUMON",
       "description": "Bouillon à base de miso, saumon et Dashi, champignons et algues.",
-      "price": "3.50"
+      "price": "3.50",
+      "customize": false
     },
     {
       "imageUrl": "Starters/soupe.jpg",
       "title": "SOUPE POULET TOM K KAW",
       "description": "Soupe traditionnelle thaïlandaise au lait de coco légèrement épicé, légumes frais et morceaux de poulet.",
-      "price": "6.50"
+      "price": "6.50",
+      "customize": false
     },
     {
       "imageUrl": "Starters/soupe.jpg",
       "title": "CREVETTE TOM YOM",
       "description": "Soupe traditionnelle thaïlandaise aux crevettes à la citronnelle, au lait de coco et ses légumes frais.",
-      "price": "7.50"
+      "price": "7.50",
+      "customize": false
     }
   ],
   "salades": [
@@ -30,19 +34,22 @@
       "imageUrl": "coming-soon.jpg",
       "title": "SALADE THAÏ MANGUE",
       "description": "Délicieuse salade fraîche, au mélange d’épices et de mangue.",
-      "price": "6.50"
+      "price": "6.50",
+      "customize": false
     },
     {
       "imageUrl": "coming-soon.jpg",
       "title": "SALADE THAÏ PAPAYE",
       "description": "Délicieuse salade fraîche, papaye et oignons frits.",
-      "price": "6.50"
+      "price": "6.50",
+      "customize": false
     },
     {
       "imageUrl": "coming-soon.jpg",
       "title": "SALADE THAÏ POULET OU BOEUF PIQUANT",
       "description": "Salade au mélange de légumes frais, surmontée au bœuf ou poulet caramélisé et oignons frits.",
-      "price": "7.50"
+      "price": "7.50",
+      "customize": false
     }
   ],
   "accompagnements": [
@@ -50,25 +57,29 @@
       "imageUrl": "Starters/edamame.jpg",
       "title": "EDAMAME",
       "description": "Fèves de soja.",
-      "price": "4.50"
+      "price": "4.50",
+      "customize": false
     },
     {
       "imageUrl": "Starters/wakame.jpg",
       "title": "WAKAME",
       "description": "Salade d'algues wakame.",
-      "price": "4.90"
+      "price": "4.90",
+      "customize": false
     },
     {
       "imageUrl": "Starters/choux.jpg",
       "title": "SALADE DE CHOUX",
       "description": "Salade de chou chinois, sésame et vinaigrette.",
-      "price": "3.50"
+      "price": "3.50",
+      "customize": false
     },
     {
       "imageUrl": "Starters/riz.jpg",
       "title": "RIZ NATURE",
       "description": "Riz blanc ou vinaigré (+0.20€) nature, servi avec une sauce au choix.",
-      "price": "3.00"
+      "price": "3.00",
+      "customize": false
     }
   ],
   "starters": [
@@ -76,54 +87,63 @@
       "imageUrl": "Starters/nems-poulet.jpg",
       "title": "NEMS POULET (X3)",
       "description": "Bouchées vapeur au poulet et aux légumes.",
-      "price": "4.90"
+      "price": "4.90",
+      "customize": false
     },
     {
       "imageUrl": "Starters/nems-crevette.jpg",
       "title": "NEMS CREVETTE (X3)",
       "description": "Crevettes décortiquées panées.",
-      "price": "5.90"
+      "price": "5.90",
+      "customize": false
     },
     {
       "imageUrl": "Starters/gyozas.jpg",
       "title": "GYOZA (X4)",
       "description": "Raviolis japonais grillés ou vapeur, au poulet ou aux légumes.",
-      "price": "5.20"
+      "price": "5.20",
+      "customize": false
     },
     {
       "imageUrl": "Starters/tempuras.jpg",
       "title": "TEMPURAS (X4)",
       "description": "Crevettes décortiquées panées.",
-      "price": "6.20"
+      "price": "6.20",
+      "customize": false
     },
     {
       "imageUrl": "coming-soon.jpg",
       "title": "ROULEAUX DE PRINTEMPS",
       "description": "Rouleaux de printemps frais, aux crevettes avec sa sauce.",
-      "price": "5.90"
+      "price": "5.90",
+      "customize": false
     },
     {
       "imageUrl": "Starters/poulet-dynamite.jpg",
       "title": "CHICKEN DYNAMITE (X8)",
       "description": "Tendres morceaux de poulet, accompagnés de leur sauce dynamite.",
-      "price": "7.90"
+      "price": "7.90",
+      "customize": false
     },
     {
       "imageUrl": "Starters/crevette-dynamite.jpg",
       "title": "CREVETTE DYNAMITE (X6)",
       "description": "Crevettes décortiquées, accompagnées de leur sauce dynamite.",
-      "price": "8.90"
+      "price": "8.90",
+      "customize": false
     },    {
       "imageUrl": "coming-soon.jpg",
       "title": "AVOCAT PANÉ CRABE SPICY",
       "description": "Avocat pané, farci de crabe sauce mayo épicée.",
-      "price": "7.90"
+      "price": "7.90",
+      "customize": false
     },
     {
       "imageUrl": "coming-soon.jpg",
       "title": "SAMOUSSA (X3)",
       "description": "3 triangles frits, farcis de légumes et de viande.",
-      "price": "4.90"
+      "price": "4.90",
+      "customize": false
     }
   ]
 }

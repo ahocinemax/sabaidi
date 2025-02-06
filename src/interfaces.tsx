@@ -14,7 +14,7 @@ export interface SushiItemProps {
     title: string;
     description: string;
     price: string;
-    customize?: boolean;
+    customize: boolean;
 }
 
 export interface CartItemProps {
@@ -22,7 +22,7 @@ export interface CartItemProps {
     title: string;
     description: string;
     price: string;
-    customize?: boolean;
+    customize: boolean;
     category: string;
     quantity: number;
 }

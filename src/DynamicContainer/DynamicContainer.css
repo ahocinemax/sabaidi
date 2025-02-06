@@ -9,6 +9,7 @@
 }
 
 .compose-ton-roll-container h3 {
+  margin: 20px auto;
   color : white;
 }
 
@@ -173,9 +174,7 @@
 }
 @media screen and (max-width: 768px) {
   .compose-ton-roll-container {
-    flex-direction: column;
     height: auto;
-    align-items: center;
   }
 
   .category {

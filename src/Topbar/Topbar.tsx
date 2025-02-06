@@ -7,13 +7,13 @@ export const Topbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { cart } = useCart(); 
     const navigate = useNavigate();
-    const toggleMenu = () => {
+    const showHideMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    const handleLogo = () => {
+    const hideMenuAndRedirectTo = (url: string) => {
         setIsMenuOpen(false);
-        navigate("/");
+        navigate(url);
     }
 
     useEffect(() => {
@@ -44,7 +44,7 @@ export const Topbar: React.FC = () => {
                 <Link className="order-button" to="/Cart">{cart.length > 0 ? "COMMANDER" : "PANIER"}</ Link>
 
                 {/* Bouton pour ouvrir le menu */}
-                <div className="menu-deroulant" onClick={toggleMenu}>
+                <div className="menu-deroulant" onClick={showHideMenu}>
                     <img src="menu-deroulant.svg" alt="Déplier le menu" />
                 </div>
             </div>
@@ -52,18 +52,18 @@ export const Topbar: React.FC = () => {
             {/* Div du menu déroulant */}
             {isMenuOpen && (
                 <div className={`menu-box ${isMenuOpen ? "menu-box-open" : ""}`}>
-                    <button className="close-button" onClick={toggleMenu}>
+                    <button className="close-button" onClick={showHideMenu}>
                         ✕
                     </button>
-                    <div className="logo-menu" onClick={() => handleLogo()}><img src="logo_couleur_texte.png" alt="logo restaurant japonais paris" /></div>
+                    <div className="logo-menu" onClick={() => hideMenuAndRedirectTo("/")}><img src="logo_couleur_texte.png" alt="logo restaurant japonais paris" /></div>
                     <div className="menu-links">
-                        <Link to="/Starters" onClick={toggleMenu}>STARTERS</Link>
-                        <Link to="/Jap" onClick={toggleMenu}>JAP'</Link>
-                        <Link to="/Thai" onClick={toggleMenu}>THAÏ</Link>
-                        <Link to="/Desserts" onClick={toggleMenu}>DESSERTS</Link>
+                        <Link to="/Starters" onClick={showHideMenu}>STARTERS</Link>
+                        <Link to="/Jap" onClick={showHideMenu}>JAP'</Link>
+                        <Link to="/Thai" onClick={showHideMenu}>THAÏ</Link>
+                        <Link to="/Desserts" onClick={showHideMenu}>DESSERTS</Link>
                     </div>
                     <div className="cart-redirect">
-                        <button className="cart-button-redirect">Panier</button>
+                        <button className="cart-button-redirect" onClick={() => hideMenuAndRedirectTo("/Cart")}>Panier</button>
                     </div>
                 </div>
             )}

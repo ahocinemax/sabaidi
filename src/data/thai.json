@@ -11,25 +11,29 @@
       "title": "LOKLAK",
       "description": "Riz rouge sauté à l'ail et son boeuf assaisonné façon cambodgienne.",
       "imageUrl": "Thai/loc lac.jpg",
-      "price": "14.90"
+      "price": "14.90",
+      "customize": false
     },
     {
       "title": "POULET CURRY KATSU",
       "description": "Curry japonnais, pomme de terre et carotte parsemé d'emmental rapé et son poulet croustillant.",
       "imageUrl": "Thai/poulet curry katsu.jpg",
-      "price": "12.90"
+      "price": "12.90",
+      "customize": false
     },
     {
       "title": "CREVETTES DYNAMITE",
       "description": "Crevette croustillante sauce spicy maison accompagné de son riz rouge à l'ail.",
       "imageUrl": "Thai/crevette-dynamite-1.jpg",
-      "price": "13.90"
+      "price": "13.90",
+      "customize": false
     },
     {
       "title": "CHICKEN DYNAMITE",
       "description": "Poulet croustillant sauce spicy maison accompagné de son riz rouge à l'ail.",
       "imageUrl": "Thai/chicken-dynamite-1.jpg",
-      "price": "13.90"
+      "price": "13.90",
+      "customize": false
     },
     {
       "title": "BASILIC RICE",
@@ -70,7 +74,8 @@
       "title": "TIGRE QUI PLEURE",
       "description": "Viande assaisonnée coupé en lamelles avec sa sauce thaï piquante.",
       "imageUrl": "Thai/tigre-qui-pleure-1.jpg",
-      "price": "14.90"
+      "price": "14.90",
+      "customize": false
     }
   ],
   "nouilles": [

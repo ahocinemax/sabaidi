@@ -30,14 +30,14 @@ interface ThaiItemProps {
   title: string;
   description: string;
   price: string;
-  customize?: boolean;
+  customize: boolean;
   openModal: (image: string) => void;
 }
 
 const ThaiItem: React.FC<ThaiItemProps> = ({ title, price, description, imageUrl, customize, openModal }) => {
   const { addToCart, removeFromCart, cart } = useCart();
   const meat: string= "Personnalisez votre viande: choix en bas de page";
-  const item: SushiItemProps = { title, price, description, imageUrl };
+  const item: SushiItemProps = { title, price, description, imageUrl, customize };
 
   return (
     <div className="menu-item">
