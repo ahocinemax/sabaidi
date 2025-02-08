@@ -68,11 +68,11 @@ const ThaiItem: React.FC<ThaiItemProps> = ({ title, price, description, imageUrl
               )}
             </div>
       </div>
-      <div className="ItemDetails">
+      <div className="menu-item-content">
         <h3>{title}</h3>
         <p>{description}</p>
         <div className="meal-info">
-          <p className="itemPrice">{price}€</p>
+          <p>{price}€</p>
           { customize === true ?
           <>
             <span className="info-meat" data-tooltip-id="my-tooltip" data-tooltip-content={meat} data-tooltip-place="bottom">
@@ -128,7 +128,7 @@ export const Thai: React.FC  = () => {
       </Helmet>
       <h2>Menu Thaïlandais</h2>
       <Sidebar titles={submenus.titles} activeTitle={submenus.activeTitle} onTitleClick={handleTitleClick}/>
-      <div className="thai-items">
+      <div className="menu-items">
         {activeSubmenu?.map((item, index) => (
           <ThaiItem key={index} {...item} openModal={openModal}/>
         ))}

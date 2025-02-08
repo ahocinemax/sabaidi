@@ -102,7 +102,7 @@ export const Starter = () => {
               )}
             </div>
           </div>
-          <div className="ItemDetails">
+          <div className="menu-item-content">
             <h3>{item.title}</h3>
             <p>{item.description}</p>
             <p>{item.price}€</p>

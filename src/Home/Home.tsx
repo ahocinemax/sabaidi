@@ -147,7 +147,6 @@ export const Home: React.FC = () => {
       </Helmet>
 
       <div className="section home">
-        {/* <div className="background"></div> */}
         <div className="content">
           <p className='welcome'><span className='text'>THAIKO x PARIS 9</span></p>
           <div className="deco">

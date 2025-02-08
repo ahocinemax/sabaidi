@@ -19,6 +19,10 @@
     transform: scale(1.2);
 }
 
+.cart-redirect {
+    margin-bottom: 25px;
+}
+
 .close-button {
     position: absolute;
     top: 20px;

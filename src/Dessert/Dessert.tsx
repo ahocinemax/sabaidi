@@ -67,7 +67,7 @@ export const Dessert = () => {
 
       <h2>Desserts</h2>
       <Sidebar titles={submenus.titles} activeTitle={submenus.activeTitle} onTitleClick={handleTitleClick}/>
-      <div className='thai-items'>
+      <div className='menu-items'>
         {activeSubmenu?.map((item, index) => (
           <div key={index} className="menu-item">
             <div className='image-part'>

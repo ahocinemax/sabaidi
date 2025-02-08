@@ -82,7 +82,7 @@ export const Sushi = () => {
         {activeTitle === "Compose ton roll" && 
           <div className="compose-details">
             <h1>Compose ton roll ! </h1>
-            <p className="menu-text">Choissisez une base, puis ajouter jusqu'à 2 ingrédients (en suppléments au delà)</p>
+            <p className="menu-text">Choissir une base, puis ajouter jusqu'à 2 ingrédients (en suppléments au delà)</p>
           </div>
         }
 
