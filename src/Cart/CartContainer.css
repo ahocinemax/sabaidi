@@ -8,6 +8,7 @@
 .cart-category {
     width: 100%;
     color: white;
+    z-index: 5;
 }
 
 .cart-item-quantity {
