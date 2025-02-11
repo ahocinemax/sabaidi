@@ -46,7 +46,6 @@ body.no-scroll {
     color: #FFB3CC;
     background: #2626287a;
     border-radius: 8px;
-    padding: 0px 20px;
     margin-top: 38px;
 }
 
@@ -108,7 +107,7 @@ body.home .background {
     z-index: -1;
     animation: slideshow 30s infinite;
     filter: blur(6px); /* Tester la suppression du flou */
-    will-change: background-image; /* Pour améliorer la performance */
+    will-change: background-image transform; /* Pour améliorer la performance */
 }
 
 @keyframes slideshow {

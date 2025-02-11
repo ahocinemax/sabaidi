@@ -11,6 +11,7 @@ import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { CartProvider } from './Context/CartContext';
 import { CartContainer } from './Cart/CartContainer';
+import {BackgroundSlideshow} from './backgroundSlider';
 import './App.css';
 
 export const App: React.FC = () => {
@@ -26,7 +27,8 @@ export const App: React.FC = () => {
 
     return (
         <div className="app">
-            <div className="background"></div>
+            <BackgroundSlideshow path={location.pathname}/>
+            {/* <div className="background"></div> */}
             <div className="full-content">
                 <Analytics />
                 <SpeedInsights />
