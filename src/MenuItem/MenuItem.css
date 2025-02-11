@@ -98,6 +98,10 @@
     width: 100%;
 }
 
+.MenuLink {
+    z-index: 5;
+}
+
 .MenuItemDescription {
     width: 40%;
     display: flex;
