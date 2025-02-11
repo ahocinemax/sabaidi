@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
 const images = [
-    "/public/Jap/sumo-kung-2.jpg",
-    "/public/Jap/P6-1.jpg",
-    "/public/Thai/mi-prat-1.jpg",
-    "/public/Thai/chicken-dynamite-2.jpg",
-    "/public/Jap/poke-crevette.jpg"
+    "/Jap/sumo-kung-2.jpg", // Chemins relatifs depuis le dossier public
+    "/Jap/P6-1.jpg",
+    "/Thai/mi-prat-1.jpg",
+    "/Thai/chicken-dynamite-2.jpg",
+    "/Jap/poke-crevette.jpg"
 ];
 
 interface BackgroundSlideshowProps {
