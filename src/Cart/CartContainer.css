@@ -77,11 +77,11 @@
 .cart-item-title {
     font-size: 1.4rem;
     margin: 0 0 10px 0;
-    color: #333;
+    color: black;
 }
 
 .cart-item-price {
-    color: #444;
+    color: black;
     font-weight: bold;
     margin-bottom: 10px;
 }

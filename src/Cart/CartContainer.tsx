@@ -86,9 +86,9 @@ export const CartContainer = () => {
                                 .toFixed(2)}€
                         </p>
                     </div>
-                    <Link to={whatsappUrl} target="_blank" rel="noopener noreferrer" className="cart-submit-button">
-                        Confirmer sur WhatsApp
-                    </Link>
+                    <div onClick={handleSubmit} rel="noopener noreferrer" className="cart-submit-button">
+                        Confirmer par téléphone
+                    </div>
                 </div>
             ) : (
                 <p className="empty-cart-message">Votre panier est vide.</p>
