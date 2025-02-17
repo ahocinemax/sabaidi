@@ -5,91 +5,29 @@ import { SushiItemProps, SidebarProps } from "../interfaces";
 import "../styles/fonts.css";
 import Sidebar from "../Sidebar/Sidebar";
 import { useSidebar } from "../Context/SidebarContext";
-import { useCart } from "../Context/CartContext";
 import { Helmet } from "react-helmet";
-import { Tooltip } from "react-tooltip";
 import thai from '../data/thai.json';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Fade from '@mui/material/Fade';
+import { Item } from "../Items/Items";
 
 const style = {
-  border: '0px',
-  padding: '0px',
-  margin: 'auto',
-  opacity: '1',
-  transition: 'opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
-  display: 'flex',
-  justifyContent: 'center',
-  height: '100dvh',
-  alignItems: 'center',
-};
-
-interface ThaiItemProps {
-  imageUrl: string;
-  title: string;
-  description: string;
-  price: string;
-  customize: boolean;
-  openModal: (image: string) => void;
-}
-
-const ThaiItem: React.FC<ThaiItemProps> = ({ title, price, description, imageUrl, customize, openModal }) => {
-  const { addToCart, removeFromCart, cart } = useCart();
-  const meat: string= "Personnalisez votre viande: choix en bas de page";
-  const item: SushiItemProps = { title, price, description, imageUrl, customize };
-
-  return (
-    <div className="menu-item">
-      <div className="image-part">
-        <img className="item-image" src={imageUrl} alt={title} onClick={() => openModal(imageUrl)} />
-        <div className="add-container">
-              {cart.find(cartItem => cartItem.title === item.title)?.quantity! > 0 ? (
-                <div className="quantity-control">
-                  <img 
-                    className="add-cart" 
-                    src="Logo-moins.png" 
-                    alt="decrement" 
-                    onClick={() => removeFromCart({...item, category: 'Thaï', quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity || 0})}
-                  />
-                  <span className="quantity">{cart.find(cartItem => cartItem.title === item.title)?.quantity!}</span>
-                  <img 
-                    className="add-cart" 
-                    src="Logo-plun.png" 
-                    alt="increment" 
-                    onClick={() => addToCart({...item, category: "Thaï", quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity!})}
-                  />
-                </div>
-              ) : (
-                <div onClick={() => addToCart({...item, category: "Thaï", quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity!})}
-                >
-                  <img className="add-cart" src="Logo-plus.png" />
-                </div>
-              )}
-            </div>
-      </div>
-      <div className="menu-item-content">
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <div className="meal-info">
-          <p>{price}€</p>
-          { customize === true ?
-          <>
-            <span className="info-meat" data-tooltip-id="my-tooltip" data-tooltip-content={meat} data-tooltip-place="bottom">
-              <img src="infobull.png" alt="Personnalisez votre viande" />
-            </span>
-            <Tooltip id="my-tooltip" className="infobulle"/>
-          </> : null }
-        </div>
-      </div>
-    </div>
-  );
+    border: '0px',
+    padding: '0px',
+    margin: 'auto',
+    opacity: '1',
+    transition: 'opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+    display: 'flex',
+    justifyContent: 'center',
+    height: '100dvh',
+    alignItems: 'center',
 };
 
 export const Thai: React.FC  = () => {
   const { activeTitle, setActiveTitle } = useSidebar();
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState("");
+  const [ modalIsOpen, setModalIsOpen ] = useState(false);
+  const [ selectedImage, setSelectedImage ] = useState("");
 
   const openModal = (image: string) => {
     if (image === "coming-soon.jpg") return;
@@ -130,7 +68,7 @@ export const Thai: React.FC  = () => {
       <Sidebar titles={submenus.titles} activeTitle={submenus.activeTitle} onTitleClick={handleTitleClick}/>
       <div className="menu-items">
         {activeSubmenu?.map((item, index) => (
-          <ThaiItem key={index} {...item} openModal={openModal}/>
+          <Item key={index} {...item} openModal={openModal}/>
         ))}
       </div>
       <Modal

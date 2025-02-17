@@ -8,6 +8,7 @@ import entrees from '../data/entrees.json'
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Fade from '@mui/material/Fade';
+import { Item } from '../Items/Items';
 
 const style = {
   border: '0px',
@@ -26,7 +27,6 @@ export const Starter = () => {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
   const [selectedImage, setSelectedImage] = React.useState("");
   const { activeTitle, setActiveTitle } = useSidebar();
-  const { addToCart, removeFromCart, cart } = useCart();
 
   const openModal = (image: string) => {
     if (image === "coming-soon.jpg") return;
@@ -66,82 +66,43 @@ export const Starter = () => {
       </Helmet>
 
       <h2>Entrées</h2>
-      <Sidebar titles={submenus.titles} activeTitle={submenus.activeTitle} onTitleClick={handleTitleClick}/>
+      <Sidebar titles={submenus.titles} activeTitle={submenus.activeTitle} onTitleClick={handleTitleClick} />
       <div className='menu-items'> {
         activeSubmenu?.map((item, index) => (
-          <div key={index} className="menu-item">
-          <div className='image-part'>
-            <img
-              className="item-image"
-              src={item.imageUrl}
-              alt={item.title}
-              onClick={() => openModal(item.imageUrl)}
-            />
-            <div className="add-container">
-              {cart.find(cartItem => cartItem.title === item.title)?.quantity! > 0 ? (
-                <div className="quantity-control">
-                  <img 
-                    className="add-cart" 
-                    src="Logo-moins.png" 
-                    alt="decrement" 
-                    onClick={() => removeFromCart({...item, category: 'Starters', quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity || 0})}
-                  />
-                  <span className="quantity">{cart.find(cartItem => cartItem.title === item.title)?.quantity!}</span>
-                  <img 
-                    className="add-cart" 
-                    src="Logo-plun.png" 
-                    alt="increment" 
-                    onClick={() => addToCart({...item, category: "Starters", quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity!})}
-                  />
-                </div>
-              ) : (
-                <div onClick={() => addToCart({...item, category: "Starters", quantity: cart.find(cartItem => cartItem.title === item.title)?.quantity!})}
-                >
-                  <img className="add-cart" src="Logo-plus.png" />
-                </div>
-              )}
-            </div>
-          </div>
-          <div className="menu-item-content">
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-            <p>{item.price}€</p>
-          </div>
-        </div>
-  
+          <Item key={index} {...item} openModal={openModal} />
         ))
       } </div>
       <Modal
-          open={modalIsOpen}
-          onClose={closeModal}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-          sx={{
-            '& .MuiBackdrop-root': {
-              backdropFilter: 'blur(10px)',
-              border: '0px',
-              padding: '0px',
-            }
-          }}
-        >
-          <Fade in={modalIsOpen}>
-            <Box sx={style} >
-              <img src={selectedImage} alt="Enlarged view" style={{ maxWidth: "95%", maxHeight: "95%", borderRadius: '11px'}} />
-              <span className="close-cart" onClick={closeModal}>
-                <img 
-                  style={{
-                    height: "3.5rem",
-                    position: "absolute",
-                    right: "45px",
-                    top: "45px"
-                  }}
-                  src="cross.png"
-                  alt="close cross"
-                />
-              </span>
-            </Box>
-          </Fade>
-        </Modal>
+        open={modalIsOpen}
+        onClose={closeModal}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+        sx={{
+          '& .MuiBackdrop-root': {
+            backdropFilter: 'blur(10px)',
+            border: '0px',
+            padding: '0px',
+          }
+        }}
+      >
+        <Fade in={modalIsOpen}>
+          <Box sx={style} >
+            <img src={selectedImage} alt="Enlarged view" style={{ maxWidth: "95%", maxHeight: "95%", borderRadius: '11px' }} />
+            <span className="close-cart" onClick={closeModal}>
+              <img
+                style={{
+                  height: "3.5rem",
+                  position: "absolute",
+                  right: "45px",
+                  top: "45px"
+                }}
+                src="cross.png"
+                alt="close cross"
+              />
+            </span>
+          </Box>
+        </Fade>
+      </Modal>
     </div>
   );
 }

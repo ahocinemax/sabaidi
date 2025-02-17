@@ -17,6 +17,15 @@ export interface SushiItemProps {
     customize: boolean;
 }
 
+export interface ItemProps {
+    imageUrl: string;
+    title: string;
+    description: string;
+    price: string;
+    customize: boolean;
+    openModal: (image: string) => void;
+}
+
 export interface CartItemProps {
     imageUrl: string;
     title: string;
